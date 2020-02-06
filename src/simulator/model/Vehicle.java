@@ -15,8 +15,7 @@ public class Vehicle extends SimulatedObject {
 	private int totalContamination;
 	private VehicleStatus status;
 	private int location;
-	private int totalDistance;
-	
+	private int totalDistance;	
 
 
 	Vehicle(String id, int maxSpeed, int contClass, List<Junction> itinerary) {
@@ -24,7 +23,6 @@ public class Vehicle extends SimulatedObject {
 		this.maxSpeed = maxSpeed;
 		this.contClass = contClass;
 		this.itinerary = itinerary;
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -38,7 +36,7 @@ public class Vehicle extends SimulatedObject {
 			//Check end of road
 			if(this.getLocation() == this.getRoad().getLength()) {
 				this.setStatus(VehicleStatus.WAITING);
-				//Method of queue in junction class
+				//TODO: Method of queue in junction class
 			}
 		}
 	}
@@ -49,92 +47,92 @@ public class Vehicle extends SimulatedObject {
 		return null;
 	}
 	
-	protected void setSpeed(int s) {
+	void setSpeed(int s) {
 		int newSpeed;
-		newSpeed = Math.min(s,getCurrSpeed());
+		newSpeed = Math.min(s,getMaxSpeed());
 		setCurrSpeed(newSpeed);
 	}
 	
-	protected void moveToNextRoad() {
+	void moveToNextRoad() {
 		
 	}
 	
-	//GETTERS & SETTERS
-	
-	public int getMaxSpeed() {
-		return maxSpeed;
-	}
-
-	public void setMaxSpeed(int maxSpeed) {
-		this.maxSpeed = maxSpeed;
-	}
-
-	public int getContClass() {
-		return contClass;
-	}
-
-	public void setContClass(int contClass) {
+	void setContClass(int contClass) {
 		if(contClass <= 10 && contClass >= 0) {
 			this.contClass = contClass;
 		}
 		else {
-			//Exception
+			throw new UnsupportedOperationException();
 		}
 	}
-
-	public List<Junction> getItinerary() {
-		return itinerary;
+	
+	int getLocation() {
+		return location;
 	}
-
-	public void setItinerary(List<Junction> itinerary) {
-		this.itinerary = itinerary;
-	}
-
-	public int getCurrSpeed() {
+	
+	int getCurrSpeed() {
 		return currSpeed;
 	}
-
-	public void setCurrSpeed(int currSpeed) {
-		this.currSpeed = currSpeed;
+	
+	int getContClass() {
+		return contClass;
 	}
-
-	public Road getRoad() {
-		return road;
-	}
-
-	public void setRoad(Road road) {
-		this.road = road;
-	}
-
-	public int getTotalContamination() {
-		return totalContamination;
-	}
-
-	public void setTotalContamination(int totalContamination) {
-		this.totalContamination = totalContamination;
-	}
-
+	
 	public VehicleStatus getStatus() {
 		return status;
 	}
+	
+	public List<Junction> getItinerary() {
+		return itinerary;
+	}
+	
+	public Road getRoad() {
+		return road;
+	}
+	
+	//PRIVATE GETTERS & SETTERS
+	
+	private int getMaxSpeed() {
+		return maxSpeed;
+	}
 
-	public void setStatus(VehicleStatus status) {
+	private void setMaxSpeed(int maxSpeed) {
+		this.maxSpeed = maxSpeed;
+	}
+
+	private void setItinerary(List<Junction> itinerary) {
+		this.itinerary = itinerary;
+	}
+
+	private void setCurrSpeed(int currSpeed) {
+		this.currSpeed = currSpeed;
+	}
+
+	private void setRoad(Road road) {
+		this.road = road;
+	}
+
+	private int getTotalContamination() {
+		return totalContamination;
+	}
+
+	private void setTotalContamination(int totalContamination) {
+		this.totalContamination = totalContamination;
+	}
+
+	private void setStatus(VehicleStatus status) {
 		this.status = status;
 	}
 
-	public int getLocation() {
-		return location;
-	}
-
-	public void setLocation(int location) {
+	private void setLocation(int location) {
 		this.location = location;
 	}
 
-	public int getTotalDistance() {
+	private int getTotalDistance() {
 		return totalDistance;
 	}
 
-	public void setTotalDistance(int totalDistance) {
+	private void setTotalDistance(int totalDistance) {
 		this.totalDistance = totalDistance;
 	}
 
