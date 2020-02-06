@@ -29,8 +29,18 @@ public class Vehicle extends SimulatedObject {
 
 	@Override
 	void advance(int time) {
-		// TODO Auto-generated method stub
-
+		if(this.status == VehicleStatus.TRAVELING) {
+			//Update location
+			this.setLocation(Math.min(this.getLocation()+this.getCurrSpeed(), this.getRoad().getLength()));
+			//Update contamination
+			int c = (this.getLocation()*this.getContClass())/10;
+			this.setTotalContamination(this.getTotalContamination()+c);
+			//Check end of road
+			if(this.getLocation() == this.getRoad().getLength()) {
+				this.setStatus(VehicleStatus.WAITING);
+				//Method of queue in junction class
+			}
+		}
 	}
 
 	@Override
