@@ -1,6 +1,7 @@
 package simulator.model;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import org.json.JSONObject;
 
@@ -29,7 +30,13 @@ public  abstract class Road extends SimulatedObject {
 
 	@Override
 	public void advance(int time) {
-
+		reduceTotalContamination();
+		updateSpeedLimit();
+		for(Vehicle v : vehicles) {
+			v.setSpeed(calculateVehicleSpeed(v));
+			v.advance(time);
+		}
+		//TODO: Sort vehicles by location
 	}
 
 	@Override
@@ -56,11 +63,14 @@ public  abstract class Road extends SimulatedObject {
 	
 	
 	void enter(Vehicle v) {
-		//TODO
+		vehicles.add(v);
+		if(v.getCurrSpeed() > 0 && v.getLocation() != 0) {
+			throw new UnknownError("The vehicle is either moving or not in the starting point of the road");
+		}
 	}
 	
 	void exit(Vehicle v) {
-		//TODO
+		vehicles.remove(v);
 	}
 
 	public int getLength() {
