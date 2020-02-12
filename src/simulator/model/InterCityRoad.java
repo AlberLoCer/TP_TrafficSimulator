@@ -40,28 +40,29 @@ public class InterCityRoad extends Road {
 	
 
 	private int weatherToCont(Weather w) {
-		//Do cases
-		int x = 0;
-		if(w == Weather.SUNNY) {
-			x = 2;
-		}
+		int x;
 		
-		else if(w == Weather.CLOUDY) {
+		switch(weather) {
+		
+		case CLOUDY:
 			x = 3;
-		}
-		
-		else if(w == Weather.RAINY) {
+			break;
+		case RAINY:
 			x = 10;
-		}
-		
-		else if(w == Weather.WINDY) {
-			x = 15;
-		}
-		
-		else {
+			break;
+		case STORM:
 			x = 20;
+			break;
+		case SUNNY:
+			x = 2;
+			break;
+		case WINDY:
+			x = 15;
+			break;
+		default:
+			x = 20;
+			break;
 		}
-		
 		return x;
 	}
 
