@@ -50,7 +50,7 @@ public  abstract class Road extends SimulatedObject {
 			this.totalCont += c;
 		}
 		else {
-			throw new UnsupportedOperationException();
+			throw new UnsupportedOperationException("Contamination cannot be negative!");
 		}
 	}
 	
@@ -64,7 +64,7 @@ public  abstract class Road extends SimulatedObject {
 	
 	void enter(Vehicle v) {
 		vehicles.add(v);
-		if(v.getCurrSpeed() > 0 && v.getLocation() != 0) {
+		if(v.getCurrSpeed() > 0 || v.getLocation() != 0) {
 			throw new UnknownError("The vehicle is either moving or not in the starting point of the road");
 		}
 	}
@@ -86,7 +86,12 @@ public  abstract class Road extends SimulatedObject {
 	}
 
 	void setWeather(Weather weather) {
-		this.weather = weather;
+		if(!weather.equals(null)) {
+			this.weather = weather;
+		}
+		else {
+			throw new NullPointerException("Weather was passed as null");
+		}
 	}
 	
 	
