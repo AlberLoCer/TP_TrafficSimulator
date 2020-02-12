@@ -6,25 +6,10 @@ import javax.security.auth.x500.X500Principal;
 
 public class InterCityRoad extends Road {
 
-	private Junction srcJunc;
-	private Junction destJunc;
-	private int maxSpeed;
-	private int currSpeedLimit;
-	private int contLimit;
-	private int totalCont;
-	private int length;
-	private Weather weather;
-	private List<Vehicle> vehicles;
 	
 	InterCityRoad(String id, Junction srcJunc, Junction destJunc, int maxSpeed, int contLimit, 
 			int length, Weather weather) { 
-		super(id, destJunc, destJunc, length, length, length, weather); 
-		this.srcJunc = srcJunc;
-		this.destJunc = destJunc;
-		this.maxSpeed = maxSpeed;
-		this.contLimit = contLimit;
-		this.length = length;
-		this.weather = weather;
+		super(id, srcJunc, destJunc, maxSpeed, contLimit, length, weather); 
 	}
 
 	@Override
@@ -44,12 +29,18 @@ public class InterCityRoad extends Road {
 
 	@Override
 	int calculateVehicleSpeed(Vehicle v) {
-		
+		if(weather == Weather.STORM) {
+			currSpeedLimit = (int)(currSpeedLimit*0.8);
+		}
+		else {
+			currSpeedLimit = maxSpeed;
+		}
 		return 0;
 	}
 	
 
 	private int weatherToCont(Weather w) {
+		//Do cases
 		int x = 0;
 		if(w == Weather.SUNNY) {
 			x = 2;

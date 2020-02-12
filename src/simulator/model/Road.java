@@ -9,12 +9,12 @@ public  abstract class Road extends SimulatedObject {
 
 	private Junction srcJunc;
 	private Junction destJunc;
-	private int maxSpeed;
-	private int currSpeedLimit;
-	private int contLimit;
-	private int totalCont;
+	protected int maxSpeed;
+	protected int currSpeedLimit;
+	protected int contLimit;
+	protected int totalCont;
 	private int length;
-	private Weather weather;
+	protected Weather weather;
 	private List<Vehicle> vehicles;
 	
 	Road(String id, Junction srcJunc, Junction destJunc, int maxSpeed, int contLimit, 
