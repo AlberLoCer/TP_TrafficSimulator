@@ -11,7 +11,10 @@ public class Junction extends SimulatedObject {
 	List<Road> incomingRoads;
 	Map<Junction,Road> outgoingRoads;
 	List<List<Vehicle>> queueList;
-	//Map<Road,List<Vehicle>> queueMapList;
+	
+	// Used when a car enters the junction (to get the list<vehicles> from its road object
+	Map<Road,List<Vehicle>> queueMapList;		
+	
 	int greenLightIdx;
 	int lastSwitchTime;
 	LightSwitchingStrategy lsStrategy;
