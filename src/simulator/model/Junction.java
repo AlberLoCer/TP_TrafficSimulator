@@ -33,13 +33,30 @@ public class Junction extends SimulatedObject {
 	}
 
 	void addIncommingRoad(Road r) {
-		incomingRoads.add(r);
-		//new LinkedList<Road>().add(r);
+		if (r.getDestJunc().equals(this)) {
+			incomingRoads.add(r);
+			LinkedList<Vehicle> aux = new LinkedList<>();
+			queueList.add(aux);
+			queueMapList.put(r, aux);
+		}
+		else {
+			throw new IllegalArgumentException();
+		}
 	}
 	
 	void addOutGotingRoad(Road r){
-		outgoingRoads.put(r.getDestJunc(), r);
-		
+		Junction destJunc = r.getDestJunc();
+		if (r.getSrcJunc().equals(this)) {
+			if (outgoingRoads.containsKey(destJunc)) {
+				throw new IllegalArgumentException();
+			}
+			else {
+				outgoingRoads.put(destJunc, r);
+			}
+		}
+		else {
+			throw new IllegalArgumentException();
+		}
 	}
 	
 	void enter(Road r, Vehicle v) {
