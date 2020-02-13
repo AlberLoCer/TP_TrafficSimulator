@@ -7,10 +7,11 @@ import java.util.Map;
 import org.json.JSONObject;
 
 public class Junction extends SimulatedObject {
+	
 	List<Road> incomingRoads;
 	Map<Junction,Road> outgoingRoads;
 	List<List<Vehicle>> queueList;
-	Map<Road,List<Vehicle>> queueMapList;
+	//Map<Road,List<Vehicle>> queueMapList;
 	int greenLightIdx;
 	int lastSwitchTime;
 	LightSwitchingStrategy lsStrategy;
