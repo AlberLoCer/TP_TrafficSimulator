@@ -1,5 +1,7 @@
 package simulator.model;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.math.*;
 
@@ -20,9 +22,24 @@ public class Vehicle extends SimulatedObject {
 
 	Vehicle(String id, int maxSpeed, int contClass, List<Junction> itinerary) {
 		super(id);
-		this.maxSpeed = maxSpeed;
-		this.contClass = contClass;
-		this.itinerary = itinerary;
+		
+		if (maxSpeed >= 0 && contClass >= 0 && contClass <= 10 && itinerary.size()> 1) {
+		
+			// "Do not store list itinerary as it is received by the construction, but rather copy
+			// it into a new read-only list (to avoid modifying it from outside)"
+			this.itinerary = Collections.unmodifiableList(new ArrayList<>(itinerary));
+			
+			this.maxSpeed = maxSpeed;
+			this.contClass = contClass;
+			this.currSpeed = 0;						// TODO: Or -1 ?
+			this.totalContamination = 0;
+			this.status = VehicleStatus.PENDING;
+			this.location = 0;						// TODO: Or -1 ?
+			this.totalDistance = 0;
+		}
+		else{
+			throw new IllegalArgumentException();
+		}
 	}
 
 	@Override
