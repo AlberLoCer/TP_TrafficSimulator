@@ -65,9 +65,12 @@ public class Vehicle extends SimulatedObject {
 	}
 	
 	void setSpeed(int s) {
-		int newSpeed;
-		newSpeed = Math.min(s,getMaxSpeed());
-		setCurrSpeed(newSpeed);
+		if (s >= 0) {
+			setCurrSpeed(Math.min(s, getMaxSpeed()));
+		}
+		else {
+			throw new IllegalArgumentException();
+		}
 	}
 	
 	void moveToNextRoad() {
