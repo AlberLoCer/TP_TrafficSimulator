@@ -12,6 +12,7 @@ public class Vehicle extends SimulatedObject {
 	private int maxSpeed;
 	private int contClass;
 	private List<Junction> itinerary;
+	private int itineraryIdx;
 	private int currSpeed;
 	private Road road;
 	private int totalContamination;
@@ -36,6 +37,7 @@ public class Vehicle extends SimulatedObject {
 			this.status = VehicleStatus.PENDING;
 			this.location = 0;						// TODO: Or -1 ?
 			this.totalDistance = 0;
+			this.itineraryIdx = 0;					// TODO: Or -1 ?
 		}
 		else{
 			throw new IllegalArgumentException();
@@ -46,16 +48,27 @@ public class Vehicle extends SimulatedObject {
 	void advance(int time) {
 		if(this.status == VehicleStatus.TRAVELING) {
 			//Update location
-			this.setLocation(Math.min(this.getLocation()+this.getCurrSpeed(), this.getRoad().getLength()));
+			int newLocation = Math.min(this.getLocation()+this.getCurrSpeed(), this.getRoad().getLength());
+			int distTravelledOnCycle = newLocation - getLocation();		// For contamination calculus
+			this.setLocation(newLocation);
+			
 			//Update contamination
-			int c = (this.getLocation()*this.getContClass())/10;
-			this.setTotalContamination(this.getTotalContamination()+c);
+			int c = getContClass() * distTravelledOnCycle;
+			setTotalContamination(getTotalContamination() + c);
+			this.road.addContamination(c);			
+			
 			//Check end of road
 			if(this.getLocation() == this.getRoad().getLength()) {
 				this.setStatus(VehicleStatus.WAITING);
-				//TODO: Method of queue in junction class
+				this.setSpeed(0);
+				//TODO: Check this: Method of queue in junction class
+				itinerary.get(itineraryIdx).enter(road, this);
 			}
 		}
+	}
+	
+	void moveToNextRoad() {
+		//TODO: implement
 	}
 
 	@Override
@@ -73,16 +86,14 @@ public class Vehicle extends SimulatedObject {
 		}
 	}
 	
-	void moveToNextRoad() {
-		
-	}
+
 	
 	void setContClass(int contClass) {
 		if(contClass <= 10 && contClass >= 0) {
 			this.contClass = contClass;
 		}
 		else {
-			throw new UnsupportedOperationException();
+			throw new IllegalArgumentException();
 		}
 	}
 	
