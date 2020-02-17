@@ -82,7 +82,7 @@ public class Vehicle extends SimulatedObject {
 			setCurrSpeed(Math.min(s, getMaxSpeed()));
 		}
 		else {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Speed must be positive");
 		}
 	}
 	
@@ -93,7 +93,7 @@ public class Vehicle extends SimulatedObject {
 			this.contClass = contClass;
 		}
 		else {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Contamination must be between [0-10]");
 		}
 	}
 	
@@ -131,9 +131,9 @@ public class Vehicle extends SimulatedObject {
 		this.maxSpeed = maxSpeed;
 	}
 
-	private void setItinerary(List<Junction> itinerary) {
-		this.itinerary = itinerary;
-	}
+//	private void setItinerary(List<Junction> itinerary) {		// Has to be done with Collections.inmutableList
+//		this.itinerary = itinerary;
+//	}
 
 	private void setCurrSpeed(int currSpeed) {
 		this.currSpeed = currSpeed;
