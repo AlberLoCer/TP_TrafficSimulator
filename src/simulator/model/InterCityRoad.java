@@ -1,9 +1,5 @@
 package simulator.model;
 
-import java.util.List;
-
-import javax.security.auth.x500.X500Principal;
-
 public class InterCityRoad extends Road {
 
 	
@@ -14,7 +10,7 @@ public class InterCityRoad extends Road {
 
 	@Override
 	void reduceTotalContamination() {
-		totalCont =(int)(((100.0-weatherToCont(this.weather))/100.0)*totalCont);
+		totalCont =(int)(( (100.0-weatherToCont()) / 100.0) * totalCont);
 	}
 	
 	@Override
@@ -30,40 +26,29 @@ public class InterCityRoad extends Road {
 	@Override
 	int calculateVehicleSpeed(Vehicle v) {
 		if(weather == Weather.STORM) {
-			currSpeedLimit = (int)(currSpeedLimit*0.8);
+			return (int)(currSpeedLimit*0.8);
 		}
 		else {
-			currSpeedLimit = maxSpeed;
+			return currSpeedLimit;
 		}
-		return 0;
 	}
 	
 
-	private int weatherToCont(Weather w) {
-		int x;
-		
-		switch(weather) {
-		
-		case CLOUDY:
-			x = 3;
-			break;
-		case RAINY:
-			x = 10;
-			break;
-		case STORM:
-			x = 20;
-			break;
-		case SUNNY:
-			x = 2;
-			break;
-		case WINDY:
-			x = 15;
-			break;
-		default:
-			x = 20;
-			break;
+	private int weatherToCont() {		
+		switch(this.weather) {
+			case SUNNY:
+				return 2;
+			case CLOUDY:
+				return 3;
+			case RAINY:
+				return 10;
+			case WINDY:
+				return 15;
+			case STORM:
+				return 20;		
+			default:
+				return 20;
 		}
-		return x;
 	}
 
 
