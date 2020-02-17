@@ -8,12 +8,9 @@ public class CityRoad extends Road {
 	
 	@Override
 	void reduceTotalContamination() {
-		if(totalCont-weatherToCont(weather) >= 0) {
-			totalCont = totalCont-weatherToCont(weather);
-		}
-		
-		else {
-			throw new UnsupportedOperationException("Contamination cannot be negative!");
+		totalCont = totalCont - weatherToCont();
+		if(totalCont < 0) {
+			totalCont = 0;
 		}
 	}
 
@@ -24,26 +21,17 @@ public class CityRoad extends Road {
 
 	@Override
 	int calculateVehicleSpeed(Vehicle v) {
-		v.setSpeed((int)(((11.0-v.getContClass())/11.0)*currSpeedLimit));
-		return 0;
+		return (int) (( (11.0-v.getContClass()) / 11.0) * currSpeedLimit);
 	}
 
-	private int weatherToCont(Weather w) {
-		int x;
-		switch(weather) {
-	
-		case STORM:
-			x = 10;
-			break;
-			
+	private int weatherToCont() {
+		switch(this.weather) {	
+		case STORM :
+			return 10;			
 		case WINDY:
-			x = 10;
-			break;
-			
+			return 10;			
 		default:
-			x = 2;
-			break;
+			return 2;
 		}
-		return x;
 	}
 }
