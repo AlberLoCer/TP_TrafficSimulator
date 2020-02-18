@@ -114,6 +114,7 @@ public class Vehicle extends SimulatedObject {
 	}
 	
 	public List<Junction> getItinerary() {
+		// Itinerary is an unmodifiable list
 		return itinerary;
 	}
 	

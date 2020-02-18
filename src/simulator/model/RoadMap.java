@@ -1,9 +1,12 @@
 package simulator.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.json.JSONObject;
 
 public class RoadMap {
 	private  List<Junction> juncList;
@@ -24,81 +27,87 @@ public class RoadMap {
 	}
 
 
-void addJunction(Junction j) {
-	if(juncMap.containsKey(j.getId())) {
-		throw new UnsupportedOperationException("The junction map already contained the junction "+j.getId());
-	}
-	else {
-		juncList.add(j);
-		juncMap.put(j.getId(), j);
-	}
-}
-
-void addRoad(Road r) {
-	if(roadMap.containsKey(r.getId())) {
-		throw new UnsupportedOperationException("The road map already contained the road "+r.getId());
+	void addJunction(Junction j) {
+		if(juncMap.containsKey(j.getId())) {
+			throw new UnsupportedOperationException("The junction map already contained the junction "+j.getId());
+		}
+		else {
+			juncList.add(j);
+			juncMap.put(j.getId(), j);
+		}
 	}
 	
-	else if (!juncMap.containsValue(r.getDestJunc()) || !juncMap.containsValue(r.getSrcJunc())) { //Ask if correct
-		throw new UnsupportedOperationException("Could not find the junctions for the road "+r.getId());
+	void addRoad(Road r) {
+		if(roadMap.containsKey(r.getId())) {
+			throw new UnsupportedOperationException("The road map already contained the road "+r.getId());
+		}
+		
+		else if (!juncMap.containsValue(r.getDestJunc()) || !juncMap.containsValue(r.getSrcJunc())) { //Ask if correct
+			throw new UnsupportedOperationException("Could not find the junctions for the road "+r.getId());
+		}
+		
+		else {
+			roadList.add(r);
+			roadMap.put(r.getId(), r);
+		}
 	}
 	
-	else {
-		roadList.add(r);
-		roadMap.put(r.getId(), r);
-	}
-}
-
-void addVehicle(Vehicle v) {
-	if(vehicleMap.containsKey(v.getId())) {
-		throw new UnsupportedOperationException("The vehicle map already contained the vehicle "+v.getId());
-	}
-	
-	//TODO: Check itinerary. Not sure how to do it. Ask teacher.
-	
-	else {
-		vehicleList.add(v);
-		vehicleMap.put(v.getId(), v);
-	}
-}
-
-
-public Junction getJunction(String id) {
-	
-//	for(Map.Entry<String, Junction> map : juncMap.entrySet()) {
-//		if(map.getKey().equalsIgnoreCase(id)) {
-//			return map.getValue();
-//		}
-//	}
-	if(juncMap.containsKey(id)) {
-		return juncMap.get(id);
+	void addVehicle(Vehicle v) {
+		boolean roadsOk = true;
+		for(Junction j : v.getItinerary()) {
+			if (!juncMap.containsValue(j)) {
+				roadsOk = false;
+			}
+		}
+		if(vehicleMap.containsKey(v.getId())) {
+			throw new UnsupportedOperationException("The vehicle map already contained the vehicle "+v.getId());
+		}	
+		else if (!roadsOk) {
+			throw new UnsupportedOperationException("Some junctions in vehicle itinerary is not registered");
+		}		
+		else {			
+			vehicleList.add(v);
+			vehicleMap.put(v.getId(), v);
+		}
 	}
 	
-	else {
+	public JSONObject report() {
+		//TODO: implement
 		return null;
 	}
 	
-}
-
-public Road getRoad(String id) {
-	if(roadMap.containsKey(id)) {
-		return roadMap.get(id);
+	public void reset() {
+		juncList.clear();
+		roadList.clear();;
+		vehicleList.clear();
+		juncMap.clear();
+		roadMap.clear();
+		vehicleMap.clear();
 	}
 	
-	else {
-		return null;
+	
+	public Junction getJunction(String id) {	
+		return juncMap.get(id);	
 	}
 	
-}
-
-public Vehicle getVehicle(String id) {
-	if(vehicleMap.containsKey(id)){
+	public Road getRoad(String id) {
+		return roadMap.get(id);	
+	}
+	
+	public Vehicle getVehicle(String id) {
 		return vehicleMap.get(id);
 	}
-	else {
-		return null;
+	
+	public List<Junction> getJunctions(){
+		return Collections.unmodifiableList(this.juncList);
 	}
-}
 
+	public List<Vehicle> getVehicles(){
+		return Collections.unmodifiableList(this.vehicleList);
+	}
+	
+	public List<Road> getRoads(){
+		return Collections.unmodifiableList(this.roadList);
+	}
 
 }
