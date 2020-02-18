@@ -62,4 +62,42 @@ void addVehicle(Vehicle v) {
 	}
 }
 
+
+public Junction getJunction(String id) {
+	
+//	for(Map.Entry<String, Junction> map : juncMap.entrySet()) {
+//		if(map.getKey().equalsIgnoreCase(id)) {
+//			return map.getValue();
+//		}
+//	}
+	if(juncMap.containsKey(id)) {
+		return juncMap.get(id);
+	}
+	
+	else {
+		return null;
+	}
+	
+}
+
+public Road getRoad(String id) {
+	if(roadMap.containsKey(id)) {
+		return roadMap.get(id);
+	}
+	
+	else {
+		return null;
+	}
+	
+}
+
+public Vehicle getVehicle(String id) {
+	if(vehicleMap.containsKey(id)){
+		return vehicleMap.get(id);
+	}
+	else {
+		return null;
+	}
+	}
+}
 }
