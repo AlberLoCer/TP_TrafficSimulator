@@ -98,6 +98,7 @@ public Vehicle getVehicle(String id) {
 	else {
 		return null;
 	}
-	}
 }
+
+
 }
