@@ -21,7 +21,8 @@ public class Junction extends SimulatedObject {
 	DequeingStrategy dqStrategy;
 	
 	Junction(String id, LightSwitchingStrategy lsStrategy, DequeingStrategy dqStrategy, 
-			int xCoor, int yCoor) { super(id); 
+			int xCoor, int yCoor) { 
+		super(id); 
 		this.lsStrategy = lsStrategy;
 		this.dqStrategy = dqStrategy;
 	}
@@ -60,7 +61,7 @@ public class Junction extends SimulatedObject {
 	}
 	
 	void enter(Road r, Vehicle v) {
-	
+		
 	}
 	
 	Road roadTo(Junction j) {
