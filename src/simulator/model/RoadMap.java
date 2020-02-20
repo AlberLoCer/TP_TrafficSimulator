@@ -85,6 +85,17 @@ public class RoadMap {
 		vehicleMap.clear();
 	}
 	
+	void advanceJunctions(int time) {
+		for(Junction j : juncList) {
+			j.advance(time);
+		}
+	}
+	
+	void advanceRoads(int time) {
+		for(Road r : roadList) {
+			r.advance(time);
+		}
+	}
 	
 	public Junction getJunction(String id) {	
 		return juncMap.get(id);	
