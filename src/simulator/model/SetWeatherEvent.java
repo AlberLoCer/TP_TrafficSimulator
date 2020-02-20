@@ -24,7 +24,6 @@ public class SetWeatherEvent extends Event {
 			Road road = map.getRoad(w.getFirst());
 			if (road != null) {
 				road.setWeather(w.getSecond());
-				// TODO: function call is done by local variable road, but not for the copy in map
 			}
 			else {
 				throw new NullPointerException();

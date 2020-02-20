@@ -24,7 +24,6 @@ public class NewSetContClassEvent extends Event {
 			Vehicle vehicle = map.getVehicle(c.getFirst());
 			if (vehicle != null) {
 				vehicle.setContClass(c.getSecond());
-				// TODO: function call is done by local variable road, but not for the copy in map
 			}
 			else {
 				throw new NullPointerException();

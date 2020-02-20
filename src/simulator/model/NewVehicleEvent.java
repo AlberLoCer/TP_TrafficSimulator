@@ -1,5 +1,6 @@
 package simulator.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class NewVehicleEvent extends Event {
@@ -7,23 +8,28 @@ public class NewVehicleEvent extends Event {
 	String id;
 	int maxSpeed;
 	int contClass;
-	List<Junction> itinerary;
+	List<String> itineraryId;
 	
-	public NewVehicleEvent(int time, String id, int maxSpeed, int contClass, List<Junction> itinerary) {
+	public NewVehicleEvent(int time, String id, int maxSpeed, int contClass, List<String> itineraryId) {
 		super(time); 
 		this.id = id;
 		this.maxSpeed = maxSpeed;
 		this.contClass = contClass;
-		this.itinerary = itinerary;
+		this.itineraryId = itineraryId;
 	}
 
 
 	@Override
 	void execute(RoadMap map) {
-		Vehicle vehicle = new Vehicle(id, maxSpeed, contClass, itinerary);
+		// Convert list of strings in list of Junctions
+		ArrayList<Junction> temp = new ArrayList<>();
+		for (String juncId : itineraryId) {
+			temp.add(map.getJunction(juncId));
+		}
+		
+		Vehicle vehicle = new Vehicle(id, maxSpeed, contClass, temp);
 		map.addVehicle(vehicle);
 		vehicle.moveToNextRoad();
-		// TODO: function call is done by local variable vehicle, but not for the copy in map
 
 	}
 
