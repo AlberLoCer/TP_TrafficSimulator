@@ -1,8 +1,8 @@
 package simulator.model;
 
-public class NewInterCityRoad extends NewRoadEvent {
+public class NewInterCityRoadEvent extends NewRoadEvent {
 
-	public NewInterCityRoad(int time, String id, String srcJuncId, String destJuncId, 
+	public NewInterCityRoadEvent(int time, String id, String srcJuncId, String destJuncId, 
 			int length, int co2Limit, int maxSpeed, Weather weather) {
 		super(time, id, srcJuncId, destJuncId, length, co2Limit, maxSpeed, weather);
 	}
