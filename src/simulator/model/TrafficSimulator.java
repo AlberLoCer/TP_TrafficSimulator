@@ -11,6 +11,9 @@ public class TrafficSimulator {
 	private List<Event> eventList;
 	private int simTime;
 	
+	public static final String timeKey = "time";
+	public static final String stateKey = "state";
+	
 	public TrafficSimulator() {
 		roadMap = new RoadMap();
 		eventList = new SortedArrayList<Event>();
@@ -43,7 +46,9 @@ public class TrafficSimulator {
 	}
 	
 	public JSONObject report() {
-		//TODO: Implement
-		return null;
+		JSONObject jo = new JSONObject();
+		jo.put(timeKey, simTime);
+		jo.put(stateKey, roadMap.report());
+		return jo;
 	}
 }
