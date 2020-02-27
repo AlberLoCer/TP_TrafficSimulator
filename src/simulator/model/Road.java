@@ -19,6 +19,12 @@ public  abstract class Road extends SimulatedObject {
 	protected Weather weather;
 	private List<Vehicle> vehicles;			// Keep always sorted
 	
+	public static final String idKey = "id";
+	public static final String speedLimitKey = "speedlimit";
+	public static final String weatherKey = "weather";
+	public static final String co2Key = "co2";
+	public static final String vehiclesKey = "vehicles";
+	
 	Road(String id, Junction srcJunc, Junction destJunc, int maxSpeed, int contLimit, 
 			int length, Weather weather) { 
 		
@@ -86,8 +92,14 @@ public  abstract class Road extends SimulatedObject {
 
 	@Override
 	public JSONObject report() {
-		// TODO Implement Json
-		return null;
+		JSONObject jo = new JSONObject();
+		jo.put(idKey, _id);
+		jo.put(speedLimitKey, currSpeedLimit);
+		jo.put(weatherKey, weather);
+		jo.put(co2Key, totalCont);
+		jo.put(vehiclesKey, vehicles);
+		
+		return jo;
 	}
 	
 	void addContamination(int c) {

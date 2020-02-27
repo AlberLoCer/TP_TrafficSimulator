@@ -7,6 +7,8 @@ import java.math.*;
 
 import org.json.JSONObject;
 
+import simulator.factories.NewVehicleEventBuilder;
+
 public class Vehicle extends SimulatedObject {
 
 	private int maxSpeed;
@@ -20,6 +22,14 @@ public class Vehicle extends SimulatedObject {
 	private int location;
 	private int totalDistance;	
 
+	public static final String idKey = "id";
+	public static final String speedKey = "speed";
+	public static final String distanceKey = "distance";
+	public static final String co2Key = "co2";
+	public static final String classKey = "class";
+	public static final String statusKey = "status";
+	public static final String roadKey = "road";
+	public static final String locationKey = "location";
 
 	Vehicle(String id, int maxSpeed, int contClass, List<Junction> itinerary) {
 		super(id);
@@ -73,8 +83,17 @@ public class Vehicle extends SimulatedObject {
 
 	@Override
 	public JSONObject report() {
-		// TODO Auto-generated method stub
-		return null;
+		JSONObject jo = new JSONObject();
+		jo.put(idKey, _id);
+		jo.put(speedKey, currSpeed);
+		jo.put(distanceKey, totalDistance);
+		jo.put(co2Key, totalContamination);
+		jo.put(classKey, contClass);
+		jo.put(statusKey, status);
+		jo.put(roadKey, road);
+		jo.put(locationKey, location);
+		
+		return jo;
 	}
 	
 	void setSpeed(int s) {

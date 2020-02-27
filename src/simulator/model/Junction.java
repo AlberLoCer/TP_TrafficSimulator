@@ -19,7 +19,9 @@ public class Junction extends SimulatedObject {
 	int lastSwitchTime;
 	LightSwitchingStrategy lsStrategy;
 	DequeingStrategy dqStrategy;
-	
+	public static final String idKey = "id";
+	public static final String greenKey = "green";
+	public static final String queueKey = "queues";
 	Junction(String id, LightSwitchingStrategy lsStrategy, DequeingStrategy dqStrategy, 
 			int xCoor, int yCoor) { 
 		super(id); 
@@ -61,17 +63,20 @@ public class Junction extends SimulatedObject {
 	}
 	
 	void enter(Road r, Vehicle v) {
-		
+		//TODO: implement method
 	}
 	
 	Road roadTo(Junction j) {
-		
+		//TODO: implement method
 		return null;	
 	}
 	@Override
 	public JSONObject report() {
-		
-		return null;
+		JSONObject jo = new JSONObject();
+		jo.put(idKey, _id);
+		jo.put(greenKey, incomingRoads.get(greenLightIdx));
+		jo.put(queueKey, queueList);
+		return jo;
 	}
 
 }
