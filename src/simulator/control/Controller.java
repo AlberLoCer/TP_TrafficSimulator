@@ -11,6 +11,7 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import simulator.factories.BuilderBasedFactory;
+import simulator.factories.Factory;
 import simulator.model.Event;
 import simulator.model.NewCityRoadEvent;
 import simulator.model.TrafficSimulator;
@@ -19,9 +20,9 @@ public class Controller {
 	private static final String key = "events";
 
 	TrafficSimulator sim;
-	BuilderBasedFactory<Event> eventFact;
+	Factory<Event> eventFact;
 	
-	public Controller(TrafficSimulator tS, BuilderBasedFactory<Event> factory) {
+	public Controller(TrafficSimulator tS, Factory<Event> factory) {
 		if(tS == null || factory == null) {
 			throw new NullPointerException();
 		

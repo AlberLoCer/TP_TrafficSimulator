@@ -1,6 +1,11 @@
 package simulator.launcher;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.channels.NonWritableChannelException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +17,7 @@ import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
+import simulator.control.Controller;
 import simulator.factories.Builder;
 import simulator.factories.BuilderBasedFactory;
 import simulator.factories.Factory;
@@ -32,6 +38,7 @@ import simulator.model.LightSwitchingStrategy;
 import simulator.model.NewInterCityRoadEvent;
 import simulator.model.RoundRobinStrategy;
 import simulator.model.SetWeatherEvent;
+import simulator.model.TrafficSimulator;
 
 public class Main {
 
@@ -39,6 +46,7 @@ public class Main {
 	private static String _inFile = null;
 	private static String _outFile = null;
 	private static Factory<Event> _eventsFactory = null;
+	private static Integer _ticks;
 
 	private static void parseArgs(String[] args) {
 
@@ -54,6 +62,7 @@ public class Main {
 			parseHelpOption(line, cmdLineOptions);
 			parseInFileOption(line);
 			parseOutFileOption(line);
+			parseTicksOption(line);
 
 			// if there are some remaining arguments, then something wrong is
 			// provided in the command line!
@@ -63,7 +72,7 @@ public class Main {
 				String error = "Illegal arguments:";
 				for (String o : remaining)
 					error += (" " + o);
-				throw new ParseException(error);
+				throw new UnknownError(error);
 			}
 
 		} catch (ParseException e) {
@@ -80,6 +89,9 @@ public class Main {
 		cmdLineOptions.addOption(
 				Option.builder("o").longOpt("output").hasArg().desc("Output file, where reports are written.").build());
 		cmdLineOptions.addOption(Option.builder("h").longOpt("help").desc("Print this message").build());
+		
+		cmdLineOptions.addOption(Option.builder("t").hasArg().longOpt("ticks")
+				.desc("Ticks to the simulator’s main loop (defaultvalue is 10).").build());
 
 		return cmdLineOptions;
 	}
@@ -103,6 +115,21 @@ public class Main {
 		_outFile = line.getOptionValue("o");
 	}
 
+	private static void parseTicksOption(CommandLine line) throws ParseException {
+		String aux = line.getOptionValue("t");
+		if (aux != null) {
+			try {
+				_ticks = Integer.parseInt(aux);
+			}
+			catch (NumberFormatException e) {
+				throw new ParseException("Ticks must be a number");
+			}
+		}
+		else {
+			_ticks = _timeLimitDefaultValue;
+		}
+	} 
+	
 	private static void initFactories() {
 
 		List<Builder<LightSwitchingStrategy>> lssBuilders = new ArrayList<>();
@@ -129,6 +156,16 @@ public class Main {
 
 	private static void startBatchMode() throws IOException {
 		// TODO complete this method to start the simulation
+		Controller controller = new Controller(new TrafficSimulator(), _eventsFactory);
+		InputStream is = new FileInputStream(new File(_inFile));
+		controller.loadEvents(is);
+		if(_outFile != null) {			
+			controller.run(_ticks, new FileOutputStream(_outFile));		
+		}
+		else {
+			controller.run(_ticks, System.out);
+		}
+		
 	}
 
 	private static void start(String[] args) throws IOException {
