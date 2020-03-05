@@ -18,7 +18,7 @@ public class NewVehicleEventBuilder extends Builder<Event> {
 	public static final String contClassKey = "class";
 	public static final String itineraryKey = "itinerary";
 	
-	NewVehicleEventBuilder() {
+	public NewVehicleEventBuilder() {
 		super(type);
 	}
 

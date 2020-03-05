@@ -1,6 +1,9 @@
 package simulator.launcher;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
@@ -9,8 +12,26 @@ import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
+import simulator.factories.Builder;
+import simulator.factories.BuilderBasedFactory;
 import simulator.factories.Factory;
+import simulator.factories.MostCrowdedStrategyBuilder;
+import simulator.factories.MoveAllStrategyBuilder;
+import simulator.factories.MoveFirstStrategyBuilder;
+import simulator.factories.NewCityRoadEventBuilder;
+import simulator.factories.NewInterCityRoadEventBuilder;
+import simulator.factories.NewJunctionEventBuilder;
+import simulator.factories.NewRoadEventBuilder;
+import simulator.factories.NewVehicleEventBuilder;
+import simulator.factories.RoundRobinStrategyBuilder;
+import simulator.factories.SetContClassEventBuilder;
+import simulator.factories.SetWeatherEventBuilder;
+import simulator.model.DequeingStrategy;
 import simulator.model.Event;
+import simulator.model.LightSwitchingStrategy;
+import simulator.model.NewInterCityRoadEvent;
+import simulator.model.RoundRobinStrategy;
+import simulator.model.SetWeatherEvent;
 
 public class Main {
 
@@ -84,7 +105,25 @@ public class Main {
 
 	private static void initFactories() {
 
-		// TODO complete this method to initialize _eventsFactory
+		List<Builder<LightSwitchingStrategy>> lssBuilders = new ArrayList<>();
+		lssBuilders.add(new RoundRobinStrategyBuilder());
+		lssBuilders.add( new MostCrowdedStrategyBuilder());		
+		Factory<LightSwitchingStrategy> lssFactory = new BuilderBasedFactory<>(lssBuilders);
+		
+		List<Builder<DequeingStrategy>> dqBuilders = new ArrayList<>();
+		dqBuilders.add( new MoveFirstStrategyBuilder());
+		dqBuilders.add( new MoveAllStrategyBuilder());
+		Factory<DequeingStrategy> dqsFactory = new BuilderBasedFactory<>(dqBuilders);
+		
+		List<Builder<Event>> builders  = new ArrayList<Builder<Event>>();
+		builders.add( new NewJunctionEventBuilder(lssFactory, dqsFactory));
+		builders.add(new SetContClassEventBuilder());
+		builders.add(new SetWeatherEventBuilder());
+		builders.add(new NewVehicleEventBuilder());
+		builders.add(new NewCityRoadEventBuilder());
+		builders.add(new NewInterCityRoadEventBuilder());
+		
+		_eventsFactory = new BuilderBasedFactory<Event>(builders);
 
 	}
 

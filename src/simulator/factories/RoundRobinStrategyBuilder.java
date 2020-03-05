@@ -10,7 +10,7 @@ public class RoundRobinStrategyBuilder extends Builder<LightSwitchingStrategy> {
 	public static final String type = "round_robin_lss";
 	public static final String timeslotKey = "timeslot";
 
-	RoundRobinStrategyBuilder() {
+	public RoundRobinStrategyBuilder() {
 		super(type);		
 	}
 

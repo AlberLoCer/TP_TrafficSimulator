@@ -53,7 +53,7 @@ public class Controller {
 			sim.advance();
 		}
 		PrintStream p = new PrintStream(out);
-		p.println(sim.report());
+		p.println(sim.report().toString());
 	}
 	
 	public void reset() {

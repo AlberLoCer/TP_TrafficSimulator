@@ -19,7 +19,7 @@ public class SetWeatherEventBuilder extends Builder<Event> {
 	public static final String roadSubKey = "road";
 	public static final String weatherSubKey = "weather";
 	
-	SetWeatherEventBuilder() {
+	public SetWeatherEventBuilder() {
 		super(type);
 		
 	}
