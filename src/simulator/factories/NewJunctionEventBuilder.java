@@ -1,5 +1,6 @@
 package simulator.factories;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import simulator.model.DequeingStrategy;
@@ -28,9 +29,17 @@ public class NewJunctionEventBuilder extends Builder<Event> {
 	protected Event createTheInstance(JSONObject data) {
 		int time = data.getInt(timeKey);
 		String id = data.getString(idKey);
-		String coorString = data.getString(coordinateKey);
-		int coorX = Integer.parseInt(coorString.substring(2, 4));
-		int coorY = Integer.parseInt(coorString.substring(6, 8)); //TODO: Check if it is right
+		
+		
+		JSONArray coorJArray = data.getJSONArray(coordinateKey);
+		int coorX = coorJArray.getInt(0);
+		int coorY = coorJArray.getInt(1);
+//		String coorString = data.getString(coordinateKey);		
+//		int coorX = Integer.parseInt(coorString.substring(2, 4));
+//		int coorY = Integer.parseInt(coorString.substring(6, 8)); //TODO: Check if it is right
+		
+		
+		
 		LightSwitchingStrategy ls = lssFactory.createInstance(data.getJSONObject(ls_strategy_key));
 		DequeingStrategy dq = dqsFactory.createInstance(data.getJSONObject(dq_strategy_key));
 
