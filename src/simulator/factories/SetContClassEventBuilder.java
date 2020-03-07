@@ -35,7 +35,8 @@ public class SetContClassEventBuilder extends Builder<Event> {
 		
 		for (JSONObject currJson : jList) {
 			String vehicleId = currJson.getString(vehicleSubKey);
-			Integer contClass = Integer.parseInt(currJson.getString(contClassSubKey));
+			//Integer contClass = Integer.parseInt(currJson.getString(contClassSubKey));
+			int contClass = currJson.getInt(contClassSubKey);
 			Pair<String, Integer> currPair = new Pair<String, Integer>(vehicleId, contClass);
 			pairList.add(currPair);
 		}
