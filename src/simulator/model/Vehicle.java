@@ -72,7 +72,8 @@ public class Vehicle extends SimulatedObject {
 				this.setStatus(VehicleStatus.WAITING);
 				this.setSpeed(0);
 				//TODO: Check this: Method of queue in junction class
-				itinerary.get(itineraryIdx).enter(road, this);
+				// TODO: itineraryIdx or ItineraryIdx + 1 ??
+				itinerary.get(itineraryIdx).enter(this);
 			}
 		}
 	}
