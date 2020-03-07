@@ -78,7 +78,28 @@ public class Vehicle extends SimulatedObject {
 	}
 	
 	void moveToNextRoad() {
-		//TODO: implement
+		if (this.status == VehicleStatus.PENDING) {
+			// Starts the trip -> no previous road
+			this.road = itinerary.get(0).roadTo(itinerary.get(1));
+			this.road.enter(this);
+			itineraryIdx++;
+			this.status = VehicleStatus.TRAVELING;
+		}
+		else if (this.status == VehicleStatus.WAITING){
+			// Continues the trip
+			this.road.exit(this);
+			this.road = itinerary.get(itineraryIdx).roadTo(itinerary.get(itineraryIdx + 1));
+			this.road.enter(this);
+			itineraryIdx++;
+			if (itineraryIdx >= itinerary.size()) {
+				this.status = VehicleStatus.ARRIVED;
+			}
+		}
+		else {
+			// Status = ARRIVED -> End the trip -> no new road -> throw exception
+			// Status = TRAVELLING -> Still moving on previous road -> throw exception			
+			throw new UnsupportedOperationException();
+		}
 	}
 
 	@Override

@@ -155,7 +155,6 @@ public class Main {
 	}
 
 	private static void startBatchMode() throws IOException {
-		// TODO complete this method to start the simulation
 		Controller controller = new Controller(new TrafficSimulator(), _eventsFactory);
 		InputStream is = new FileInputStream(new File(_inFile));
 		controller.loadEvents(is);

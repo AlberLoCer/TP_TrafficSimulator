@@ -28,18 +28,10 @@ public class NewJunctionEventBuilder extends Builder<Event> {
 	@Override
 	protected Event createTheInstance(JSONObject data) {
 		int time = data.getInt(timeKey);
-		String id = data.getString(idKey);
-		
-		
+		String id = data.getString(idKey);		
 		JSONArray coorJArray = data.getJSONArray(coordinateKey);
 		int coorX = coorJArray.getInt(0);
-		int coorY = coorJArray.getInt(1);
-//		String coorString = data.getString(coordinateKey);		
-//		int coorX = Integer.parseInt(coorString.substring(2, 4));
-//		int coorY = Integer.parseInt(coorString.substring(6, 8)); //TODO: Check if it is right
-		
-		
-		
+		int coorY = coorJArray.getInt(1);		
 		LightSwitchingStrategy ls = lssFactory.createInstance(data.getJSONObject(ls_strategy_key));
 		DequeingStrategy dq = dqsFactory.createInstance(data.getJSONObject(dq_strategy_key));
 

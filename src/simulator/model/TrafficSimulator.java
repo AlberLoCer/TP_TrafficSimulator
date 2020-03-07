@@ -29,14 +29,8 @@ public class TrafficSimulator {
 	public void advance() {
 		//Advance simulation time
 		simTime++;
-		//Execute and delete events if time 
-//		for(Event e : eventList) {
-//			if(e.getTime() == simTime) {
-//				e.execute(roadMap);
-//				eventList.remove(e); //TODO: Check whether deletion while iterating may cause errors
-//			}
-//		}
 		
+		//Execute and delete events if time 
 		//Traverse the eventList being careful when deleting an element (because index shouldn't be incremented)
 		int i = 0;
 		while (i < eventList.size()) {
