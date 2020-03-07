@@ -2,6 +2,8 @@ package simulator.model;
 
 import java.util.List;
 
+import javax.xml.transform.ErrorListener;
+
 import org.json.JSONObject;
 
 import simulator.misc.SortedArrayList;
@@ -28,12 +30,26 @@ public class TrafficSimulator {
 		//Advance simulation time
 		simTime++;
 		//Execute and delete events if time 
-		for(Event e : eventList) {
+//		for(Event e : eventList) {
+//			if(e.getTime() == simTime) {
+//				e.execute(roadMap);
+//				eventList.remove(e); //TODO: Check whether deletion while iterating may cause errors
+//			}
+//		}
+		
+		//Traverse the eventList being careful when deleting an element (because index shouldn't be incremented)
+		int i = 0;
+		while (i < eventList.size()) {
+			Event e = eventList.get(i);
 			if(e.getTime() == simTime) {
 				e.execute(roadMap);
-				eventList.remove(e); //TODO: Check whether deletion while iterating may cause errors
+				eventList.remove(e); 
+			}
+			else {
+				i++;
 			}
 		}
+		
 		//Advance methods
 		roadMap.advanceJunctions(simTime);
 		roadMap.advanceRoads(simTime);
