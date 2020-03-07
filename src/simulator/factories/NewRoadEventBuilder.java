@@ -15,7 +15,7 @@ public abstract class NewRoadEventBuilder extends Builder<Event> {
 	public static final String destKey = "dest";
 	public static final String lengthKey = "length";
 	public static final String co2Key = "co2limit";
-	public static final String maxSpeedKey = "maxSpeed";
+	public static final String maxSpeedKey = "maxspeed";
 	public static final String weatherKey = "weather";
 
 	NewRoadEventBuilder(String type) {
