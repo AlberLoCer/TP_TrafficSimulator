@@ -50,11 +50,11 @@ public class Controller {
 	}
 	
 	public void run(int n, OutputStream out) {
+		PrintStream p = new PrintStream(out);
 		for(int i = 0; i < n; i++) {
 			sim.advance();
-		}
-		PrintStream p = new PrintStream(out);
-		p.println(sim.report().toString());
+			p.println(sim.report().toString());
+		}		
 	}
 	
 	public void reset() {

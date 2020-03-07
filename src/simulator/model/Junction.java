@@ -34,6 +34,8 @@ public class Junction extends SimulatedObject {
 		this.lsStrategy = lsStrategy;
 		this.dqStrategy = dqStrategy;
 		
+		greenLightIdx = -1;
+		
 		incomingRoads = new ArrayList<>();
 		outgoingRoads = new HashMap<>();
 		queueList = new ArrayList<>();
@@ -85,7 +87,12 @@ public class Junction extends SimulatedObject {
 	public JSONObject report() {
 		JSONObject jo = new JSONObject();
 		jo.put(idKey, _id);
-		jo.put(greenKey, incomingRoads.get(greenLightIdx));
+		if (greenLightIdx > -1 && greenLightIdx <= incomingRoads.size()) {
+			jo.put(greenKey, incomingRoads.get(greenLightIdx).getId());
+		}
+		else {
+			jo.put(greenKey, "none");
+		}
 		jo.put(queueKey, queueList);
 		return jo;
 	}
