@@ -1,5 +1,7 @@
 package simulator.model;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -7,6 +9,10 @@ import java.util.Map;
 import org.json.JSONObject;
 
 public class Junction extends SimulatedObject {
+	
+	public static final String idKey = "id";
+	public static final String greenKey = "green";
+	public static final String queueKey = "queues";
 	
 	List<Road> incomingRoads;
 	Map<Junction,Road> outgoingRoads;
@@ -19,14 +25,19 @@ public class Junction extends SimulatedObject {
 	int lastSwitchTime;
 	LightSwitchingStrategy lsStrategy;
 	DequeingStrategy dqStrategy;
-	public static final String idKey = "id";
-	public static final String greenKey = "green";
-	public static final String queueKey = "queues";
+	
+	
 	Junction(String id, LightSwitchingStrategy lsStrategy, DequeingStrategy dqStrategy, 
 			int xCoor, int yCoor) { 
+		
 		super(id); 
 		this.lsStrategy = lsStrategy;
 		this.dqStrategy = dqStrategy;
+		
+		incomingRoads = new ArrayList<>();
+		outgoingRoads = new HashMap<>();
+		queueList = new ArrayList<>();
+		queueMapList = new HashMap<>();
 	}
 
 	@Override
