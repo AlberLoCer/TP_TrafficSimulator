@@ -47,10 +47,12 @@ public class Junction extends SimulatedObject {
 		
 		// TODO: check
 		for (List<Vehicle> currQueueList : queueList) {
-			List<Vehicle> toDequeue = dqStrategy.dequeue(currQueueList);
-			for(Vehicle v : toDequeue) {
-				v.moveToNextRoad();
-				currQueueList.remove(v);			
+			if (!currQueueList.isEmpty()) {
+				List<Vehicle> toDequeue = dqStrategy.dequeue(currQueueList);
+				for (Vehicle v : toDequeue) {
+					v.moveToNextRoad();
+					currQueueList.remove(v);
+				}
 			}
 		}
 		
