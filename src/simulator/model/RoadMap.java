@@ -10,15 +10,18 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class RoadMap {
-	private  List<Junction> juncList;
-	private  List<Road> roadList;
-	private  List<Vehicle> vehicleList;
+	
+	private List<Junction> juncList;
+	private List<Road> roadList;
+	private List<Vehicle> vehicleList;
 	private Map<String,Junction> juncMap;
 	private Map<String,Road> roadMap;
 	private Map<String,Vehicle> vehicleMap;
+	
 	public static final String junctionsKey = "junctions";
 	public static final String roadKey = "road";
 	public static final String vehiclesKey = "vehicles";
+	
 	public RoadMap() {
 		juncList = new ArrayList<Junction>();
 		roadList = new ArrayList<Road>();
@@ -26,9 +29,7 @@ public class RoadMap {
 		juncMap = new HashMap<String, Junction>();
 		roadMap = new HashMap<String, Road>();
 		vehicleMap = new HashMap<String, Vehicle>();
-		
 	}
-
 
 	void addJunction(Junction j) {
 		if(juncMap.containsKey(j.getId())) {
@@ -75,7 +76,9 @@ public class RoadMap {
 	}
 	
 	public JSONObject report() {
+		
 		JSONObject jo = new JSONObject();
+		
 		ArrayList<JSONObject> juncArray = new ArrayList<JSONObject>();
 		for(Junction j : juncList) {
 			juncArray.add(j.report());
@@ -91,9 +94,9 @@ public class RoadMap {
 		ArrayList<JSONObject> vehicleArray = new ArrayList<JSONObject>();
 		for(Vehicle v : vehicleList) {
 			vehicleArray.add(v.report());
-		}
-		
+		}		
 		jo.put(vehiclesKey, vehicleArray);
+		
 		return jo;
 	}
 	

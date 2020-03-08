@@ -18,7 +18,7 @@ public class Junction extends SimulatedObject {
 	Map<Junction,Road> outgoingRoads;
 	List<List<Vehicle>> queueList;
 	
-	// Used when a car enters the junction (to get the list<vehicles> from its road object
+	// Used when a car enters the junction (to get the list<vehicles> from its road object)
 	Map<Road,List<Vehicle>> queueMapList;		
 	
 	int greenLightIdx;

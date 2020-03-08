@@ -26,8 +26,7 @@ public  abstract class Road extends SimulatedObject {
 	public static final String vehiclesKey = "vehicles";
 	
 	Road(String id, Junction srcJunc, Junction destJunc, int maxSpeed, int contLimit, 
-			int length, Weather weather) { 
-		
+			int length, Weather weather) { 		
 		super(id); 
 		
 		if (maxSpeed > 0 && contLimit >= 0 && length > 0 

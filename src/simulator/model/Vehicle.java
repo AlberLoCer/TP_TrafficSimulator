@@ -127,8 +127,6 @@ public class Vehicle extends SimulatedObject {
 		}
 	}
 	
-
-	
 	void setContClass(int contClass) {
 		if(contClass <= 10 && contClass >= 0) {
 			this.contClass = contClass;
@@ -169,20 +167,8 @@ public class Vehicle extends SimulatedObject {
 		return maxSpeed;
 	}
 
-	private void setMaxSpeed(int maxSpeed) {
-		this.maxSpeed = maxSpeed;
-	}
-
-//	private void setItinerary(List<Junction> itinerary) {		// Has to be done with Collections.inmutableList
-//		this.itinerary = itinerary;
-//	}
-
 	private void setCurrSpeed(int currSpeed) {
 		this.currSpeed = currSpeed;
-	}
-
-	private void setRoad(Road road) {
-		this.road = road;
 	}
 
 	private int getTotalContamination() {
@@ -199,14 +185,6 @@ public class Vehicle extends SimulatedObject {
 
 	private void setLocation(int location) {
 		this.location = location;
-	}
-
-	private int getTotalDistance() {
-		return totalDistance;
-	}
-
-	private void setTotalDistance(int totalDistance) {
-		this.totalDistance = totalDistance;
 	}
 
 }
