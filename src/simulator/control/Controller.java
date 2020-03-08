@@ -5,6 +5,7 @@ import java.awt.List;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -50,11 +51,17 @@ public class Controller {
 	}
 	
 	public void run(int n, OutputStream out) {
-		PrintStream p = new PrintStream(out);
+		JSONArray ja = new JSONArray();
 		for(int i = 0; i < n; i++) {
 			sim.advance();
-			p.println(sim.report().toString());
+			ja.put(sim.report());
 		}		
+				
+		JSONObject mainObj = new JSONObject();
+		mainObj.put("states", ja);
+		
+		PrintStream p = new PrintStream(out);
+		p.println(mainObj.toString(1));
 	}
 	
 	public void reset() {

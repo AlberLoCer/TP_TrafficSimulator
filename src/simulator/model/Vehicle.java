@@ -71,6 +71,7 @@ public class Vehicle extends SimulatedObject {
 			if(this.getLocation() == this.getRoad().getLength()) {
 				this.setStatus(VehicleStatus.WAITING);
 				this.setSpeed(0);
+				this.setLocation(0);
 				//TODO: Check this: Method of queue in junction class
 				// TODO: itineraryIdx or ItineraryIdx + 1 ??
 				itinerary.get(itineraryIdx).enter(this);
@@ -90,6 +91,7 @@ public class Vehicle extends SimulatedObject {
 			// Continues the trip
 			this.road.exit(this);
 			this.road = itinerary.get(itineraryIdx).roadTo(itinerary.get(itineraryIdx + 1));
+			this.location = 0;
 			this.road.enter(this);
 			itineraryIdx++;
 			if (itineraryIdx >= itinerary.size()) {
