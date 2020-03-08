@@ -45,7 +45,20 @@ public class Junction extends SimulatedObject {
 	@Override
 	void advance(int time) {
 		
-		// TODO: implement
+		// TODO: check
+		for (List<Vehicle> currQueueList : queueList) {
+			List<Vehicle> toDequeue = dqStrategy.dequeue(currQueueList);
+			for(Vehicle v : toDequeue) {
+				v.moveToNextRoad();
+				currQueueList.remove(v);			
+			}
+		}
+		
+		int newGreen = lsStrategy.chooseNextGreen(incomingRoads, queueList, greenLightIdx, lastSwitchTime, time);
+		if (newGreen != greenLightIdx) {
+			greenLightIdx = newGreen;
+			lastSwitchTime = time;
+		}
 	}
 
 	void addIncommingRoad(Road r) {
@@ -75,14 +88,14 @@ public class Junction extends SimulatedObject {
 		}
 	}
 	
-	void enter( Vehicle v) {
-		
-		//TODO: implement method
+	void enter( Vehicle v) {		
+		//TODO: check
+		queueMapList.get(v.getRoad()).add(v);
 	}
 	
 	Road roadTo(Junction j) {
-		//TODO: implement method
-		return null;	
+		// TODO: check
+		return outgoingRoads.get(j);
 	}
 	@Override
 	public JSONObject report() {
