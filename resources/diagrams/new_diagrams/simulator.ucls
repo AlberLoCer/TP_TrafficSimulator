@@ -3,7 +3,7 @@
   realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="simulator.model.TrafficSimulator" project="TrafficSimulatorTP" 
     file="/TrafficSimulatorTP/src/simulator/model/TrafficSimulator.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="507" y="113"/>    
+    <position height="-1" width="-1" x="502" y="115"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="false"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="simulator.model.Event" project="TrafficSimulatorTP" 
     file="/TrafficSimulatorTP/src/simulator/model/Event.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="123" width="143" x="41" y="254"/>    
+    <position height="-1" width="-1" x="112" y="323"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -146,166 +146,200 @@
     </display>  
   </class>  
   <association id="17">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="18" name="juncList">        
-        <position height="18" width="45" x="308" y="658"/>      
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="18" name="eventList">        
+        <position height="0" width="0" x="0" y="8"/>      
       </attribute>      
-      <multiplicity id="19" minimum="0" maximum="2147483647"/>    
+      <multiplicity id="19" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="8"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="false"/>  
   </association>  
-  <association id="20">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="21" name="status">        
-        <position height="18" width="38" x="1168" y="1097"/>      
-      </attribute>      
-      <multiplicity id="22" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="false"/>  
-  </association>  
-  <realization id="23">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="8"/>  
-  </realization>  
-  <realization id="24">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="8"/>  
-  </realization>  
-  <association id="25">    
-    <bendpoint x="768" y="1003"/>    
-    <bendpoint x="657" y="1003"/>    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="26" name="road">        
-        <position height="18" width="30" x="834" y="980"/>      
-      </attribute>      
-      <multiplicity id="27" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="false"/>  
-  </association>  
-  <association id="28">    
+  <generalization id="20">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="21">    
     <bendpoint x="396" y="891"/>    
     <bendpoint x="302" y="891"/>    
     <bendpoint x="218" y="891"/>    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="29" name="destJunc">        
+      <attribute id="22" name="destJunc">        
         <position height="18" width="52" x="326" y="893"/>      
       </attribute>      
-      <multiplicity id="30" minimum="0" maximum="1"/>    
+      <multiplicity id="23" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="false"/>  
+  </association>  
+  <association id="24">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="25" name="lsStrategy">        
+        <position height="18" width="59" x="-195" y="985"/>      
+      </attribute>      
+      <multiplicity id="26" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="false"/>  
+  </association>  
+  <realization id="27">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <association id="28">    
+    <bendpoint x="395" y="863"/>    
+    <bendpoint x="313" y="863"/>    
+    <bendpoint x="221" y="862"/>    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="29" name="srcJunc">        
+        <position height="18" width="47" x="328" y="840"/>      
+      </attribute>      
+      <multiplicity id="30" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="false"/>  
   </association>  
   <association id="31">    
+    <bendpoint x="903" y="716"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="32" name="vehicleMap">        
+        <position height="18" width="62" x="755" y="672"/>      
+      </attribute>      
+      <multiplicity id="33" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="false"/>  
+  </association>  
+  <association id="34">    
     <bendpoint x="-140" y="840"/>    
     <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="32" name="dqStrategy">        
+      <attribute id="35" name="dqStrategy">        
         <position height="18" width="63" x="-256" y="815"/>      
       </attribute>      
-      <multiplicity id="33" minimum="0" maximum="1"/>    
+      <multiplicity id="36" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="false"/>  
   </association>  
-  <association id="34">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="35" name="eventList"/>      
-      <multiplicity id="36" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="false"/>  
-  </association>  
   <association id="37">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="38" name="weather">        
-        <position height="18" width="51" x="706" y="1045"/>      
-      </attribute>      
-      <multiplicity id="39" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="false"/>  
-  </association>  
-  <association id="40">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="41" name="roadMap"/>      
-      <multiplicity id="42" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="false"/>  
-  </association>  
-  <generalization id="43">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <realization id="44">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="7"/>  
-  </realization>  
-  <association id="45">    
-    <bendpoint x="903" y="716"/>    
+    <bendpoint x="571" y="828"/>    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="46" name="vehicleMap">        
-        <position height="18" width="62" x="755" y="672"/>      
+      <attribute id="38" name="roadMap">        
+        <position height="18" width="50" x="553" y="628"/>      
       </attribute>      
-      <multiplicity id="47" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
-    <display labels="true" multiplicity="false"/>  
-  </association>  
-  <association id="48">    
-    <bendpoint x="395" y="863"/>    
-    <bendpoint x="313" y="863"/>    
-    <bendpoint x="221" y="862"/>    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="49" name="srcJunc">        
-        <position height="18" width="47" x="328" y="840"/>      
-      </attribute>      
-      <multiplicity id="50" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="false"/>  
-  </association>  
-  <association id="51">    
-    <bendpoint x="472" y="817"/>    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="52" name="roadList">        
-        <position height="18" width="47" x="430" y="629"/>      
-      </attribute>      
-      <multiplicity id="53" minimum="0" maximum="2147483647"/>    
+      <multiplicity id="39" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="false"/>  
   </association>  
-  <association id="54">    
+  <association id="40">    
     <bendpoint x="660" y="940"/>    
     <bendpoint x="773" y="940"/>    
     <bendpoint x="862" y="940"/>    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="55" name="vehicles">        
+      <attribute id="41" name="vehicles">        
         <position height="18" width="48" x="677" y="914"/>      
       </attribute>      
-      <multiplicity id="56" minimum="0" maximum="2147483647"/>    
+      <multiplicity id="42" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="false"/>  
   </association>  
-  <association id="57">    
-    <bendpoint x="571" y="828"/>    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="58" name="roadMap">        
-        <position height="18" width="50" x="553" y="628"/>      
+  <association id="43">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="44" name="status">        
+        <position height="18" width="38" x="1168" y="1097"/>      
       </attribute>      
-      <multiplicity id="59" minimum="0" maximum="2147483647"/>    
+      <multiplicity id="45" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="false"/>  
+  </association>  
+  <association id="46">    
+    <bendpoint x="204" y="1007"/>    
+    <bendpoint x="299" y="1007"/>    
+    <bendpoint x="391" y="1008"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="47" name="outgoingRoads">        
+        <position height="18" width="82" x="226" y="1014"/>      
+      </attribute>      
+      <multiplicity id="48" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="false"/>  
   </association>  
-  <generalization id="60">    
-    <end type="SOURCE" refId="16"/>    
+  <realization id="49">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <association id="50">    
+    <bendpoint x="472" y="817"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="51" name="roadList">        
+        <position height="18" width="47" x="430" y="629"/>      
+      </attribute>      
+      <multiplicity id="52" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="false"/>  
+  </association>  
+  <association id="53">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="54" name="weather">        
+        <position height="18" width="51" x="706" y="1045"/>      
+      </attribute>      
+      <multiplicity id="55" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="false"/>  
+  </association>  
+  <generalization id="56">    
+    <end type="SOURCE" refId="15"/>    
     <end type="TARGET" refId="5"/>  
   </generalization>  
+  <association id="57">    
+    <bendpoint x="878" y="793"/>    
+    <bendpoint x="874" y="785"/>    
+    <bendpoint x="230" y="786"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="58" name="itinerary">        
+        <position height="18" width="47" x="772" y="759"/>      
+      </attribute>      
+      <multiplicity id="59" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="false"/>  
+  </association>  
+  <realization id="60">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
   <association id="61">    
     <bendpoint x="220" y="982"/>    
     <bendpoint x="395" y="982"/>    
@@ -313,71 +347,79 @@
       <attribute id="62" name="incomingRoads">        
         <position height="18" width="83" x="222" y="959"/>      
       </attribute>      
-      <multiplicity id="63" minimum="0" maximum="2147483647"/>    
+      <multiplicity id="63" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="false"/>  
   </association>  
-  <realization id="64">    
+  <association id="64">    
+    <bendpoint x="138" y="749"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="65" name="juncMap">        
+        <position height="18" width="48" x="220" y="625"/>      
+      </attribute>      
+      <multiplicity id="66" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="false"/>  
+  </association>  
+  <realization id="67">    
     <end type="SOURCE" refId="11"/>    
     <end type="TARGET" refId="7"/>  
   </realization>  
-  <association id="65">    
+  <association id="68">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="69" name="juncList">        
+        <position height="18" width="45" x="308" y="658"/>      
+      </attribute>      
+      <multiplicity id="70" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="false"/>  
+  </association>  
+  <association id="71">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="72" name="roadMap">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="73" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="false"/>  
+  </association>  
+  <association id="74">    
     <bendpoint x="948" y="704"/>    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="66" name="vehicleList">        
+      <attribute id="75" name="vehicleList">        
         <position height="18" width="59" x="826" y="612"/>      
       </attribute>      
-      <multiplicity id="67" minimum="0" maximum="2147483647"/>    
+      <multiplicity id="76" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="false"/>  
   </association>  
-  <association id="68">    
-    <bendpoint x="204" y="1007"/>    
-    <bendpoint x="299" y="1007"/>    
-    <bendpoint x="391" y="1008"/>    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="69" name="outgoingRoads">        
-        <position height="18" width="82" x="226" y="1014"/>      
+  <association id="77">    
+    <bendpoint x="768" y="1003"/>    
+    <bendpoint x="657" y="1003"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="78" name="road">        
+        <position height="18" width="30" x="834" y="980"/>      
       </attribute>      
-      <multiplicity id="70" minimum="0" maximum="2147483647"/>    
+      <multiplicity id="79" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="false"/>  
-  </association>  
-  <association id="71">    
-    <bendpoint x="878" y="793"/>    
-    <bendpoint x="874" y="785"/>    
-    <bendpoint x="230" y="786"/>    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="72" name="itinerary">        
-        <position height="18" width="47" x="772" y="759"/>      
-      </attribute>      
-      <multiplicity id="73" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="false"/>  
-  </association>  
-  <association id="74">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="75" name="lsStrategy">        
-        <position height="18" width="59" x="-195" y="985"/>      
-      </attribute>      
-      <multiplicity id="76" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="false"/>  
-  </association>  
-  <association id="77">    
-    <bendpoint x="138" y="749"/>    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="78" name="juncMap">        
-        <position height="18" width="48" x="220" y="625"/>      
-      </attribute>      
-      <multiplicity id="79" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="false"/>  
   </association>  
   <classifier-display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 

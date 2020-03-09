@@ -13,24 +13,16 @@ public class MostCrowdedStrategy implements LightSwitchingStrategy {
 			int currTime) {
 		if(roads.size() == 0) {
 			return -1;
+		}	
+		else if(currGreen == -1) {
+			return giveGreen(qs, 0);
 		}
-		
+		else if(currTime - lastSwitchingTime < timeSlot) {
+			return currGreen;
+		}
 		else {
-		
-			if(currTime - lastSwitchingTime < timeSlot) {
-				return currGreen;
-			}
-			
-			else if(currGreen == -1) {
-				return giveGreen(qs, 0);
-			}
-			
-			else {
-				return giveGreen(qs, currGreen + 1);
-			}
-		
-		}
-		
+			return giveGreen(qs, currGreen + 1);
+		}		
 	}
 	
 	private int giveGreen(List<List<Vehicle>> qs, int firstIdx) {

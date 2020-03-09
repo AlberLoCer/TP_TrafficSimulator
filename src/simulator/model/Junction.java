@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class Junction extends SimulatedObject {
@@ -13,6 +14,8 @@ public class Junction extends SimulatedObject {
 	public static final String idKey = "id";
 	public static final String greenKey = "green";
 	public static final String queueKey = "queues";
+	public static final String roadSubKey = "road";
+	public static final String vehiclesSubKey = "vehicles";
 	
 	List<Road> incomingRoads;
 	Map<Junction,Road> outgoingRoads;
@@ -25,21 +28,30 @@ public class Junction extends SimulatedObject {
 	int lastSwitchTime;
 	LightSwitchingStrategy lsStrategy;
 	DequeingStrategy dqStrategy;
+	int xCoor, yCoor;
 	
 	
 	Junction(String id, LightSwitchingStrategy lsStrategy, DequeingStrategy dqStrategy, 
 			int xCoor, int yCoor) { 
 		
 		super(id); 
-		this.lsStrategy = lsStrategy;
-		this.dqStrategy = dqStrategy;
 		
-		greenLightIdx = -1;
-		
-		incomingRoads = new ArrayList<>();
-		outgoingRoads = new HashMap<>();
-		queueList = new ArrayList<>();
-		queueMapList = new HashMap<>();
+		if (lsStrategy != null && dqStrategy != null && xCoor >= 0 && yCoor >= 0) {			
+			this.lsStrategy = lsStrategy;
+			this.dqStrategy = dqStrategy;
+			this.xCoor = xCoor;
+			this.yCoor = yCoor;
+			
+			greenLightIdx = -1;
+			
+			incomingRoads = new ArrayList<>();
+			outgoingRoads = new HashMap<>();
+			queueList = new ArrayList<>();
+			queueMapList = new HashMap<>();
+		}
+		else {
+			throw new IllegalArgumentException();
+		}
 	}
 
 	@Override
@@ -76,8 +88,8 @@ public class Junction extends SimulatedObject {
 	}
 	
 	void addOutGotingRoad(Road r){
-		Junction destJunc = r.getDestJunc();
 		if (r.getSrcJunc().equals(this)) {
+			Junction destJunc = r.getDestJunc();
 			if (outgoingRoads.containsKey(destJunc)) {
 				throw new IllegalArgumentException();
 			}
@@ -109,7 +121,16 @@ public class Junction extends SimulatedObject {
 		else {
 			jo.put(greenKey, "none");
 		}
-		jo.put(queueKey, queueList);
+		
+		JSONArray jArray = new JSONArray();
+		for (Road road : queueMapList.keySet()) {
+			JSONObject jObject = new JSONObject();
+			jObject.put(roadSubKey, road.getId());
+			jObject.put(vehiclesSubKey, queueMapList.get(road));
+			jArray.put(jObject);
+		}
+		jo.put(queueKey, jArray);		
+		
 		return jo;
 	}
 

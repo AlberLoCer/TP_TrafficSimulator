@@ -14,7 +14,7 @@ public class Vehicle extends SimulatedObject {
 	private int maxSpeed;
 	private int contClass;
 	private List<Junction> itinerary;
-	private int itineraryIdx;
+	private int itineraryIdx;				// Index of the NEXT junction in the itinerary
 	private int currSpeed;
 	private Road road;
 	private int totalContamination;
@@ -61,6 +61,7 @@ public class Vehicle extends SimulatedObject {
 			int newLocation = Math.min(this.getLocation()+this.getCurrSpeed(), this.getRoad().getLength());
 			int distTravelledOnCycle = newLocation - getLocation();		// For contamination calculus
 			this.setLocation(newLocation);
+			this.totalDistance += distTravelledOnCycle;
 			
 			//Update contamination
 			int c = getContClass() * distTravelledOnCycle;
@@ -72,7 +73,6 @@ public class Vehicle extends SimulatedObject {
 				this.setStatus(VehicleStatus.WAITING);
 				this.setSpeed(0);
 				this.setLocation(0);
-				//TODO: Check this: Method of queue in junction class
 				// TODO: itineraryIdx or ItineraryIdx + 1 ??
 				itinerary.get(itineraryIdx).enter(this);
 			}
@@ -89,12 +89,15 @@ public class Vehicle extends SimulatedObject {
 		}
 		else if (this.status == VehicleStatus.WAITING){
 			// Continues the trip
-			this.road.exit(this);
-			this.road = itinerary.get(itineraryIdx).roadTo(itinerary.get(itineraryIdx + 1));
-			this.location = 0;
-			this.road.enter(this);
-			itineraryIdx++;
-			if (itineraryIdx >= itinerary.size()) {
+			this.road.exit(this);			
+			if (itineraryIdx < itinerary.size() - 1) {
+				this.road = itinerary.get(itineraryIdx).roadTo(itinerary.get(itineraryIdx + 1));
+				this.location = 0;
+				this.road.enter(this);
+				itineraryIdx++;
+			}
+			else {
+				// Has arrived to end of itinerary
 				this.status = VehicleStatus.ARRIVED;
 			}
 		}

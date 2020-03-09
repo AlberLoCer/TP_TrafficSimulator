@@ -21,7 +21,7 @@ public class CityRoad extends Road {
 
 	@Override
 	int calculateVehicleSpeed(Vehicle v) {
-		return (int) (( (11.0-v.getContClass()) / 11.0) * currSpeedLimit);
+		return (int) Math.ceil(( (11.0-v.getContClass()) / 11.0) * currSpeedLimit);
 	}
 
 	private int weatherToCont() {

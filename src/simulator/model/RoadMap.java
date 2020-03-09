@@ -19,7 +19,7 @@ public class RoadMap {
 	private Map<String,Vehicle> vehicleMap;
 	
 	public static final String junctionsKey = "junctions";
-	public static final String roadKey = "road";
+	public static final String roadKey = "roads";
 	public static final String vehiclesKey = "vehicles";
 	
 	public RoadMap() {
@@ -57,16 +57,16 @@ public class RoadMap {
 	}
 	
 	void addVehicle(Vehicle v) {
-		boolean roadsOk = true;
+		boolean junctionsOK = true;
 		for(Junction j : v.getItinerary()) {
 			if (!juncMap.containsValue(j)) {
-				roadsOk = false;
+				junctionsOK = false;
 			}
 		}
 		if(vehicleMap.containsKey(v.getId())) {
 			throw new UnsupportedOperationException("The vehicle map already contained the vehicle "+v.getId());
 		}	
-		else if (!roadsOk) {
+		else if (!junctionsOK) {
 			throw new UnsupportedOperationException("Some junctions in vehicle itinerary is not registered");
 		}		
 		else {			

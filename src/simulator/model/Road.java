@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 public  abstract class Road extends SimulatedObject {
@@ -96,7 +97,13 @@ public  abstract class Road extends SimulatedObject {
 		jo.put(speedLimitKey, currSpeedLimit);
 		jo.put(weatherKey, weather);
 		jo.put(co2Key, totalCont);
-		jo.put(vehiclesKey, vehicles);
+		
+		JSONArray ja = new JSONArray();
+		for (Vehicle v : vehicles) {
+			ja.put(v.getId());
+		}
+		
+		jo.put(vehiclesKey, ja);
 		
 		return jo;
 	}
