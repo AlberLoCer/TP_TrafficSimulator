@@ -11403,21 +11403,7 @@
      "queues": [
       {
        "road": "r1",
-       "vehicles": [{
-        "road": {
-         "length": 10000,
-         "id": "r1",
-         "destJunc": {"id": "j3"},
-         "srcJunc": {"id": "j1"}
-        },
-        "itinerary": [
-         {"id": "j1"},
-         {"id": "j3"},
-         {"id": "j4"}
-        ],
-        "id": "v1",
-        "status": "WAITING"
-       }]
+       "vehicles": ["v1"]
       },
       {
        "road": "r2",
@@ -16797,21 +16783,7 @@
       },
       {
        "road": "r2",
-       "vehicles": [{
-        "road": {
-         "length": 10000,
-         "id": "r2",
-         "destJunc": {"id": "j3"},
-         "srcJunc": {"id": "j2"}
-        },
-        "itinerary": [
-         {"id": "j2"},
-         {"id": "j3"},
-         {"id": "j4"}
-        ],
-        "id": "v2",
-        "status": "WAITING"
-       }]
+       "vehicles": ["v2"]
       }
      ],
      "id": "j3"

@@ -9782,21 +9782,7 @@
      "green": "r1",
      "queues": [{
       "road": "r1",
-      "vehicles": [{
-       "road": {
-        "length": 10000,
-        "id": "r1",
-        "destJunc": {"id": "j2"},
-        "srcJunc": {"id": "j1"}
-       },
-       "itinerary": [
-        {"id": "j1"},
-        {"id": "j2"},
-        {"id": "j3"}
-       ],
-       "id": "v1",
-       "status": "WAITING"
-      }]
+      "vehicles": ["v1"]
      }],
      "id": "j2"
     },
@@ -13624,21 +13610,7 @@
      "green": "r1",
      "queues": [{
       "road": "r1",
-      "vehicles": [{
-       "road": {
-        "length": 10000,
-        "id": "r1",
-        "destJunc": {"id": "j2"},
-        "srcJunc": {"id": "j1"}
-       },
-       "itinerary": [
-        {"id": "j1"},
-        {"id": "j2"},
-        {"id": "j3"}
-       ],
-       "id": "v2",
-       "status": "WAITING"
-      }]
+      "vehicles": ["v2"]
      }],
      "id": "j2"
     },
