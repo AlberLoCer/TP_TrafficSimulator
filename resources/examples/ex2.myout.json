@@ -9737,8 +9737,8 @@
      "co2": 43338,
      "weather": "SUNNY",
      "vehicles": [
-      "v2",
-      "v1"
+      "v1",
+      "v2"
      ],
      "id": "r1"
     },
@@ -9755,7 +9755,7 @@
      "distance": 10000,
      "road": "r1",
      "co2": 34320,
-     "location": 0,
+     "location": 10000,
      "id": "v1",
      "class": 5,
      "speed": 0,
@@ -9810,7 +9810,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 330,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -9818,14 +9818,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 10066,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 34650,
+     "location": 66,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7150,
@@ -9876,7 +9876,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 650,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -9884,14 +9884,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 10132,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 34980,
+     "location": 132,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7200,
@@ -9942,7 +9942,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 970,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -9950,14 +9950,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 10198,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 35310,
+     "location": 198,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7250,
@@ -10008,7 +10008,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 1290,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -10016,14 +10016,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 10264,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 35640,
+     "location": 264,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7300,
@@ -10074,7 +10074,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 1610,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -10082,14 +10082,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 10330,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 35970,
+     "location": 330,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7350,
@@ -10140,7 +10140,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 1930,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -10148,14 +10148,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 10396,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 36300,
+     "location": 396,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7400,
@@ -10206,7 +10206,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 2250,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -10214,14 +10214,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 10462,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 36630,
+     "location": 462,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7450,
@@ -10272,7 +10272,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 2570,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -10280,14 +10280,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 10528,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 36960,
+     "location": 528,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7500,
@@ -10338,7 +10338,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 2890,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -10346,14 +10346,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 10594,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 37290,
+     "location": 594,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7550,
@@ -10404,7 +10404,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 3210,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -10412,14 +10412,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 10660,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 37620,
+     "location": 660,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7600,
@@ -10470,7 +10470,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 3530,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -10478,14 +10478,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 10726,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 37950,
+     "location": 726,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7650,
@@ -10536,7 +10536,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 3850,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -10544,14 +10544,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 10792,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 38280,
+     "location": 792,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7700,
@@ -10602,7 +10602,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 4170,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -10610,14 +10610,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 10858,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 38610,
+     "location": 858,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7750,
@@ -10668,7 +10668,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 4490,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -10676,14 +10676,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 10924,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 38940,
+     "location": 924,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7800,
@@ -10734,7 +10734,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 4810,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -10742,14 +10742,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 10990,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 39270,
+     "location": 990,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7850,
@@ -10800,7 +10800,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 5130,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -10808,14 +10808,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 11056,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 39600,
+     "location": 1056,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7900,
@@ -10866,7 +10866,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 5450,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -10874,14 +10874,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 11122,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 39930,
+     "location": 1122,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 7950,
@@ -10932,7 +10932,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 5770,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -10940,14 +10940,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 11188,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 40260,
+     "location": 1188,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8000,
@@ -10998,7 +10998,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 6090,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -11006,14 +11006,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 11254,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 40590,
+     "location": 1254,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8050,
@@ -11064,7 +11064,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 6410,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -11072,14 +11072,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 11320,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 40920,
+     "location": 1320,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8100,
@@ -11130,7 +11130,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 6730,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -11138,14 +11138,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 11386,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 41250,
+     "location": 1386,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8150,
@@ -11196,7 +11196,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 7050,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -11204,14 +11204,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 11452,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 41580,
+     "location": 1452,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8200,
@@ -11262,7 +11262,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 7370,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -11270,14 +11270,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 11518,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 41910,
+     "location": 1518,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8250,
@@ -11328,7 +11328,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 7690,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -11336,14 +11336,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 11584,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 42240,
+     "location": 1584,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8300,
@@ -11394,7 +11394,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 8010,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -11402,14 +11402,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 11650,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 42570,
+     "location": 1650,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8350,
@@ -11460,7 +11460,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 8330,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -11468,14 +11468,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 11716,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 42900,
+     "location": 1716,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8400,
@@ -11526,7 +11526,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 8650,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -11534,14 +11534,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 11782,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 43230,
+     "location": 1782,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8450,
@@ -11592,7 +11592,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 8970,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -11600,14 +11600,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 11848,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 43560,
+     "location": 1848,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8500,
@@ -11658,7 +11658,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 9290,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -11666,14 +11666,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 11914,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 43890,
+     "location": 1914,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8550,
@@ -11724,7 +11724,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 9610,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -11732,14 +11732,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 11980,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 44220,
+     "location": 1980,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8600,
@@ -11790,7 +11790,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 9930,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -11798,14 +11798,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 12046,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 44550,
+     "location": 2046,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8650,
@@ -11856,7 +11856,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 10250,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -11864,14 +11864,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 12112,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 44880,
+     "location": 2112,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8700,
@@ -11922,7 +11922,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 10570,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -11930,14 +11930,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 12178,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 45210,
+     "location": 2178,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8750,
@@ -11988,7 +11988,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 10890,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -11996,14 +11996,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 12244,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 45540,
+     "location": 2244,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8800,
@@ -12054,7 +12054,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 11210,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -12062,14 +12062,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 12310,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 45870,
+     "location": 2310,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8850,
@@ -12120,7 +12120,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 11530,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -12128,14 +12128,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 12376,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 46200,
+     "location": 2376,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8900,
@@ -12186,7 +12186,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 11850,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -12194,14 +12194,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 12442,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 46530,
+     "location": 2442,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 8950,
@@ -12252,7 +12252,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 12170,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -12260,14 +12260,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 12508,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 46860,
+     "location": 2508,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9000,
@@ -12318,7 +12318,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 12490,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -12326,14 +12326,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 12574,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 47190,
+     "location": 2574,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9050,
@@ -12384,7 +12384,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 12810,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -12392,14 +12392,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 12640,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 47520,
+     "location": 2640,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9100,
@@ -12450,7 +12450,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 13130,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -12458,14 +12458,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 12706,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 47850,
+     "location": 2706,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9150,
@@ -12516,7 +12516,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 13450,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -12524,14 +12524,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 12772,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 48180,
+     "location": 2772,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9200,
@@ -12582,7 +12582,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 13770,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -12590,14 +12590,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 12838,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 48510,
+     "location": 2838,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9250,
@@ -12648,7 +12648,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 14090,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -12656,14 +12656,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 12904,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 48840,
+     "location": 2904,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9300,
@@ -12714,7 +12714,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 14410,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -12722,14 +12722,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 12970,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 49170,
+     "location": 2970,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9350,
@@ -12780,7 +12780,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 14730,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -12788,14 +12788,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 13036,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 49500,
+     "location": 3036,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9400,
@@ -12846,7 +12846,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 15050,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -12854,14 +12854,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 13102,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 49830,
+     "location": 3102,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9450,
@@ -12912,7 +12912,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 15370,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -12920,14 +12920,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 13168,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 50160,
+     "location": 3168,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9500,
@@ -12978,7 +12978,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 15690,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -12986,14 +12986,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 13234,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 50490,
+     "location": 3234,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9550,
@@ -13044,7 +13044,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 16010,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -13052,14 +13052,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 13300,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 50820,
+     "location": 3300,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9600,
@@ -13110,7 +13110,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 16330,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -13118,14 +13118,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 13366,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 51150,
+     "location": 3366,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9650,
@@ -13176,7 +13176,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 16650,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -13184,14 +13184,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 13432,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 51480,
+     "location": 3432,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9700,
@@ -13242,7 +13242,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 16970,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -13250,14 +13250,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 13498,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 51810,
+     "location": 3498,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9750,
@@ -13308,7 +13308,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 17290,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -13316,14 +13316,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 13564,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 52140,
+     "location": 3564,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9800,
@@ -13374,7 +13374,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 17610,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -13382,14 +13382,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 13630,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 52470,
+     "location": 3630,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9850,
@@ -13440,7 +13440,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 17930,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -13448,14 +13448,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 13696,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 52800,
+     "location": 3696,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9900,
@@ -13506,7 +13506,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 18250,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -13514,14 +13514,14 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 13762,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 53130,
+     "location": 3762,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 9950,
@@ -13572,7 +13572,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 18570,
      "weather": "STORM",
      "vehicles": ["v1"],
      "id": "r2"
@@ -13580,20 +13580,20 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 13828,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 53460,
+     "location": 3828,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
      "distance": 10000,
      "road": "r1",
      "co2": 15100,
-     "location": 0,
+     "location": 10000,
      "id": "v2",
      "class": 2,
      "speed": 0,
@@ -13638,7 +13638,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 18990,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -13649,24 +13649,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 13894,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 53790,
+     "location": 3894,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10050,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 15200,
+     "location": 50,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -13707,7 +13707,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 19410,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -13718,24 +13718,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 13960,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 54120,
+     "location": 3960,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10100,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 15300,
+     "location": 100,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -13776,7 +13776,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 19830,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -13787,24 +13787,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 14026,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 54450,
+     "location": 4026,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10150,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 15400,
+     "location": 150,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -13845,7 +13845,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 20250,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -13856,24 +13856,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 14092,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 54780,
+     "location": 4092,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10200,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 15500,
+     "location": 200,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -13914,7 +13914,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 20670,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -13925,24 +13925,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 14158,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 55110,
+     "location": 4158,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10250,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 15600,
+     "location": 250,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -13983,7 +13983,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 21090,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -13994,24 +13994,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 14224,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 55440,
+     "location": 4224,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10300,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 15700,
+     "location": 300,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -14052,7 +14052,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 21510,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -14063,24 +14063,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 14290,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 55770,
+     "location": 4290,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10350,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 15800,
+     "location": 350,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -14121,7 +14121,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 21930,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -14132,24 +14132,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 14356,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 56100,
+     "location": 4356,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10400,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 15900,
+     "location": 400,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -14190,7 +14190,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 22350,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -14201,24 +14201,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 14422,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 56430,
+     "location": 4422,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10450,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 16000,
+     "location": 450,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -14259,7 +14259,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 22770,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -14270,24 +14270,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 14488,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 56760,
+     "location": 4488,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10500,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 16100,
+     "location": 500,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -14328,7 +14328,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 23190,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -14339,24 +14339,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 14554,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 57090,
+     "location": 4554,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10550,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 16200,
+     "location": 550,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -14397,7 +14397,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 23610,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -14408,24 +14408,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 14620,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 57420,
+     "location": 4620,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10600,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 16300,
+     "location": 600,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -14466,7 +14466,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 24030,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -14477,24 +14477,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 14686,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 57750,
+     "location": 4686,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10650,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 16400,
+     "location": 650,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -14535,7 +14535,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 24450,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -14546,24 +14546,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 14752,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 58080,
+     "location": 4752,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10700,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 16500,
+     "location": 700,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -14604,7 +14604,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 24870,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -14615,24 +14615,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 14818,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 58410,
+     "location": 4818,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10750,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 16600,
+     "location": 750,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -14673,7 +14673,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 25290,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -14684,24 +14684,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 14884,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 58740,
+     "location": 4884,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10800,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 16700,
+     "location": 800,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -14742,7 +14742,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 25710,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -14753,24 +14753,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 14950,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 59070,
+     "location": 4950,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10850,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 16800,
+     "location": 850,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -14811,7 +14811,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 26130,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -14822,24 +14822,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 15016,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 59400,
+     "location": 5016,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10900,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 16900,
+     "location": 900,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -14880,7 +14880,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 26550,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -14891,24 +14891,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 15082,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 59730,
+     "location": 5082,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 10950,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 17000,
+     "location": 950,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -14949,7 +14949,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 26970,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -14960,24 +14960,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 15148,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 60060,
+     "location": 5148,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11000,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 17100,
+     "location": 1000,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -15018,7 +15018,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 27390,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -15029,24 +15029,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 15214,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 60390,
+     "location": 5214,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11050,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 17200,
+     "location": 1050,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -15087,7 +15087,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 27810,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -15098,24 +15098,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 15280,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 60720,
+     "location": 5280,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11100,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 17300,
+     "location": 1100,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -15156,7 +15156,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 28230,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -15167,24 +15167,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 15346,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 61050,
+     "location": 5346,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11150,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 17400,
+     "location": 1150,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -15225,7 +15225,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 28650,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -15236,24 +15236,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 15412,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 61380,
+     "location": 5412,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11200,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 17500,
+     "location": 1200,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -15294,7 +15294,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 29070,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -15305,24 +15305,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 15478,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 61710,
+     "location": 5478,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11250,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 17600,
+     "location": 1250,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -15363,7 +15363,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 29490,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -15374,24 +15374,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 15544,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 62040,
+     "location": 5544,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11300,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 17700,
+     "location": 1300,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -15432,7 +15432,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 29910,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -15443,24 +15443,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 15610,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 62370,
+     "location": 5610,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11350,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 17800,
+     "location": 1350,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -15501,7 +15501,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 30330,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -15512,24 +15512,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 15676,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 62700,
+     "location": 5676,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11400,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 17900,
+     "location": 1400,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -15570,7 +15570,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 30750,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -15581,24 +15581,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 15742,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 63030,
+     "location": 5742,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11450,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 18000,
+     "location": 1450,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -15639,7 +15639,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 31170,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -15650,24 +15650,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 15808,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 63360,
+     "location": 5808,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11500,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 18100,
+     "location": 1500,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -15708,7 +15708,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 31590,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -15719,24 +15719,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 15874,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 63690,
+     "location": 5874,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11550,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 18200,
+     "location": 1550,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -15777,7 +15777,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 32010,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -15788,24 +15788,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 15940,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 64020,
+     "location": 5940,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11600,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 18300,
+     "location": 1600,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -15846,7 +15846,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 32430,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -15857,24 +15857,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 16006,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 64350,
+     "location": 6006,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11650,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 18400,
+     "location": 1650,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -15915,7 +15915,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 32850,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -15926,24 +15926,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 16072,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 64680,
+     "location": 6072,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11700,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 18500,
+     "location": 1700,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -15984,7 +15984,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 33270,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -15995,24 +15995,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 16138,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 65010,
+     "location": 6138,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11750,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 18600,
+     "location": 1750,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -16053,7 +16053,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 33690,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -16064,24 +16064,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 16204,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 65340,
+     "location": 6204,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11800,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 18700,
+     "location": 1800,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -16122,7 +16122,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 34110,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -16133,24 +16133,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 16270,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 65670,
+     "location": 6270,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11850,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 18800,
+     "location": 1850,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -16191,7 +16191,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 34530,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -16202,24 +16202,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 16336,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 66000,
+     "location": 6336,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11900,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 18900,
+     "location": 1900,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -16260,7 +16260,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 34950,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -16271,24 +16271,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 16402,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 66330,
+     "location": 6402,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 11950,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 19000,
+     "location": 1950,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -16329,7 +16329,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 35370,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -16340,24 +16340,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 16468,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 66660,
+     "location": 6468,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12000,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 19100,
+     "location": 2000,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -16398,7 +16398,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 35790,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -16409,24 +16409,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 16534,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 66990,
+     "location": 6534,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12050,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 19200,
+     "location": 2050,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -16467,7 +16467,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 36210,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -16478,24 +16478,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 16600,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 67320,
+     "location": 6600,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12100,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 19300,
+     "location": 2100,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -16536,7 +16536,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 36630,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -16547,24 +16547,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 16666,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 67650,
+     "location": 6666,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12150,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 19400,
+     "location": 2150,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -16605,7 +16605,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 37050,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -16616,24 +16616,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 16732,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 67980,
+     "location": 6732,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12200,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 19500,
+     "location": 2200,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -16674,7 +16674,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 37470,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -16685,24 +16685,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 16798,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 68310,
+     "location": 6798,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12250,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 19600,
+     "location": 2250,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -16743,7 +16743,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 37890,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -16754,24 +16754,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 16864,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 68640,
+     "location": 6864,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12300,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 19700,
+     "location": 2300,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -16812,7 +16812,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 38310,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -16823,24 +16823,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 16930,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 68970,
+     "location": 6930,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12350,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 19800,
+     "location": 2350,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -16881,7 +16881,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 38730,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -16892,24 +16892,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 16996,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 69300,
+     "location": 6996,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12400,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 19900,
+     "location": 2400,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -16950,7 +16950,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 39150,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -16961,24 +16961,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 17062,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 69630,
+     "location": 7062,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12450,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 20000,
+     "location": 2450,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -17019,7 +17019,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 39570,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -17030,24 +17030,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 17128,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 69960,
+     "location": 7128,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12500,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 20100,
+     "location": 2500,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -17088,7 +17088,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 39990,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -17099,24 +17099,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 17194,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 70290,
+     "location": 7194,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12550,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 20200,
+     "location": 2550,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -17157,7 +17157,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 40410,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -17168,24 +17168,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 17260,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 70620,
+     "location": 7260,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12600,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 20300,
+     "location": 2600,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -17226,7 +17226,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 40830,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -17237,24 +17237,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 17326,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 70950,
+     "location": 7326,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12650,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 20400,
+     "location": 2650,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -17295,7 +17295,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 41250,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -17306,24 +17306,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 17392,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 71280,
+     "location": 7392,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12700,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 20500,
+     "location": 2700,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -17364,7 +17364,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 41670,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -17375,24 +17375,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 17458,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 71610,
+     "location": 7458,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12750,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 20600,
+     "location": 2750,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -17433,7 +17433,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 42090,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -17444,24 +17444,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 17524,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 71940,
+     "location": 7524,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12800,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 20700,
+     "location": 2800,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -17502,7 +17502,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 42510,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -17513,24 +17513,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 17590,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 72270,
+     "location": 7590,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12850,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 20800,
+     "location": 2850,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -17571,7 +17571,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 42930,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -17582,24 +17582,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 17656,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 72600,
+     "location": 7656,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12900,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 20900,
+     "location": 2900,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -17640,7 +17640,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 43350,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -17651,24 +17651,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 17722,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 72930,
+     "location": 7722,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 12950,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 21000,
+     "location": 2950,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -17709,7 +17709,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 43770,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -17720,24 +17720,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 17788,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 73260,
+     "location": 7788,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13000,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 21100,
+     "location": 3000,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -17778,7 +17778,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 44190,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -17789,24 +17789,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 17854,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 73590,
+     "location": 7854,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13050,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 21200,
+     "location": 3050,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -17847,7 +17847,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 44610,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -17858,24 +17858,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 17920,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 73920,
+     "location": 7920,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13100,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 21300,
+     "location": 3100,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -17916,7 +17916,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 45030,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -17927,24 +17927,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 17986,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 74250,
+     "location": 7986,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13150,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 21400,
+     "location": 3150,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -17985,7 +17985,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 45450,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -17996,24 +17996,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 18052,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 74580,
+     "location": 8052,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13200,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 21500,
+     "location": 3200,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -18054,7 +18054,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 45870,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -18065,24 +18065,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 18118,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 74910,
+     "location": 8118,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13250,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 21600,
+     "location": 3250,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -18123,7 +18123,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 46290,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -18134,24 +18134,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 18184,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 75240,
+     "location": 8184,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13300,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 21700,
+     "location": 3300,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -18192,7 +18192,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 46710,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -18203,24 +18203,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 18250,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 75570,
+     "location": 8250,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13350,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 21800,
+     "location": 3350,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -18261,7 +18261,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 47130,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -18272,24 +18272,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 18316,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 75900,
+     "location": 8316,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13400,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 21900,
+     "location": 3400,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -18330,7 +18330,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 47550,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -18341,24 +18341,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 18382,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 76230,
+     "location": 8382,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13450,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 22000,
+     "location": 3450,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -18399,7 +18399,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 47970,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -18410,24 +18410,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 18448,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 76560,
+     "location": 8448,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13500,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 22100,
+     "location": 3500,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -18468,7 +18468,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 48390,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -18479,24 +18479,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 18514,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 76890,
+     "location": 8514,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13550,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 22200,
+     "location": 3550,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -18537,7 +18537,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 48810,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -18548,24 +18548,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 18580,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 77220,
+     "location": 8580,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13600,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 22300,
+     "location": 3600,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -18606,7 +18606,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 49230,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -18617,24 +18617,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 18646,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 77550,
+     "location": 8646,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13650,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 22400,
+     "location": 3650,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -18675,7 +18675,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 49650,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -18686,24 +18686,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 18712,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 77880,
+     "location": 8712,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13700,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 22500,
+     "location": 3700,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -18744,7 +18744,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 50070,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -18755,24 +18755,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 18778,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 78210,
+     "location": 8778,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13750,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 22600,
+     "location": 3750,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -18813,7 +18813,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 50490,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -18824,24 +18824,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 18844,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 78540,
+     "location": 8844,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13800,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 22700,
+     "location": 3800,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -18882,7 +18882,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 50910,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -18893,24 +18893,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 18910,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 78870,
+     "location": 8910,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13850,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 22800,
+     "location": 3850,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -18951,7 +18951,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 51330,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -18962,24 +18962,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 18976,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 79200,
+     "location": 8976,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13900,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 22900,
+     "location": 3900,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -19020,7 +19020,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 51750,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -19031,24 +19031,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 19042,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 79530,
+     "location": 9042,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 13950,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 23000,
+     "location": 3950,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -19089,7 +19089,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 52170,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -19100,24 +19100,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 19108,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 79860,
+     "location": 9108,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 14000,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 23100,
+     "location": 4000,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -19158,7 +19158,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 52590,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -19169,24 +19169,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 19174,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 80190,
+     "location": 9174,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 14050,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 23200,
+     "location": 4050,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -19227,7 +19227,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 53010,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -19238,24 +19238,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 19240,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 80520,
+     "location": 9240,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 14100,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 23300,
+     "location": 4100,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -19296,7 +19296,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 53430,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -19307,24 +19307,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 19306,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 80850,
+     "location": 9306,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 14150,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 23400,
+     "location": 4150,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -19365,7 +19365,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 53850,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -19376,24 +19376,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 19372,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 81180,
+     "location": 9372,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 14200,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 23500,
+     "location": 4200,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -19434,7 +19434,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 54270,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -19445,24 +19445,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 19438,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 81510,
+     "location": 9438,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 14250,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 23600,
+     "location": 4250,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -19503,7 +19503,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 54690,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -19514,24 +19514,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 19504,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 81840,
+     "location": 9504,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 14300,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 23700,
+     "location": 4300,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -19572,7 +19572,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 55110,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -19583,24 +19583,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 19570,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 82170,
+     "location": 9570,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 14350,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 23800,
+     "location": 4350,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -19641,7 +19641,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 55530,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -19652,24 +19652,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 19636,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 82500,
+     "location": 9636,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 14400,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 23900,
+     "location": 4400,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -19710,7 +19710,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 55950,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -19721,24 +19721,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 19702,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 82830,
+     "location": 9702,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 14450,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 24000,
+     "location": 4450,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -19779,7 +19779,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 56370,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -19790,24 +19790,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 19768,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 83160,
+     "location": 9768,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 14500,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 24100,
+     "location": 4500,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -19848,7 +19848,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 56790,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -19859,24 +19859,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 19834,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 83490,
+     "location": 9834,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 14550,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 24200,
+     "location": 4550,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -19917,7 +19917,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 57210,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -19928,24 +19928,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 19900,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 83820,
+     "location": 9900,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 14600,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 24300,
+     "location": 4600,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -19986,7 +19986,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 57630,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -19997,24 +19997,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 19966,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 84150,
+     "location": 9966,
      "id": "v1",
      "class": 5,
      "speed": 66,
-     "status": "WAITING"
+     "status": "TRAVELING"
     },
     {
-     "distance": 10000,
+     "distance": 14650,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 24400,
+     "location": 4650,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -20055,7 +20055,7 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 57890,
      "weather": "STORM",
      "vehicles": [
       "v1",
@@ -20066,24 +20066,24 @@
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 20000,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 84320,
+     "location": 10000,
      "id": "v1",
      "class": 5,
-     "speed": 66,
+     "speed": 0,
      "status": "WAITING"
     },
     {
-     "distance": 10000,
+     "distance": 14700,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 24500,
+     "location": 4700,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -20104,7 +20104,7 @@
      "green": "r2",
      "queues": [{
       "road": "r2",
-      "vehicles": []
+      "vehicles": ["v1"]
      }],
      "id": "j3"
     }
@@ -20124,35 +20124,32 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 57980,
      "weather": "STORM",
-     "vehicles": [
-      "v1",
-      "v2"
-     ],
+     "vehicles": ["v2"],
      "id": "r2"
     }
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 20000,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 84320,
+     "location": 10000,
      "id": "v1",
      "class": 5,
-     "speed": 66,
-     "status": "WAITING"
+     "speed": 0,
+     "status": "ARRIVED"
     },
     {
-     "distance": 10000,
+     "distance": 14750,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 24600,
+     "location": 4750,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -20193,35 +20190,32 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 58070,
      "weather": "STORM",
-     "vehicles": [
-      "v1",
-      "v2"
-     ],
+     "vehicles": ["v2"],
      "id": "r2"
     }
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 20000,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 84320,
+     "location": 10000,
      "id": "v1",
      "class": 5,
-     "speed": 66,
-     "status": "WAITING"
+     "speed": 0,
+     "status": "ARRIVED"
     },
     {
-     "distance": 10000,
+     "distance": 14800,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 24700,
+     "location": 4800,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -20262,35 +20256,32 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 58160,
      "weather": "STORM",
-     "vehicles": [
-      "v1",
-      "v2"
-     ],
+     "vehicles": ["v2"],
      "id": "r2"
     }
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 20000,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 84320,
+     "location": 10000,
      "id": "v1",
      "class": 5,
-     "speed": 66,
-     "status": "WAITING"
+     "speed": 0,
+     "status": "ARRIVED"
     },
     {
-     "distance": 10000,
+     "distance": 14850,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 24800,
+     "location": 4850,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -20331,35 +20322,32 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 58250,
      "weather": "STORM",
-     "vehicles": [
-      "v1",
-      "v2"
-     ],
+     "vehicles": ["v2"],
      "id": "r2"
     }
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 20000,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 84320,
+     "location": 10000,
      "id": "v1",
      "class": 5,
-     "speed": 66,
-     "status": "WAITING"
+     "speed": 0,
+     "status": "ARRIVED"
     },
     {
-     "distance": 10000,
+     "distance": 14900,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 24900,
+     "location": 4900,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -20400,35 +20388,32 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 58340,
      "weather": "STORM",
-     "vehicles": [
-      "v1",
-      "v2"
-     ],
+     "vehicles": ["v2"],
      "id": "r2"
     }
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 20000,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 84320,
+     "location": 10000,
      "id": "v1",
      "class": 5,
-     "speed": 66,
-     "status": "WAITING"
+     "speed": 0,
+     "status": "ARRIVED"
     },
     {
-     "distance": 10000,
+     "distance": 14950,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 25000,
+     "location": 4950,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [
@@ -20469,35 +20454,32 @@
     },
     {
      "speedlimit": 120,
-     "co2": 0,
+     "co2": 58430,
      "weather": "STORM",
-     "vehicles": [
-      "v1",
-      "v2"
-     ],
+     "vehicles": ["v2"],
      "id": "r2"
     }
    ],
    "vehicles": [
     {
-     "distance": 10000,
+     "distance": 20000,
      "road": "r2",
-     "co2": 34320,
-     "location": 0,
+     "co2": 84320,
+     "location": 10000,
      "id": "v1",
      "class": 5,
-     "speed": 66,
-     "status": "WAITING"
+     "speed": 0,
+     "status": "ARRIVED"
     },
     {
-     "distance": 10000,
+     "distance": 15000,
      "road": "r2",
-     "co2": 15100,
-     "location": 0,
+     "co2": 25100,
+     "location": 5000,
      "id": "v2",
      "class": 2,
      "speed": 50,
-     "status": "WAITING"
+     "status": "TRAVELING"
     }
    ],
    "junctions": [

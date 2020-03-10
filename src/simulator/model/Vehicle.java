@@ -72,7 +72,6 @@ public class Vehicle extends SimulatedObject {
 			if(this.getLocation() == this.getRoad().getLength()) {
 				this.setStatus(VehicleStatus.WAITING);
 				this.setSpeed(0);
-				this.setLocation(0);
 				// TODO: itineraryIdx or ItineraryIdx + 1 ??
 				itinerary.get(itineraryIdx).enter(this);
 			}
@@ -93,6 +92,8 @@ public class Vehicle extends SimulatedObject {
 			if (itineraryIdx < itinerary.size() - 1) {
 				this.road = itinerary.get(itineraryIdx).roadTo(itinerary.get(itineraryIdx + 1));
 				this.location = 0;
+				this.currSpeed = 0;
+				this.status = VehicleStatus.TRAVELING;
 				this.road.enter(this);
 				itineraryIdx++;
 			}
