@@ -20133,9 +20133,7 @@
    "vehicles": [
     {
      "distance": 20000,
-     "road": "r2",
      "co2": 84320,
-     "location": 10000,
      "id": "v1",
      "class": 5,
      "speed": 0,
@@ -20199,9 +20197,7 @@
    "vehicles": [
     {
      "distance": 20000,
-     "road": "r2",
      "co2": 84320,
-     "location": 10000,
      "id": "v1",
      "class": 5,
      "speed": 0,
@@ -20265,9 +20261,7 @@
    "vehicles": [
     {
      "distance": 20000,
-     "road": "r2",
      "co2": 84320,
-     "location": 10000,
      "id": "v1",
      "class": 5,
      "speed": 0,
@@ -20331,9 +20325,7 @@
    "vehicles": [
     {
      "distance": 20000,
-     "road": "r2",
      "co2": 84320,
-     "location": 10000,
      "id": "v1",
      "class": 5,
      "speed": 0,
@@ -20397,9 +20389,7 @@
    "vehicles": [
     {
      "distance": 20000,
-     "road": "r2",
      "co2": 84320,
-     "location": 10000,
      "id": "v1",
      "class": 5,
      "speed": 0,
@@ -20463,9 +20453,7 @@
    "vehicles": [
     {
      "distance": 20000,
-     "road": "r2",
      "co2": 84320,
-     "location": 10000,
      "id": "v1",
      "class": 5,
      "speed": 0,

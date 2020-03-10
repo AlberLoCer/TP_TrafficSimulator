@@ -4636,9 +4636,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -4673,9 +4671,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -4710,9 +4706,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -4747,9 +4741,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -4784,9 +4776,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -4821,9 +4811,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -4858,9 +4846,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -4895,9 +4881,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -4932,9 +4916,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -4969,9 +4951,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -5006,9 +4986,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -5043,9 +5021,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -5080,9 +5056,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -5117,9 +5091,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -5154,9 +5126,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -5191,9 +5161,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -5228,9 +5196,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -5265,9 +5231,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -5302,9 +5266,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -5339,9 +5301,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -5376,9 +5336,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -5413,9 +5371,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -5450,9 +5406,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -5487,9 +5441,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,
@@ -5524,9 +5476,7 @@
    }],
    "vehicles": [{
     "distance": 10000,
-    "road": "r1",
     "co2": 10000,
-    "location": 10000,
     "id": "v1",
     "class": 1,
     "speed": 0,

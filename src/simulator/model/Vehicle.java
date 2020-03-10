@@ -118,9 +118,10 @@ public class Vehicle extends SimulatedObject {
 		jo.put(co2Key, totalContamination);
 		jo.put(classKey, contClass);
 		jo.put(statusKey, status);
-		jo.put(roadKey, road);
-		jo.put(locationKey, location);
-		
+		if (status != VehicleStatus.ARRIVED) {
+			jo.put(roadKey, road);
+			jo.put(locationKey, location);
+		}
 		return jo;
 	}
 	
