@@ -154,4 +154,11 @@ public  abstract class Road extends SimulatedObject {
 		return destJunc;
 	}
 	
+	public int getTotalCO2() {
+		return totalCont;
+	}
+	
+	public int getCO2Limit() {
+		return contLimit;
+	}
 }

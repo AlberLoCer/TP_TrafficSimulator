@@ -139,7 +139,7 @@ public class Vehicle extends SimulatedObject {
 		}
 	}
 	
-	int getLocation() {
+	public int getLocation() {
 		return location;
 	}
 	
@@ -147,7 +147,7 @@ public class Vehicle extends SimulatedObject {
 		return currSpeed;
 	}
 	
-	int getContClass() {
+	public int getContClass() {
 		return contClass;
 	}
 	
@@ -189,5 +189,4 @@ public class Vehicle extends SimulatedObject {
 	private void setLocation(int location) {
 		this.location = location;
 	}
-
 }
