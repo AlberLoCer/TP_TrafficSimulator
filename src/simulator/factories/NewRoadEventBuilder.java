@@ -3,9 +3,7 @@ package simulator.factories;
 import org.json.JSONObject;
 
 import simulator.model.Event;
-import simulator.model.NewInterCityRoadEvent;
 import simulator.model.NewRoadEvent;
-import simulator.model.Weather;
 
 public abstract class NewRoadEventBuilder extends Builder<Event> {
 	

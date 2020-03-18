@@ -29,7 +29,13 @@ public class SetWeatherEvent extends Event {
 				throw new NullPointerException();
 			}
 		}
-
+	}
+	
+	@Override
+	public String toString() {
+		return "Weather changes";
+		// TODO: To print specific info, store map parameter of execute and
+		// iterate over list as in execute
 	}
 
 }

@@ -3,8 +3,6 @@ package simulator.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.transform.ErrorListener;
-
 import org.json.JSONObject;
 
 import simulator.misc.SortedArrayList;

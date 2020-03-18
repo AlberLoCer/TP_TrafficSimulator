@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.channels.NonWritableChannelException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +26,6 @@ import simulator.factories.MoveFirstStrategyBuilder;
 import simulator.factories.NewCityRoadEventBuilder;
 import simulator.factories.NewInterCityRoadEventBuilder;
 import simulator.factories.NewJunctionEventBuilder;
-import simulator.factories.NewRoadEventBuilder;
 import simulator.factories.NewVehicleEventBuilder;
 import simulator.factories.RoundRobinStrategyBuilder;
 import simulator.factories.SetContClassEventBuilder;
@@ -35,9 +33,6 @@ import simulator.factories.SetWeatherEventBuilder;
 import simulator.model.DequeingStrategy;
 import simulator.model.Event;
 import simulator.model.LightSwitchingStrategy;
-import simulator.model.NewInterCityRoadEvent;
-import simulator.model.RoundRobinStrategy;
-import simulator.model.SetWeatherEvent;
 import simulator.model.TrafficSimulator;
 
 public class Main {

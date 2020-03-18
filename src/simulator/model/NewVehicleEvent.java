@@ -32,5 +32,10 @@ public class NewVehicleEvent extends Event {
 		vehicle.moveToNextRoad();
 
 	}
+	
+	@Override
+	public String toString() {
+		return "New vehicle '" + id + "'";
+	}
 
 }

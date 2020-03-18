@@ -30,5 +30,12 @@ public class NewSetContClassEvent extends Event {
 			}
 		}
 	}
+	
+	@Override
+	public String toString() {
+		 return "New contamination classes ";
+		// TODO: To print specific vehicles and cont, store map parameter of execute and
+		// iterate over list as in execute
+	}
 
 }

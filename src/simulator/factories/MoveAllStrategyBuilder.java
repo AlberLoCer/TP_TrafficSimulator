@@ -4,7 +4,6 @@ import org.json.JSONObject;
 
 import simulator.model.DequeingStrategy;
 import simulator.model.MoveAllStrategy;
-import simulator.model.MoveFirstStrategy;
 
 public class MoveAllStrategyBuilder extends Builder<DequeingStrategy> {
 	

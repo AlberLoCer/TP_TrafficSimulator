@@ -1,20 +1,17 @@
 package simulator.control;
 
 
-import java.awt.List;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
-import simulator.factories.BuilderBasedFactory;
 import simulator.factories.Factory;
 import simulator.model.Event;
-import simulator.model.NewCityRoadEvent;
+import simulator.model.TrafficSimObserver;
 import simulator.model.TrafficSimulator;
 
 public class Controller {
@@ -66,5 +63,17 @@ public class Controller {
 	
 	public void reset() {
 		sim.reset();
+	}
+	
+	public void addObserver(TrafficSimObserver o) {
+		sim.addObserver(o);
+	}
+	
+	public void removeObserver(TrafficSimObserver o) {
+		sim.removeObserver(o);
+	}
+	
+	public void addEvent(Event e) {
+		sim.addEvent(e);
 	}
 }
