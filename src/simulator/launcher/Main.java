@@ -1,6 +1,5 @@
 package simulator.launcher;
 
-import java.io.Console;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -20,23 +19,9 @@ import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
 import simulator.control.Controller;
-import simulator.factories.Builder;
-import simulator.factories.BuilderBasedFactory;
-import simulator.factories.Factory;
-import simulator.factories.MostCrowdedStrategyBuilder;
-import simulator.factories.MoveAllStrategyBuilder;
-import simulator.factories.MoveFirstStrategyBuilder;
-import simulator.factories.NewCityRoadEventBuilder;
-import simulator.factories.NewInterCityRoadEventBuilder;
-import simulator.factories.NewJunctionEventBuilder;
-import simulator.factories.NewVehicleEventBuilder;
-import simulator.factories.RoundRobinStrategyBuilder;
-import simulator.factories.SetContClassEventBuilder;
-import simulator.factories.SetWeatherEventBuilder;
-import simulator.model.DequeingStrategy;
-import simulator.model.Event;
-import simulator.model.LightSwitchingStrategy;
-import simulator.model.TrafficSimulator;
+import simulator.factories.*;
+import simulator.model.*;
+import simulator.view.MainWindow;
 
 public class Main {
 	
@@ -215,7 +200,7 @@ public class Main {
 			controller.loadEvents(is);
 		}
 		
-		SwingUtilities.invokeLater(() -> new MainWindow(controller));
+		SwingUtilities.invokeLater( () -> new MainWindow(controller));
 	}
 
 	private static void start(String[] args) throws IOException {
