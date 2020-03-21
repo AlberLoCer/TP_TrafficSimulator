@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
 
-public class EventsTableModel extends AbstractTableModel {
+public class EventExTableModel extends AbstractTableModel {
 
 	/**
 	 * 
@@ -15,13 +15,13 @@ public class EventsTableModel extends AbstractTableModel {
 	private List<EventEx> _events;
 	private String[] _colNames = { "#", "Time", "Priority" };
 
-	public EventsTableModel() {
+	public EventExTableModel() {
 		_events=null;
 	}
 
 	public void update() {
 		// observar que si no refresco la tabla no se carga
-		// La tabla es la represantaciÃ³n visual de una estructura de datos,
+		// La tabla es la represantación visual de una estructura de datos,
 		// en este caso de un ArrayList, hay que notificar los cambios.
 		
 		// We need to notify changes, otherwise the table does not refresh.
@@ -47,7 +47,7 @@ public class EventsTableModel extends AbstractTableModel {
 	}
 
 	@Override
-	// mÃ©todo obligatorio, probad a quitarlo, no compila
+	// método obligatorio, probad a quitarlo, no compila
 	//
 	// this is for the number of columns
 	public int getColumnCount() {
@@ -55,7 +55,7 @@ public class EventsTableModel extends AbstractTableModel {
 	}
 
 	@Override
-	// mÃ©todo obligatorio
+	// método obligatorio
 	//
 	// the number of row, like those in the events list
 	public int getRowCount() {
@@ -63,9 +63,9 @@ public class EventsTableModel extends AbstractTableModel {
 	}
 
 	@Override
-	// mÃ©todo obligatorio
-	// asÃ­ es como se va a cargar la tabla desde el ArrayList
-	// el Ã­ndice del arrayList es el nÃºmero de fila pq en este ejemplo
+	// método obligatorio
+	// así es como se va a cargar la tabla desde el ArrayList
+	// el índice del arrayList es el número de fila pq en este ejemplo
 	// quiero enumerarlos.
 	//
 	// returns the value of a particular cell 

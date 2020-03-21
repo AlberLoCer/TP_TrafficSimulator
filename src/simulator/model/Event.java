@@ -2,25 +2,25 @@ package simulator.model;
 
 public abstract class Event implements Comparable<Event> {
 
-	protected int _time;
+	protected int time;
 
 	Event(int time) {
 		if (time < 1)
 			throw new IllegalArgumentException("Time must be positive (" + time + ")");
 		else
-			_time = time;
+			this.time = time;
 	}
 
-	int getTime() {
-		return _time;
+	public int getTime() {
+		return time;
 	}
 
 	@Override
 	public int compareTo(Event o) {
-		if (_time < o.getTime()) {
+		if (time < o.getTime()) {
 			return -1;
 		}
-		else if (_time > o.getTime()){
+		else if (time > o.getTime()){
 			return 1;
 		}
 		else {
