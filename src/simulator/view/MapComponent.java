@@ -46,6 +46,7 @@ public class MapComponent extends JPanel implements TrafficSimObserver {
 		_car = loadImage("car_front.png");
 	}
 
+	@Override
 	public void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
 		Graphics2D g = (Graphics2D) graphics;

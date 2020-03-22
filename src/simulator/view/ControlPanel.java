@@ -17,9 +17,11 @@ import simulator.control.Controller;
 public class ControlPanel extends JPanel{
 	
 	//TODO: Use glue for adapting the UI to what it's meant	
+	private Controller controller;
 
 	public ControlPanel(Controller controller) {
-		initGUI();
+		this.controller = controller; 
+		initGUI();		
 	}
 	
 	public void initGUI() {
@@ -60,7 +62,8 @@ public class ControlPanel extends JPanel{
 		runButton.setIcon(getIcon("run.png"));
 		runButton.setSize(60, 60);
 		runButton.addActionListener( (actionEvent) -> {
-			System.out.println("Run");
+			// TODO: change, this is only to test
+			controller.run(1);
 		});
 		this.add(runButton);
 		
