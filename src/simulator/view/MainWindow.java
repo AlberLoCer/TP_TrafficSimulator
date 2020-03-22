@@ -3,6 +3,7 @@ package simulator.view;
 import java.awt.*;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 
 import extra.jtable.EventExTableModel;
 import simulator.control.Controller;
@@ -24,7 +25,7 @@ public class MainWindow extends JFrame{
 		mainPanel.add( new ControlPanel( ctrl ), BorderLayout.PAGE_START );	// Top panel (icons)
 		mainPanel.add( new StatusBar( ctrl ), BorderLayout.PAGE_END ); //Bottom panel bar (text, time...)
 		
-		initPanels(mainPanel);
+		initPanels(mainPanel);		// Central panel (six tables)
 		
 		this.setDefaultCloseOperation( DO_NOTHING_ON_CLOSE );
 		this.pack();
@@ -46,7 +47,6 @@ public class MainWindow extends JFrame{
 		tablesPanel.setLayout( new BoxLayout( tablesPanel , BoxLayout.Y_AXIS ));
 		viewsPanel.add( tablesPanel );
     	
-		// TODO: fix constructor of given EventsTableModel
 		JPanel eventsView = createViewPanel( new JTable( new EventsTableModel( ctrl )), "Events" );
 		eventsView.setPreferredSize( new Dimension(500, 200));
 		tablesPanel.add( eventsView );
@@ -70,7 +70,7 @@ public class MainWindow extends JFrame{
 		viewsPanel.add( mapsPanel );
 		
 		JPanel mapView = createViewPanel( new MapComponent( ctrl ), "Map" );
-		mapView .setPreferredSize( new Dimension(500, 400));
+		mapView.setPreferredSize( new Dimension(500, 400));
 		mapsPanel.add( mapView );
 		// TODO add a map for MapByRoadComponent
     }
@@ -78,8 +78,12 @@ public class MainWindow extends JFrame{
 	
 	private JPanel createViewPanel(JComponent c , String title ) {
 		JPanel p = new JPanel( new BorderLayout() );
-		// TODO add a framed border to p with title
+		
 		p.add( new JScrollPane( c ));
+		
+		Border border = BorderFactory.createLineBorder(Color.black, 2);
+		p.setBorder(BorderFactory.createTitledBorder(border, title));
+		
 		return p ;
 	}
 }
