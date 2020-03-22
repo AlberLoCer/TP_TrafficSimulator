@@ -3,11 +3,7 @@ package simulator.model;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.math.*;
-
 import org.json.JSONObject;
-
-import simulator.factories.NewVehicleEventBuilder;
 
 public class Vehicle extends SimulatedObject {
 
