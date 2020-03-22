@@ -1,6 +1,5 @@
 package simulator.control;
 
-
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
@@ -20,8 +19,7 @@ public class Controller {
 	
 	public Controller(TrafficSimulator tS, Factory<Event> factory) {
 		if(tS == null || factory == null) {
-			throw new NullPointerException();
-		
+			throw new NullPointerException();		
 		}
 		else {
 			this.sim = tS;

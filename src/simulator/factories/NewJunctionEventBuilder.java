@@ -11,11 +11,13 @@ import simulator.model.NewJunctionEvent;
 public class NewJunctionEventBuilder extends Builder<Event> {
 
 	public static final String type = "new_junction";
+	
 	public static final String timeKey = "time";
 	public static final String idKey = "id";
 	public static final String coordinateKey = "coor";
 	public static final String ls_strategy_key = "ls_strategy";
 	public static final String dq_strategy_key = "dq_strategy";
+	
 	private Factory<LightSwitchingStrategy> lssFactory;
 	private Factory<DequeingStrategy> dqsFactory;
 	
@@ -25,6 +27,7 @@ public class NewJunctionEventBuilder extends Builder<Event> {
 		this.lssFactory = lssFactory;
 		this.dqsFactory = dqsFactory;
 	}
+	
 	@Override
 	protected Event createTheInstance(JSONObject data) {
 		int time = data.getInt(timeKey);

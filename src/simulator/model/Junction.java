@@ -14,6 +14,7 @@ public class Junction extends SimulatedObject {
 	public static final String idKey = "id";
 	public static final String greenKey = "green";
 	public static final String queueKey = "queues";
+	
 	public static final String roadSubKey = "road";
 	public static final String vehiclesSubKey = "vehicles";
 	
@@ -28,8 +29,7 @@ public class Junction extends SimulatedObject {
 	int lastSwitchTime;
 	LightSwitchingStrategy lsStrategy;
 	DequeingStrategy dqStrategy;
-	int xCoor, yCoor;
-	
+	int xCoor, yCoor;	
 	
 	Junction(String id, LightSwitchingStrategy lsStrategy, DequeingStrategy dqStrategy, 
 			int xCoor, int yCoor) { 
@@ -57,7 +57,6 @@ public class Junction extends SimulatedObject {
 	@Override
 	void advance(int time) {
 		
-		// TODO: maybe only advance the queue that has green light
 		if (greenLightIdx != -1 && greenLightIdx < incomingRoads.size()) {
 			List<Vehicle> currQueue = queueMapList.get(incomingRoads.get(greenLightIdx));
 			if (!currQueue.isEmpty()) {
@@ -69,7 +68,9 @@ public class Junction extends SimulatedObject {
 			}
 		}
 		
-		int newGreen = lsStrategy.chooseNextGreen(incomingRoads, queueList, greenLightIdx, lastSwitchTime, time);
+		int newGreen = lsStrategy.chooseNextGreen(incomingRoads, queueList, 
+				greenLightIdx, lastSwitchTime, time);
+		
 		if (newGreen != greenLightIdx) {
 			greenLightIdx = newGreen;
 			lastSwitchTime = time;
@@ -104,12 +105,10 @@ public class Junction extends SimulatedObject {
 	}
 	
 	void enter( Vehicle v) {		
-		//TODO: check
 		queueMapList.get(v.getRoad()).add(v);
 	}
 	
 	Road roadTo(Junction j) {
-		// TODO: check
 		return outgoingRoads.get(j);
 	}
 	@Override

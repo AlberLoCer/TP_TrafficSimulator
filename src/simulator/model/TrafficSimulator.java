@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import simulator.misc.SortedArrayList;
 
 public class TrafficSimulator {
+	
 	private RoadMap roadMap;
 	private List<Event> eventList;
 	private int simTime;
@@ -29,7 +30,8 @@ public class TrafficSimulator {
 		simTime++;
 		
 		//Execute and delete events if time 
-		//Traverse the eventList being careful when deleting an element (because index shouldn't be incremented)
+		//Traverse the eventList being careful when deleting an element 
+		// (because index shouldn't be incremented)
 		int i = 0;
 		while (i < eventList.size()) {
 			Event e = eventList.get(i);

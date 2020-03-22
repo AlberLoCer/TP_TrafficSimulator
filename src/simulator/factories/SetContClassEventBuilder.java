@@ -11,8 +11,9 @@ import simulator.model.NewSetContClassEvent;
 public class SetContClassEventBuilder extends Builder<Event> {
 
 	public static final String type = "set_cont_class";
+	
 	public static final String timeKey = "time";
-	public static final String infoKey = "info";
+	public static final String infoKey = "info";	
 	
 	public static final String vehicleSubKey = "vehicle";
 	public static final String contClassSubKey = "class";

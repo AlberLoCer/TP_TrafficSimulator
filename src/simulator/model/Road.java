@@ -18,7 +18,7 @@ public  abstract class Road extends SimulatedObject {
 	protected int totalCont;
 	private int length;
 	protected Weather weather;
-	private List<Vehicle> vehicles;			// Keep always sorted
+	private List<Vehicle> vehicles;
 	
 	public static final String idKey = "id";
 	public static final String speedLimitKey = "speedlimit";
@@ -84,7 +84,6 @@ public  abstract class Road extends SimulatedObject {
 		reduceTotalContamination();
 		updateSpeedLimit();
 		for(Vehicle v : vehicles) {
-			//TODO: only when vehicle moving
 			if (v.getStatus() == VehicleStatus.TRAVELING) {
 				v.setSpeed(calculateVehicleSpeed(v));
 				v.advance(time);

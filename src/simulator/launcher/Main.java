@@ -46,11 +46,9 @@ public class Main {
 	private static void parseArgs(String[] args) {
 
 		// define the valid command line options
-		//
 		Options cmdLineOptions = buildOptions();
 
 		// parse the command line as provided in args
-		//
 		CommandLineParser parser = new DefaultParser();
 		try {
 			CommandLine line = parser.parse(cmdLineOptions, args);
@@ -80,10 +78,14 @@ public class Main {
 	private static Options buildOptions() {
 		Options cmdLineOptions = new Options();
 
-		cmdLineOptions.addOption(Option.builder("i").longOpt("input").hasArg().desc("Events input file").build());
-		cmdLineOptions.addOption(
-				Option.builder("o").longOpt("output").hasArg().desc("Output file, where reports are written.").build());
-		cmdLineOptions.addOption(Option.builder("h").longOpt("help").desc("Print this message").build());
+		cmdLineOptions.addOption(Option.builder("i").longOpt("input").hasArg()
+				.desc("Events input file").build());
+		
+		cmdLineOptions.addOption(Option.builder("o").longOpt("output").hasArg()
+				.desc("Output file, where reports are written.").build());
+		
+		cmdLineOptions.addOption(Option.builder("h").longOpt("help")
+				.desc("Print this message").build());
 		
 		cmdLineOptions.addOption(Option.builder("t").hasArg().longOpt("ticks")
 				.desc("Ticks to the simulator’s main loop (defaultvalue is 10).").build());

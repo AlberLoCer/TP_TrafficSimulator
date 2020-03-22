@@ -38,12 +38,12 @@ public class Vehicle extends SimulatedObject {
 			
 			this.maxSpeed = maxSpeed;
 			this.contClass = contClass;
-			this.currSpeed = 0;						// TODO: Or -1 ?
+			this.currSpeed = 0;	
 			this.totalContamination = 0;
 			this.status = VehicleStatus.PENDING;
-			this.location = 0;						// TODO: Or -1 ?
+			this.location = 0;
 			this.totalDistance = 0;
-			this.itineraryIdx = 0;					// TODO: Or -1 ?
+			this.itineraryIdx = 0;
 		}
 		else{
 			throw new IllegalArgumentException();
@@ -68,13 +68,12 @@ public class Vehicle extends SimulatedObject {
 			if(this.getLocation() == this.getRoad().getLength()) {
 				this.setStatus(VehicleStatus.WAITING);
 				this.setSpeed(0);
-				// TODO: itineraryIdx or ItineraryIdx + 1 ??
 				itinerary.get(itineraryIdx).enter(this);
 			}
 		}
 	}
 	
-	void moveToNextRoad() {
+	void moveToNextRoad() {		
 		if (this.status == VehicleStatus.PENDING) {
 			// Starts the trip -> no previous road
 			this.road = itinerary.get(0).roadTo(itinerary.get(1));
@@ -82,6 +81,7 @@ public class Vehicle extends SimulatedObject {
 			itineraryIdx++;
 			this.status = VehicleStatus.TRAVELING;
 		}
+		
 		else if (this.status == VehicleStatus.WAITING){
 			// Continues the trip
 			this.road.exit(this);			
@@ -98,6 +98,7 @@ public class Vehicle extends SimulatedObject {
 				this.status = VehicleStatus.ARRIVED;
 			}
 		}
+		
 		else {
 			// Status = ARRIVED -> End the trip -> no new road -> throw exception
 			// Status = TRAVELLING -> Still moving on previous road -> throw exception			

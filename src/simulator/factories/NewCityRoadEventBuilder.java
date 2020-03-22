@@ -13,8 +13,8 @@ public class NewCityRoadEventBuilder extends NewRoadEventBuilder {
 	}
 	
 	@Override
-	NewRoadEvent createEvent(int time, String id, String src, String dest, int length, int co2, int maxSpeed,
-			String weather) {
+	NewRoadEvent createEvent(int time, String id, String src, String dest, 
+			int length, int co2, int maxSpeed, String weather) {
 		return new NewCityRoadEvent(time, id, src, dest, length, co2, maxSpeed, Weather.valueOf(weather));
 	}
 

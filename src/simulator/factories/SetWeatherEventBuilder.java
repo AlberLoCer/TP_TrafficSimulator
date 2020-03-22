@@ -13,6 +13,7 @@ import simulator.model.Weather;
 public class SetWeatherEventBuilder extends Builder<Event> {
 	
 	public static final String type = "set_weather";
+	
 	public static final String timeKey = "time";
 	public static final String infoKey = "info";
 	
@@ -20,8 +21,7 @@ public class SetWeatherEventBuilder extends Builder<Event> {
 	public static final String weatherSubKey = "weather";
 	
 	public SetWeatherEventBuilder() {
-		super(type);
-		
+		super(type);		
 	}
 
 	@Override

@@ -18,8 +18,9 @@ public class BuilderBasedFactory<T> implements Factory<T> {
 		if (info != null) {
 			for (Builder<T> bb : _builders) {
 				T o = bb.createInstance(info);
-				if (o != null)
+				if (o != null) {
 					return o;
+				}
 			}
 		}
 

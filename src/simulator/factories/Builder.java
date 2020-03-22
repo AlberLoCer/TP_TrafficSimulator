@@ -3,6 +3,7 @@ package simulator.factories;
 import org.json.JSONObject;
 
 public abstract class Builder<T> {
+	
 	protected String _type;
 
 	Builder(String type) {
@@ -13,7 +14,6 @@ public abstract class Builder<T> {
 	}
 
 	public T createInstance(JSONObject info) {
-
 		T b = null;
 
 		if (_type != null && _type.equals(info.getString("type"))) {

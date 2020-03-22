@@ -18,7 +18,6 @@ public class NewVehicleEvent extends Event {
 		this.itineraryId = itineraryId;
 	}
 
-
 	@Override
 	void execute(RoadMap map) {
 		// Convert list of strings in list of Junctions
@@ -30,7 +29,6 @@ public class NewVehicleEvent extends Event {
 		Vehicle vehicle = new Vehicle(id, maxSpeed, contClass, temp);
 		map.addVehicle(vehicle);
 		vehicle.moveToNextRoad();
-
 	}
 
 }

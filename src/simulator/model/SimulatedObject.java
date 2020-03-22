@@ -15,7 +15,6 @@ public abstract class SimulatedObject  {
 		}
 	}
 
-
 	public String getId() {
 		return _id;
 	}

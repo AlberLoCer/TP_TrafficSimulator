@@ -32,7 +32,8 @@ public class RoadMap {
 
 	void addJunction(Junction j) {
 		if(juncMap.containsKey(j.getId())) {
-			throw new UnsupportedOperationException("The junction map already contained the junction "+j.getId());
+			throw new UnsupportedOperationException("The junction map already "
+					+ "contained the junction " + j.getId());
 		}
 		else {
 			juncList.add(j);
@@ -42,11 +43,13 @@ public class RoadMap {
 	
 	void addRoad(Road r) {
 		if(roadMap.containsKey(r.getId())) {
-			throw new UnsupportedOperationException("The road map already contained the road "+r.getId());
+			throw new UnsupportedOperationException("The road map already "
+					+ "contained the road " + r.getId());
 		}
 		
-		else if (!juncMap.containsValue(r.getDestJunc()) || !juncMap.containsValue(r.getSrcJunc())) { //Ask if correct
-			throw new UnsupportedOperationException("Could not find the junctions for the road "+r.getId());
+		else if (!juncMap.containsValue(r.getDestJunc()) || !juncMap.containsValue(r.getSrcJunc())) { 
+			throw new UnsupportedOperationException("Could not find the "
+					+ "junctions for the road " + r.getId());
 		}
 		
 		else {
@@ -57,16 +60,20 @@ public class RoadMap {
 	
 	void addVehicle(Vehicle v) {
 		boolean junctionsOK = true;
+		
 		for(Junction j : v.getItinerary()) {
 			if (!juncMap.containsValue(j)) {
 				junctionsOK = false;
 			}
 		}
+		
 		if(vehicleMap.containsKey(v.getId())) {
-			throw new UnsupportedOperationException("The vehicle map already contained the vehicle "+v.getId());
+			throw new UnsupportedOperationException("The vehicle map already "
+					+ "contained the vehicle " + v.getId());
 		}	
 		else if (!junctionsOK) {
-			throw new UnsupportedOperationException("Some junctions in vehicle itinerary is not registered");
+			throw new UnsupportedOperationException("Some junctions in vehicle "
+					+ "itinerary is not registered");
 		}		
 		else {			
 			vehicleList.add(v);

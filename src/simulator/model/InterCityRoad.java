@@ -1,7 +1,6 @@
 package simulator.model;
 
 public class InterCityRoad extends Road {
-
 	
 	InterCityRoad(String id, Junction srcJunc, Junction destJunc, int maxSpeed, int contLimit, 
 			int length, Weather weather) { 
@@ -31,8 +30,7 @@ public class InterCityRoad extends Road {
 		else {
 			return currSpeedLimit;
 		}
-	}
-	
+	}	
 
 	private int weatherToCont() {		
 		switch(this.weather) {
@@ -50,6 +48,5 @@ public class InterCityRoad extends Road {
 				return 20;
 		}
 	}
-
-
+	
 }

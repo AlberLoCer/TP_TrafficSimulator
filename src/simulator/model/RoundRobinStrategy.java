@@ -5,6 +5,7 @@ import java.util.List;
 public class RoundRobinStrategy implements LightSwitchingStrategy {
 	
 	private int timeSlot;
+	
 	public RoundRobinStrategy(int timeSlot) {
 		this.timeSlot = timeSlot;
 	}
@@ -22,7 +23,7 @@ public class RoundRobinStrategy implements LightSwitchingStrategy {
 			return currGreen;
 		}			
 		else {
-			return (currGreen+1)%roads.size();
+			return (currGreen+1) % roads.size();
 		}			
 	}
 }
