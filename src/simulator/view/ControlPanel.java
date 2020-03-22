@@ -28,7 +28,7 @@ public class ControlPanel extends JPanel{
 			
 			this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 			JButton openButton = addButton("");
-			openButton.setIcon(new ImageIcon("C:\\Users\\alber\\Desktop\\Desktop\\Universidad\\Repositorios\\TP_TrafficSimulator\\resources\\icons\\open.png"));
+			openButton.setIcon(new ImageIcon("resources/icons/open.png"));
 			openButton.setSize(60, 60);
 			openButton.addActionListener(new ActionListener() {
 				
@@ -45,7 +45,7 @@ public class ControlPanel extends JPanel{
 			this.add(sep1);
 			
 			JButton co2Button = addButton("");
-			co2Button.setIcon(new ImageIcon("C:\\Users\\alber\\Desktop\\Desktop\\Universidad\\Repositorios\\TP_TrafficSimulator\\resources\\icons\\co2class.png"));
+			co2Button.setIcon(new ImageIcon("resources/icons/co2class.png"));
 			co2Button.setSize(60, 60);
 			co2Button.addActionListener(new ActionListener() {
 				
@@ -59,7 +59,7 @@ public class ControlPanel extends JPanel{
 			this.add(co2Button);
 			
 			JButton weatherButton = addButton("");
-			weatherButton.setIcon(new ImageIcon("C:\\Users\\alber\\Desktop\\Desktop\\Universidad\\Repositorios\\TP_TrafficSimulator\\resources\\icons\\weather.png"));
+			weatherButton.setIcon(new ImageIcon("resources/icons/weather.png"));
 			weatherButton.setSize(60, 60);
 			weatherButton.addActionListener(new ActionListener() {
 				
@@ -76,7 +76,7 @@ public class ControlPanel extends JPanel{
 			this.add(sep2);
 			
 			JButton runButton = addButton("");
-			runButton.setIcon(new ImageIcon("C:\\Users\\alber\\Desktop\\Desktop\\Universidad\\Repositorios\\TP_TrafficSimulator\\resources\\icons\\run.png"));
+			runButton.setIcon(new ImageIcon("resources/icons/run.png"));
 			runButton.setSize(60, 60);
 			runButton.addActionListener(new ActionListener() {
 				
@@ -90,7 +90,7 @@ public class ControlPanel extends JPanel{
 			this.add(runButton);
 			
 			JButton stopButton = addButton("");
-			stopButton.setIcon(new ImageIcon("C:\\Users\\alber\\Desktop\\Desktop\\Universidad\\Repositorios\\TP_TrafficSimulator\\resources\\icons\\stop.png"));
+			stopButton.setIcon(new ImageIcon("resources/icons/stop.png"));
 			stopButton.setSize(60, 60);
 			stopButton.addActionListener(new ActionListener() {
 				
@@ -116,7 +116,7 @@ public class ControlPanel extends JPanel{
 			this.add(sep3);
 			
 			JButton exitButton = addButton("");
-			exitButton.setIcon(new ImageIcon("C:\\Users\\alber\\Desktop\\Desktop\\Universidad\\Repositorios\\TP_TrafficSimulator\\resources\\icons\\exit.png"));
+			exitButton.setIcon(new ImageIcon("resources/icons/exit.png"));
 			exitButton.setSize(60, 60);
 			exitButton.addActionListener(new ActionListener() {
 				
