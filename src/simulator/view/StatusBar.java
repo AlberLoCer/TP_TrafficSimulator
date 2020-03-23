@@ -37,13 +37,13 @@ public class StatusBar extends JPanel implements TrafficSimObserver{
 	@Override
 	public void onAdvanceStart(RoadMap map, List<Event> events, int time) {
 		timeLabel.setText("Time: "+ time);
-		eventLabel.setText("Simulation time advancing...");
+		eventLabel.setText("Event: " + "Simulation time advancing...");
 	}
 
 	@Override
 	public void onAdvanceEnd(RoadMap map, List<Event> events, int time) {
 		timeLabel.setText("Time: "+ time);
-		eventLabel.setText("Simulation time advance stopped."); //Provisional
+		eventLabel.setText("Event: " + "Simulation time advance stopped."); //Provisional
 	}
 
 	@Override
@@ -55,7 +55,7 @@ public class StatusBar extends JPanel implements TrafficSimObserver{
 	@Override
 	public void onReset(RoadMap map, List<Event> events, int time) {
 		timeLabel.setText("Time: "+ time);
-		eventLabel.setText("Simulator state reseted"); //Provisional
+		eventLabel.setText("Event: " + "Simulator state reseted"); //Provisional
 	}
 
 	@Override
