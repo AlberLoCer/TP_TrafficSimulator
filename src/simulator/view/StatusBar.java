@@ -14,10 +14,13 @@ import simulator.model.RoadMap;
 import simulator.model.TrafficSimObserver;
 
 public class StatusBar extends JPanel implements TrafficSimObserver{
+	
 	//TODO: Check correctness of event JLable messages
 	private JLabel timeLabel;
 	private JLabel eventLabel;
+	
     public StatusBar(Controller controller){
+    	controller.addObserver(this);
     	initGUI();
     }
     
@@ -66,6 +69,6 @@ public class StatusBar extends JPanel implements TrafficSimObserver{
 
 	@Override
 	public void onError(String err) {
-		eventLabel.setText(err); //Where is err initialized??
+		eventLabel.setText(err); //Where is err initialized??  -> in trafficsim 
 	}
 }
