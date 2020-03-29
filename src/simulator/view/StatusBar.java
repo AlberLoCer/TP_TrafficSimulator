@@ -63,12 +63,14 @@ public class StatusBar extends JPanel implements TrafficSimObserver{
 
 	@Override
 	public void onRegister(RoadMap map, List<Event> events, int time) {
-		timeLabel.setText("Time: "+ time);
+		//WARNING:
+		// Don't do anything here because onRegister is called before InitGUI (see constructor)
+		//timeLabel.setText("Time: "+ time);
 		//For event label??
 	}
 
 	@Override
 	public void onError(String err) {
-		eventLabel.setText(err); //Where is err initialized??  -> in trafficsim 
+		eventLabel.setText(err); 
 	}
 }
