@@ -7,6 +7,7 @@ import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JSpinner;
@@ -91,7 +92,15 @@ public class ControlPanel extends JPanel{
 		exitButton.setIcon(getIcon("exit.png"));
 		exitButton.setSize(60, 60);
 		exitButton.addActionListener( (actionEvent) -> {
-			System.out.println("Exit");
+			
+			Object[] options = {"Yes", "No"};
+			int choice = JOptionPane.showOptionDialog(null, "Are you sure you want to exit?"
+					, "Quit", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null,
+					options, options[0]);
+			if(choice == 0) {
+				System.exit(0);
+			}		
+			
 		});
 		this.add(exitButton);
 		
