@@ -46,13 +46,13 @@ public class JunctionsTableModel extends AbstractTableModel implements TrafficSi
 			s = junctions.get(rowIndex).getId();
 			break;
 		case 1:
-			s = junctions.get(rowIndex).getQueueList().get(junctions.get(rowIndex).getGreenLightIndex());
+			s = junctions.get(rowIndex).getQueueList().get(junctions.get(rowIndex).getGreenLightIndex()).toString();
 			if(s == null) {
 				s =  new String("NONE");
 			}
 			break;
 		case 2:
-			s = junctions.get(rowIndex).getQueueMapList();
+			s = junctions.get(rowIndex).getQueueMapList().toString();
 			if(s == null) {
 				s =  new String(" ");
 			}
