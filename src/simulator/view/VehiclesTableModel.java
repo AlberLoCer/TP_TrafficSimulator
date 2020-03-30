@@ -8,30 +8,73 @@ import simulator.control.Controller;
 import simulator.model.Event;
 import simulator.model.RoadMap;
 import simulator.model.TrafficSimObserver;
+import simulator.model.Vehicle;
 
 public class VehiclesTableModel extends AbstractTableModel implements TrafficSimObserver{
+	private String[] colNames = { "Id", "Location", "itinerary", "CO2 Class", "Max Speed", "Speed", "Total CO2", "Distance" };
+	private List<Vehicle> vehicles;
 	
 	public VehiclesTableModel(Controller controller) {
 		controller.addObserver(this);
 	}
+	
+	public void update() {
+
+		fireTableDataChanged();		
+	}
 
 	@Override
 	public int getColumnCount() {
-		// TODO Auto-generated method stub
-		return 0;
+		return colNames.length;
 	}
 
 	@Override
 	public int getRowCount() {
-		// TODO Auto-generated method stub
-		return 0;
+		return vehicles == null ? 0 : vehicles.size();
+	}
+	
+	@Override
+	public boolean isCellEditable(int row, int column) {
+		return false;
 	}
 
 	@Override
-	public Object getValueAt(int arg0, int arg1) {
-		// TODO Auto-generated method stub
-		return null;
+	public Object getValueAt(int row, int col) {
+		Object s = null;
+		switch (col) {
+		case 0:
+			s = vehicles.get(row).getId();
+			break;
+		case 1:
+			s = vehicles.get(row).getLocation();
+			break;
+		case 2:
+			s = vehicles.get(row).getItinerary();
+			break;
+		case 3:
+			s = vehicles.get(row).getContClass();
+			break;
+		case 4:
+			s = vehicles.get(row).getMaxSpeed();
+			break;
+		case 5:
+			s = vehicles.get(row).getCurrSpeed();
+			break;
+		case 6:
+			s = vehicles.get(row).getTotalContamination();
+			break;
+		case 7:
+			s = vehicles.get(row).getTotalDistance();
+			break;
+		}
+		return s;
 	}
+	
+	@Override
+	public String getColumnName(int col) {
+		return colNames[col];
+	}
+	
 
 	@Override
 	public void onAdvanceStart(RoadMap map, List<Event> events, int time) {

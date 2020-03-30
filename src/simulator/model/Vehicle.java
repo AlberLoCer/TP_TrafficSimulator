@@ -143,7 +143,7 @@ public class Vehicle extends SimulatedObject {
 		return location;
 	}
 	
-	int getCurrSpeed() {
+	public int getCurrSpeed() {
 		return currSpeed;
 	}
 	
@@ -164,18 +164,24 @@ public class Vehicle extends SimulatedObject {
 		return road;
 	}
 	
-	//PRIVATE GETTERS & SETTERS
-	
-	private int getMaxSpeed() {
+	public int getMaxSpeed() {
 		return maxSpeed;
 	}
 
-	private void setCurrSpeed(int currSpeed) {
-		this.currSpeed = currSpeed;
+	public int getTotalContamination() {
+		return totalContamination;
+	}
+	
+	public int getTotalDistance() {
+		return totalDistance;
 	}
 
-	private int getTotalContamination() {
-		return totalContamination;
+
+	//PRIVATE GETTERS & SETTERS
+	
+
+	private  void setCurrSpeed(int currSpeed) {
+		this.currSpeed = currSpeed;
 	}
 
 	private void setTotalContamination(int totalContamination) {
