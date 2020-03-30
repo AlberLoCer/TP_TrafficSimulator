@@ -6,31 +6,63 @@ import javax.swing.table.AbstractTableModel;
 
 import simulator.control.Controller;
 import simulator.model.Event;
+import simulator.model.Junction;
 import simulator.model.RoadMap;
 import simulator.model.TrafficSimObserver;
 
 public class JunctionsTableModel extends AbstractTableModel implements TrafficSimObserver{
 	
+	private List<Junction> junctions;
+	private String[] colNames = { "Id", "Green", "Queues" };
+	
 	public JunctionsTableModel(Controller controller) {
 		controller.addObserver(this);
+	}
+	
+	public void update() {
+		fireTableDataChanged();		
+	}
+	
+	@Override
+	public boolean isCellEditable(int row, int column) {
+		return false;
 	}
 
 	@Override
 	public int getColumnCount() {
-		// TODO Auto-generated method stub
-		return 0;
+		return colNames.length;
 	}
 
 	@Override
 	public int getRowCount() {
-		// TODO Auto-generated method stub
-		return 0;
+		return junctions == null ? 0 : junctions.size();
 	}
 
 	@Override
 	public Object getValueAt(int rowIndex, int columnIndex) {
-		// TODO Auto-generated method stub
-		return null;
+		Object s = null;
+		switch (columnIndex) {
+		case 0:
+			s = junctions.get(rowIndex).getId();
+			break;
+		case 1:
+			s = junctions.get(rowIndex).getQueueList().get(junctions.get(rowIndex).getGreenLightIndex());
+			if(s == null) {
+				s =  new String("NONE");
+			}
+			break;
+		case 2:
+			s = junctions.get(rowIndex).getQueueMapList();
+			if(s == null) {
+				s =  new String(" ");
+			}
+			break;
+		}
+		return s;
+	}
+	
+	public String getColumnName(int col) {
+		return colNames[col];
 	}
 
 	@Override
