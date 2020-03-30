@@ -18,8 +18,8 @@ public class VehiclesTableModel extends AbstractTableModel implements TrafficSim
 		controller.addObserver(this);
 	}
 	
+	
 	public void update() {
-
 		fireTableDataChanged();		
 	}
 
