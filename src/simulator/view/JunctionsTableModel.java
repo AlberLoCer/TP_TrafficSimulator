@@ -19,6 +19,12 @@ public class JunctionsTableModel extends AbstractTableModel implements TrafficSi
 		controller.addObserver(this);
 	}
 	
+	public void setJunctionsList(List<Junction> junctions) {
+		this.junctions = junctions;
+		update();
+	}
+
+	
 	public void update() {
 		fireTableDataChanged();		
 	}

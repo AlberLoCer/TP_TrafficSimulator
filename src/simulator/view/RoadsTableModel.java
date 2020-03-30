@@ -20,6 +20,13 @@ public class RoadsTableModel extends AbstractTableModel implements TrafficSimObs
 		controller.addObserver(this);
 	}
 
+	
+	public void setRoads(List<Road> roads) {
+		this.roads = roads;
+		update();
+	}
+
+
 	@Override
 	public int getColumnCount() {
 		return colNames.length;
