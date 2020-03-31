@@ -21,7 +21,7 @@ public class RoadsTableModel extends AbstractTableModel implements TrafficSimObs
 	}
 
 	
-	public void setRoads(List<Road> roads) {
+	public void setRoadList(List<Road> roads) {
 		this.roads = roads;
 		update();
 	}
@@ -83,40 +83,33 @@ public class RoadsTableModel extends AbstractTableModel implements TrafficSimObs
 		return colNames[col];
 	}
 	
-
 	@Override
 	public void onAdvanceStart(RoadMap map, List<Event> events, int time) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void onAdvanceEnd(RoadMap map, List<Event> events, int time) {
-		// TODO Auto-generated method stub
-		
+		setRoadList(map.getRoads());		
 	}
 
 	@Override
 	public void onEventAdded(RoadMap map, List<Event> events, Event e, int time) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void onReset(RoadMap map, List<Event> events, int time) {
-		// TODO Auto-generated method stub
-		
+		setRoadList(map.getRoads());		
 	}
 
 	@Override
 	public void onRegister(RoadMap map, List<Event> events, int time) {
-		// TODO Auto-generated method stub
-		
+		setRoadList(map.getRoads());
 	}
 
 	@Override
 	public void onError(String err) {
-		// TODO Auto-generated method stub
 		
 	}
 
