@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.Image;
 import java.awt.RenderingHints;
 import java.io.File;
@@ -55,6 +57,18 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 	private RoadMap _map;
 
 	private Image _car;
+	
+	private Image _cont0;
+	private Image _cont1;
+	private Image _cont2;
+	private Image _cont3;
+	private Image _cont4;
+	private Image _cont5;
+	
+	private Image _rain;
+	private Image _storm;
+	private Image _sun;
+	private Image _wind;
 
 	MapByRoadComponent(Controller ctrl) {
 		initGUI();
@@ -62,7 +76,19 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 	}
 
 	private void initGUI() {
-		_car = loadImage("car_front.png");
+		_car = loadImage("car.png");
+		
+		_cont0 = loadImage("cont_0.png");
+		_cont1 = loadImage("cont_1.png");
+		_cont2 = loadImage("cont_2.png");
+		_cont3 = loadImage("cont_3.png");
+		_cont4 = loadImage("cont_4t.png");
+		_cont5 = loadImage("cont_5.png");
+		
+		_rain = loadImage("rain.png");
+		_storm = loadImage("storm.png");
+		_sun = loadImage("sun.png");
+		_wind = loadImage("wind.png");
 	}
 
 	@Override
@@ -86,9 +112,48 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 	}
 
 	private void drawMap(Graphics g) {
-		drawRoads(g);
-		drawVehicles(g);
-		drawJunctions(g);
+		this.setLayout(new GridBagLayout());
+		GridBagConstraints gbConstraints = new GridBagConstraints();
+		
+		JPanel redJPanel = createPanel(Color.RED, 50, 50);
+		gbConstraints.fill = GridBagConstraints.BOTH;
+		gbConstraints.gridx = 0; 
+		gbConstraints.gridy = 0;
+		gbConstraints.weightx = 0.1;
+		gbConstraints.weighty = 0.4;
+		this.add(redJPanel, gbConstraints);
+		
+		JPanel blueJPanel = createPanel(Color.BLUE, 50, 50);
+		gbConstraints.fill = GridBagConstraints.BOTH;
+		gbConstraints.gridx = 0; 
+		gbConstraints.gridy = 2;
+		gbConstraints.weightx = 0.1;
+		gbConstraints.weighty = 0.4;
+		this.add(blueJPanel, gbConstraints);
+		
+		JPanel midJPanel = createPanel(Color.ORANGE, 50, 50);
+		gbConstraints.fill = GridBagConstraints.BOTH;
+		gbConstraints.gridx = 0; 
+		gbConstraints.gridy = 1;
+		gbConstraints.weightx = 0.1;
+		gbConstraints.weighty = 0.4;
+		this.add(midJPanel, gbConstraints);
+		
+		
+		
+//		drawRoads(g);
+//		drawVehicles(g);
+//		drawJunctions(g);
+	}
+	
+	// TODO: delete, just for testing 
+	private JPanel createPanel(Color color, int x, int y) {
+		JPanel panel = new JPanel();
+		panel.setBackground(color);
+		panel.setPreferredSize(new Dimension(x, y));
+		panel.setMaximumSize(new Dimension(x, y));
+		panel.setMinimumSize(new Dimension(x, y));
+		return panel;
 	}
 
 	private void drawRoads(Graphics g) {
