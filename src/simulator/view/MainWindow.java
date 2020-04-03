@@ -74,7 +74,7 @@ public class MainWindow extends JFrame{
 		mapsPanel.add( mapView );
 
 		JPanel mapByRoadView = createViewPanel( new MapByRoadComponent( ctrl ), "Map by Road" );
-		mapByRoadView.setPreferredSize( new Dimension(500, 400));			
+		mapByRoadView.setPreferredSize( new Dimension(500, 400));
 		mapsPanel.add( mapByRoadView );
     }
 	

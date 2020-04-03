@@ -28,16 +28,14 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 	
 	/* STRATEGY TO FOLLOW:
 	 * 
-	 * This panel will contain GridBagLayout.
-	 * Each row will correspond to the view of one road.
-	 * 3 columns:
-	 * 	- Left column: Name of the road										-> Fixed size
-	 * 	- Right column: Two icons (for weather and contamination levels)	-> Fixed size
-	 * 	- Middle column: Line for the road 									-> Adjustable size
+	 * All sizes will be relative to getWidth and getHeight (of the resizable parent)
+	 * In particular, the elements of the sides will be placed at a small distance
+	 * of the sides (again, using getWidth...) and the road line will spawn taking
+	 * all the space between the elements of the left and of the right.
 	 * 
-	 * The idea is that the middle column will take the remaining space of the GBL, 
-	 * so that when the screen is resized, only the line of the road will be resized, 
-	 * taking as much space as available. 
+	 * The panel is ensured to measure at least _MIN_WIDTH x _MIN_HEIGHT.
+	 * If the screen is resized to a smaller dimension, a scrollbar will appear.
+	 * 
 	 * 
 	 */
 	
@@ -46,13 +44,26 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 	
 	private static final long serialVersionUID = 1L;
 
-	private static final int _JRADIUS = 10;
-
 	private static final Color _BG_COLOR = Color.WHITE;
 	private static final Color _JUNCTION_COLOR = Color.BLUE;
 	private static final Color _JUNCTION_LABEL_COLOR = new Color(200, 100, 0);
 	private static final Color _GREEN_LIGHT_COLOR = Color.GREEN;
 	private static final Color _RED_LIGHT_COLOR = Color.RED;
+	
+	// DIMENSIONS:
+	private static final int _MIN_PANEL_WIDTH = 360;
+	private static final int _MIN_PANEL_HEIGHT = 200;	
+	
+	private static final int _HOR_SIDE_MARGINS = 20;	
+	private static final int _VERT_SIDE_MARGINS = 50;	
+	private static final int _IN_BETWEEN_HOR_MARGINS = 20;	
+	private static final int _IN_BETWEEN_VERT_MARGINS = 20;	
+	
+	private static final int _IMAGE_SIZE = 40;	
+	private static final int _JUNC_RADIUS = 10;
+
+
+
 
 	private RoadMap _map;
 
@@ -105,41 +116,58 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 		if (_map == null || _map.getJunctions().size() == 0) {
 			g.setColor(Color.red);
 			g.drawString("No map yet!", getWidth() / 2 - 50, getHeight() / 2);
-		} else {
-			updatePrefferedSize();
+		} else {			
 			drawMap(g);
 		}
 	}
 
 	private void drawMap(Graphics g) {
-		this.setLayout(new GridBagLayout());
-		GridBagConstraints gbConstraints = new GridBagConstraints();
+		// Adjust the panel size
+		if (getWidth() < _MIN_PANEL_WIDTH || getHeight() < _MIN_PANEL_HEIGHT) {
+			setPreferredSize(new Dimension(_MIN_PANEL_WIDTH, _MIN_PANEL_HEIGHT));
+			setSize(new Dimension(_MIN_PANEL_WIDTH, _MIN_PANEL_HEIGHT));
+		}
 		
-		JPanel redJPanel = createPanel(Color.RED, 50, 50);
-		gbConstraints.fill = GridBagConstraints.BOTH;
-		gbConstraints.gridx = 0; 
-		gbConstraints.gridy = 0;
-		gbConstraints.weightx = 0.1;
-		gbConstraints.weighty = 0.4;
-		this.add(redJPanel, gbConstraints);
+		// Calculate horizontal positions
+		int roadNameX = 0 + _HOR_SIDE_MARGINS;
+		int roadNameY = 0 + _VERT_SIDE_MARGINS;
+		int leftJuncX = roadNameX + _IN_BETWEEN_HOR_MARGINS * 2; 
+		int leftJuncY = 0 + _VERT_SIDE_MARGINS;
+		int contImX = getWidth() - _IMAGE_SIZE - _HOR_SIDE_MARGINS;
+		int contImY = 0 + _VERT_SIDE_MARGINS - _IMAGE_SIZE / 2;
+		int weatherImX = contImX - _IMAGE_SIZE - _IN_BETWEEN_HOR_MARGINS;
+		int weatherImY = 0 + _VERT_SIDE_MARGINS - _IMAGE_SIZE / 2;
+		int rightJuncX = weatherImX - _IN_BETWEEN_HOR_MARGINS * 2;
+		int rightJuncY = 0 + _VERT_SIDE_MARGINS;
 		
-		JPanel blueJPanel = createPanel(Color.BLUE, 50, 50);
-		gbConstraints.fill = GridBagConstraints.BOTH;
-		gbConstraints.gridx = 0; 
-		gbConstraints.gridy = 2;
-		gbConstraints.weightx = 0.1;
-		gbConstraints.weighty = 0.4;
-		this.add(blueJPanel, gbConstraints);
+		g.drawImage(_cont0, contImX, contImY, _IMAGE_SIZE, _IMAGE_SIZE, this);
+		g.drawImage(_rain, weatherImX, weatherImY, _IMAGE_SIZE, _IMAGE_SIZE, this);
 		
-		JPanel midJPanel = createPanel(Color.ORANGE, 50, 50);
-		gbConstraints.fill = GridBagConstraints.BOTH;
-		gbConstraints.gridx = 0; 
-		gbConstraints.gridy = 1;
-		gbConstraints.weightx = 0.1;
-		gbConstraints.weighty = 0.4;
-		this.add(midJPanel, gbConstraints);
+		// draw the road's identifier
+		g.setColor(_JUNCTION_LABEL_COLOR);
+		g.drawString("r1", roadNameX, roadNameY);
 		
+		// draw the left junction's circle
+		g.setColor(_JUNCTION_COLOR);
+		g.fillOval(leftJuncX - _JUNC_RADIUS / 2, leftJuncY - _JUNC_RADIUS / 2,
+				_JUNC_RADIUS, _JUNC_RADIUS);
+
+		// draw the left junction's id
+		g.setColor(_JUNCTION_LABEL_COLOR);
+		g.drawString("temp", leftJuncX - _JUNC_RADIUS / 2, leftJuncY - _JUNC_RADIUS);
 		
+		// draw the right junction's circle
+		g.setColor(_JUNCTION_COLOR);
+		g.fillOval(rightJuncX - _JUNC_RADIUS / 2, rightJuncY - _JUNC_RADIUS / 2,
+				_JUNC_RADIUS, _JUNC_RADIUS);
+
+		// draw the left junction's id
+		g.setColor(_JUNCTION_LABEL_COLOR);
+		g.drawString("temp", rightJuncX - _JUNC_RADIUS / 2, rightJuncY - _JUNC_RADIUS);
+		
+		// draw line for road
+		drawLineWithArrow(g, leftJuncX, leftJuncY, rightJuncX, rightJuncY, 
+				15, 5, Color.BLUE, Color.ORANGE);
 		
 //		drawRoads(g);
 //		drawVehicles(g);
@@ -147,14 +175,14 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 	}
 	
 	// TODO: delete, just for testing 
-	private JPanel createPanel(Color color, int x, int y) {
-		JPanel panel = new JPanel();
-		panel.setBackground(color);
-		panel.setPreferredSize(new Dimension(x, y));
-		panel.setMaximumSize(new Dimension(x, y));
-		panel.setMinimumSize(new Dimension(x, y));
-		return panel;
-	}
+//	private JPanel createPanel(Color color, int x, int y) {
+//		JPanel panel = new JPanel();
+//		panel.setBackground(color);
+//		panel.setPreferredSize(new Dimension(x, y));
+//		panel.setMaximumSize(new Dimension(x, y));
+//		panel.setMinimumSize(new Dimension(x, y));
+//		return panel;
+//	}
 
 	private void drawRoads(Graphics g) {
 		for (Road r : _map.getRoads()) {
@@ -230,7 +258,7 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 
 			// draw a circle with center at (x,y) with radius _JRADIUS
 			g.setColor(_JUNCTION_COLOR);
-			g.fillOval(x - _JRADIUS / 2, y - _JRADIUS / 2, _JRADIUS, _JRADIUS);
+			g.fillOval(x - _JUNC_RADIUS / 2, y - _JUNC_RADIUS / 2, _JUNC_RADIUS, _JUNC_RADIUS);
 
 			// draw the junction's identifier at (x,y)
 			g.setColor(_JUNCTION_LABEL_COLOR);
