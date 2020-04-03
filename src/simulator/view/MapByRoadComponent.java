@@ -26,9 +26,9 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 	
 	/* STRATEGY TO FOLLOW:
 	 * 
-	 * This panel will contain a vertical stack of GridBagLayouts.
-	 * Each GridBagLayout (GBL) will correspond to the view of one road.
-	 * Each GBL will be divided in 3 columns (and only 1 row)
+	 * This panel will contain GridBagLayout.
+	 * Each row will correspond to the view of one road.
+	 * 3 columns:
 	 * 	- Left column: Name of the road										-> Fixed size
 	 * 	- Right column: Two icons (for weather and contamination levels)	-> Fixed size
 	 * 	- Middle column: Line for the road 									-> Adjustable size
