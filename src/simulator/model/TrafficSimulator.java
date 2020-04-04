@@ -26,17 +26,19 @@ public class TrafficSimulator implements Observable<TrafficSimObserver> {
 	}
 
 	public void addEvent(Event e) {
-		try {
-			eventList.add(e);
-			//Notify
-			for (TrafficSimObserver obs : observers) {
-				obs.onEventAdded(roadMap, eventList, e, simTime);
-			} 
-		} catch (Exception exc) {
-			for (TrafficSimObserver obs : observers) {
-				obs.onError(exc.getMessage());
+		if(e.getTime() >= simTime) {
+			try {
+				eventList.add(e);
+				//Notify
+				for (TrafficSimObserver obs : observers) {
+					obs.onEventAdded(roadMap, eventList, e, simTime);
+				} 
+			} catch (Exception exc) {
+				for (TrafficSimObserver obs : observers) {
+					obs.onError(exc.getMessage());
+				}
+				throw exc;
 			}
-			throw exc;
 		}
 	}
 	
@@ -50,15 +52,8 @@ public class TrafficSimulator implements Observable<TrafficSimObserver> {
 			}
 			//Execute and delete events if time 
 			//Traverse the eventList being careful when deleting an element (because index shouldn't be incremented)
-			int i = 0;
-			while (i < eventList.size()) {
-				Event e = eventList.get(i);
-				if (e.getTime() == simTime) {
-					e.execute(roadMap);
-					eventList.remove(e);
-				} else {
-					i++;
-				}
+			while ((eventList.size()>0) && (eventList.get(0).getTime() == simTime)) {
+				eventList.remove(0).execute(roadMap);
 			}
 			//Advance methods
 			roadMap.advanceJunctions(simTime);
