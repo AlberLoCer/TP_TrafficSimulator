@@ -19,6 +19,7 @@ public  abstract class Road extends SimulatedObject {
 	private int length;
 	protected Weather weather;
 	private List<Vehicle> vehicles;			// Keep always sorted
+	private Comparator<Vehicle> vComp;
 	
 	private static final String idKey = "id";
 	private static final String speedLimitKey = "speedlimit";
@@ -41,6 +42,25 @@ public  abstract class Road extends SimulatedObject {
 			this.currSpeedLimit = maxSpeed;
 			this.totalCont = 0;
 			this.vehicles = new ArrayList<>();
+			this.vComp = new Comparator<Vehicle>() {
+
+				@Override
+				public int compare(Vehicle v1, Vehicle v2) {
+						int v1Loc = v1.getLocation();
+						int v2Loc = v2.getLocation();
+						if (v1Loc == v2Loc) {
+							return 0;
+						}
+						else if (v1Loc > v2Loc) {
+							// v1 should be placed before v2 in list -> tell sort that it's smaller
+							// because the Collections.sort sorts in ascending order (smallers first)
+							return -1;
+						}
+						else {
+							return 1;
+						}
+					}
+			};
 			
 			destJunc.addIncommingRoad(this);
 			srcJunc.addOutGotingRoad(this);
@@ -57,26 +77,7 @@ public  abstract class Road extends SimulatedObject {
 	abstract int calculateVehicleSpeed(Vehicle v);
 	
 	private void sortVehicleList () {
-		Collections.sort(vehicles, new Comparator<Vehicle>() {
-
-			@Override
-			public int compare(Vehicle v1, Vehicle v2) {
-				int v1Loc = v1.getLocation();
-				int v2Loc = v2.getLocation();
-				if (v1Loc == v2Loc) {
-					return 0;
-				}
-				else if (v1Loc > v2Loc) {
-					// v1 should be placed before v2 in list -> tell sort that it's smaller
-					// because the Collections.sort sorts in ascending order (smallers first)
-					return -1;
-				}
-				else {
-					return 1;
-				}
-			}
-			
-		});
+		Collections.sort(vehicles, vComp);
 	}
 
 	@Override
