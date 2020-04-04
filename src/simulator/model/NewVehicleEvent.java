@@ -5,10 +5,10 @@ import java.util.List;
 
 public class NewVehicleEvent extends Event {
 	
-	String id;
-	int maxSpeed;
-	int contClass;
-	List<String> itineraryId;
+	private String id;
+	private int maxSpeed;
+	private int contClass;
+	private List<String> itineraryId;
 	
 	public NewVehicleEvent(int time, String id, int maxSpeed, int contClass, List<String> itineraryId) {
 		super(time); 
@@ -24,7 +24,9 @@ public class NewVehicleEvent extends Event {
 		// Convert list of strings in list of Junctions
 		ArrayList<Junction> temp = new ArrayList<>();
 		for (String juncId : itineraryId) {
-			temp.add(map.getJunction(juncId));
+			if(!map.getJunction(juncId).equals(null)) {
+				temp.add(map.getJunction(juncId));
+			}
 		}
 		
 		Vehicle vehicle = new Vehicle(id, maxSpeed, contClass, temp);
