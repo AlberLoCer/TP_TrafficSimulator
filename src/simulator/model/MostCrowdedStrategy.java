@@ -27,22 +27,19 @@ public class MostCrowdedStrategy implements LightSwitchingStrategy {
 	
 	private int giveGreen(List<List<Vehicle>> qs, int firstIdx) {
 		int idx = 0;
+		int i = 0;
 		int aux = -1;
 		List<Vehicle> inside;
-		for (int i = firstIdx; i < qs.size(); i++) {
+		
+		while(i != firstIdx) {
 			inside = qs.get(i);
 			if (inside.size() > aux) {
 				aux = inside.size();
 				idx = i;
 			}
+			i = (i+1)%qs.size();
 		}
-		for (int i = 0; i < firstIdx; i++) {
-			inside = qs.get(i);
-			if (inside.size() > aux) {
-				aux = inside.size();
-				idx = i;
-			}
-		}
+		
 		return idx;
 	}
 	
