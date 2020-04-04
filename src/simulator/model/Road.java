@@ -145,6 +145,10 @@ public  abstract class Road extends SimulatedObject {
 	public int getLength() {
 		return length;
 	}
+	
+	public List<Vehicle> getVehicles(){
+		return Collections.unmodifiableList(vehicles);
+	}
 
 	public Junction getSrcJunc() {
 		return srcJunc;

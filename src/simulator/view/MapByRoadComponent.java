@@ -57,6 +57,7 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 	private static final int _IN_BETWEEN_VERT_MARGINS = 50;	
 	
 	private static final int _IMAGE_SIZE = 32;	
+	private static final int _CAR_SIZE = 16;	
 	private static final int _JUNC_RADIUS = 10;
 
 	
@@ -170,6 +171,15 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 		drawLineWithArrow(g, leftJuncX, leftJuncY, rightJuncX, rightJuncY, 
 				15, 5, Color.BLUE, Color.ORANGE);	
 		
+		// draw the vehicles
+		for (Vehicle v : road.getVehicles()) {
+			int carPosX = leftJuncX + (int) ((rightJuncX - leftJuncX) *
+					( (double) v.getLocation() / (double) road.getLength() ) );
+			int carPosY = leftJuncY  - _JUNC_RADIUS / 2;
+			
+			g.drawImage(_car, carPosX, carPosY - 6, _CAR_SIZE, _CAR_SIZE, this);
+			g.drawString(v.getId(), carPosX, carPosY - 6);			
+		}
 		
 		// choose a color for the right junction's circle depending on the traffic light of the road
 		Color rightJuncColor = _RED_LIGHT_COLOR;
