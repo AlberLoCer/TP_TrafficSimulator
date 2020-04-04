@@ -167,10 +167,16 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 		String id = road.getSrcJunc().getId();
 		g.drawString(id, leftJuncX - _JUNC_RADIUS / 2, leftJuncY - _JUNC_RADIUS);
 		
-		// draw line for road
-		drawLineWithArrow(g, leftJuncX, leftJuncY, rightJuncX, rightJuncY, 
-				15, 5, Color.BLUE, Color.ORANGE);	
 		
+		// choose a color for the road depending on the total contamination, the darker
+		// the more contaminated (wrt its co2 limit)
+		int roadColorValue = 200 - (int) (200.0 * Math.min(1.0, (double) road.getTotalCO2() / (1.0 + (double) road.getCO2Limit())));
+		Color roadColor = new Color(roadColorValue, roadColorValue, roadColorValue);
+		
+		// draw line for road
+		g.setColor(roadColor);
+		g.drawLine(leftJuncX + _JUNC_RADIUS / 2, leftJuncY, rightJuncX - _JUNC_RADIUS / 2, rightJuncY);
+	
 		// draw the vehicles
 		for (Vehicle v : road.getVehicles()) {
 			int carPosX = leftJuncX + (int) ((rightJuncX - leftJuncX) *
@@ -244,37 +250,7 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 		}
 	}
 	
-	// This method draws a line from (x1,y1) to (x2,y2) with an arrow.
-	// The arrow is of height h and width w.
-	// The last two arguments are the colors of the arrow and the line
-	private void drawLineWithArrow(//
-			Graphics g, //
-			int x1, int y1, //
-			int x2, int y2, //
-			int w, int h, //
-			Color lineColor, Color arrowColor) {
 
-		int dx = x2 - x1, dy = y2 - y1;
-		double D = Math.sqrt(dx * dx + dy * dy);
-		double xm = D - w, xn = xm, ym = h, yn = -h, x;
-		double sin = dy / D, cos = dx / D;
-
-		x = xm * cos - ym * sin + x1;
-		ym = xm * sin + ym * cos + y1;
-		xm = x;
-
-		x = xn * cos - yn * sin + x1;
-		yn = xn * sin + yn * cos + y1;
-		xn = x;
-
-		int[] xpoints = { x2, (int) xm, (int) xn };
-		int[] ypoints = { y2, (int) ym, (int) yn };
-
-		g.setColor(lineColor);
-		g.drawLine(x1, y1, x2, y2);
-		g.setColor(arrowColor);
-		g.fillPolygon(xpoints, ypoints, 3);
-	}
 
 	// loads an image from a file
 	private Image loadImage(String img) {
