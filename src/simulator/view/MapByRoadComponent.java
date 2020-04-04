@@ -183,6 +183,11 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 					( (double) v.getLocation() / (double) road.getLength() ) );
 			int carPosY = leftJuncY  - _JUNC_RADIUS / 2;
 			
+			// Choose a color for the vehcile's label, depending on its
+			// contamination class
+			int vLabelColor = (int) (25.0 * (10.0 - (double) v.getContClass()));
+			g.setColor(new Color(0, vLabelColor, 0));
+			
 			g.drawImage(_car, carPosX, carPosY - 6, _CAR_SIZE, _CAR_SIZE, this);
 			g.drawString(v.getId(), carPosX, carPosY - 6);			
 		}
