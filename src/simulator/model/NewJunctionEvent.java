@@ -2,11 +2,11 @@ package simulator.model;
 
 public class NewJunctionEvent extends Event {
 	
-	String id;
-	LightSwitchingStrategy lsStrategy;	
-	DequeingStrategy dqStrategy;
-	int xCoor;
-	int yCoor;
+	private String id;
+	private LightSwitchingStrategy lsStrategy;	
+	private DequeingStrategy dqStrategy;
+	private int xCoor;
+	private int yCoor;
 	
 	public NewJunctionEvent(int time, String id, LightSwitchingStrategy lsStrategy,
 			DequeingStrategy dqStrategy, int xCoor, int yCoor) {
