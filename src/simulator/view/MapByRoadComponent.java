@@ -53,10 +53,10 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 	
 	private static final int _HOR_SIDE_MARGINS = 20;	
 	private static final int _VERT_SIDE_MARGINS = 50;	
-	private static final int _IN_BETWEEN_HOR_MARGINS = 20;	
+	private static final int _IN_BETWEEN_HOR_MARGINS = 15;	
 	private static final int _IN_BETWEEN_VERT_MARGINS = 50;	
 	
-	private static final int _IMAGE_SIZE = 40;	
+	private static final int _IMAGE_SIZE = 32;	
 	private static final int _JUNC_RADIUS = 10;
 
 	
@@ -78,6 +78,7 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 	private Image _wind;
 
 	MapByRoadComponent(Controller ctrl) {
+		//setPreferredSize(new Dimension(300,200) );
 		initGUI();
 		ctrl.addObserver(this);
 	}
@@ -167,10 +168,18 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 		
 		// draw line for road
 		drawLineWithArrow(g, leftJuncX, leftJuncY, rightJuncX, rightJuncY, 
-				15, 5, Color.BLUE, Color.ORANGE);		
+				15, 5, Color.BLUE, Color.ORANGE);	
+		
+		
+		// choose a color for the right junction's circle depending on the traffic light of the road
+		Color rightJuncColor = _RED_LIGHT_COLOR;
+		int idx = road.getDestJunc().getGreenLightIndex();
+		if (idx != -1 && road.equals(road.getDestJunc().getInRoads().get(idx))) {
+			rightJuncColor = _GREEN_LIGHT_COLOR;
+		}
 		
 		// draw the right junction's circle
-		g.setColor(_JUNCTION_COLOR);
+		g.setColor(rightJuncColor);
 		g.fillOval(rightJuncX - _JUNC_RADIUS / 2, rightJuncY - _JUNC_RADIUS / 2,
 				_JUNC_RADIUS, _JUNC_RADIUS);
 
