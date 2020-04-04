@@ -17,9 +17,9 @@ public class RoadMap {
 	private Map<String,Road> roadMap;
 	private Map<String,Vehicle> vehicleMap;
 	
-	public static final String junctionsKey = "junctions";
-	public static final String roadKey = "roads";
-	public static final String vehiclesKey = "vehicles";
+	private static final String junctionsKey = "junctions";
+	private static final String roadKey = "roads";
+	private static final String vehiclesKey = "vehicles";
 	
 	public RoadMap() {
 		juncList = new ArrayList<Junction>();

@@ -18,14 +18,14 @@ public class Vehicle extends SimulatedObject {
 	private int location;
 	private int totalDistance;	
 
-	public static final String idKey = "id";
-	public static final String speedKey = "speed";
-	public static final String distanceKey = "distance";
-	public static final String co2Key = "co2";
-	public static final String classKey = "class";
-	public static final String statusKey = "status";
-	public static final String roadKey = "road";
-	public static final String locationKey = "location";
+	private static final String idKey = "id";
+	private static final String speedKey = "speed";
+	private static final String distanceKey = "distance";
+	private static final String co2Key = "co2";
+	private static final String classKey = "class";
+	private static final String statusKey = "status";
+	private static final String roadKey = "road";
+	private static final String locationKey = "location";
 
 	Vehicle(String id, int maxSpeed, int contClass, List<Junction> itinerary) {
 		super(id);

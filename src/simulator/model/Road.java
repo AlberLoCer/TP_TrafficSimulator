@@ -20,11 +20,11 @@ public  abstract class Road extends SimulatedObject {
 	protected Weather weather;
 	private List<Vehicle> vehicles;			// Keep always sorted
 	
-	public static final String idKey = "id";
-	public static final String speedLimitKey = "speedlimit";
-	public static final String weatherKey = "weather";
-	public static final String co2Key = "co2";
-	public static final String vehiclesKey = "vehicles";
+	private static final String idKey = "id";
+	private static final String speedLimitKey = "speedlimit";
+	private static final String weatherKey = "weather";
+	private static final String co2Key = "co2";
+	private static final String vehiclesKey = "vehicles";
 	
 	Road(String id, Junction srcJunc, Junction destJunc, int maxSpeed, int contLimit, 
 			int length, Weather weather) { 		

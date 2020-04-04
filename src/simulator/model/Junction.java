@@ -12,24 +12,24 @@ import org.json.JSONObject;
 
 public class Junction extends SimulatedObject {
 	
-	public static final String idKey = "id";
-	public static final String greenKey = "green";
-	public static final String queueKey = "queues";
-	public static final String roadSubKey = "road";
-	public static final String vehiclesSubKey = "vehicles";
+	private static final String idKey = "id";
+	private static final String greenKey = "green";
+	private static final String queueKey = "queues";
+	private static final String roadSubKey = "road";
+	private static final String vehiclesSubKey = "vehicles";
 	
-	List<Road> incomingRoads;
-	Map<Junction,Road> outgoingRoads;
-	List<List<Vehicle>> queueList;
+	protected List<Road> incomingRoads;
+	protected Map<Junction,Road> outgoingRoads;
+	protected List<List<Vehicle>> queueList;
 	
 	// Used when a car enters the junction (to get the list<vehicles> from its road object)
-	Map<Road,List<Vehicle>> queueMapList;		
+	protected Map<Road,List<Vehicle>> queueMapList;		
 	
-	int greenLightIdx;
-	int lastSwitchTime;
-	LightSwitchingStrategy lsStrategy;
-	DequeingStrategy dqStrategy;
-	int xCoor, yCoor;
+	protected int greenLightIdx;
+	protected int lastSwitchTime;
+	protected LightSwitchingStrategy lsStrategy;
+	protected DequeingStrategy dqStrategy;
+	protected int xCoor, yCoor;
 	
 	
 	Junction(String id, LightSwitchingStrategy lsStrategy, DequeingStrategy dqStrategy, 
