@@ -125,7 +125,7 @@ public class Junction extends SimulatedObject {
 		}
 		
 		JSONArray jArray = new JSONArray();
-		for (Road road : queueMapList.keySet()) {
+		for (Road road : incomingRoads) {
 			JSONObject jObject = new JSONObject();
 			jObject.put(roadSubKey, road.getId());
 		
