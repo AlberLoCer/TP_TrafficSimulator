@@ -15,6 +15,16 @@ public abstract class NewRoadEventBuilder extends Builder<Event> {
 	private static final String co2Key = "co2limit";
 	private static final String maxSpeedKey = "maxspeed";
 	private static final String weatherKey = "weather";
+	
+	//Variables
+	protected int time;
+	protected String id;
+	protected String src;
+	protected String dest;
+	protected int length;
+	protected int co2;
+	protected int maxSpeed;
+	protected String weather;
 
 	NewRoadEventBuilder(String type) {
 		super(type);
@@ -22,19 +32,18 @@ public abstract class NewRoadEventBuilder extends Builder<Event> {
 	
 	@Override
 	protected Event createTheInstance(JSONObject data) {
-		int time = data.getInt(timeKey);
-		String id = data.getString(idKey);
-		String src = data.getString(srcKey);
-		String dest = data.getString(destKey);
-		int length = data.getInt(lengthKey);
-		int co2 = data.getInt(co2Key);
-		int maxSpeed = data.getInt(maxSpeedKey);
-		String weather = data.getString(weatherKey);
+		time = data.getInt(timeKey);
+		id = data.getString(idKey);
+		src = data.getString(srcKey);
+		dest = data.getString(destKey);
+		length = data.getInt(lengthKey);
+		co2 = data.getInt(co2Key);
+		maxSpeed = data.getInt(maxSpeedKey);
+		weather = data.getString(weatherKey);
 		
-		return createEvent(time, id, src, dest, length, co2, maxSpeed, weather);
+		return createEvent();
 	}
 	
-	abstract NewRoadEvent createEvent(int time, String id, String src, String dest, int length,
-			int co2, int maxSpeed, String weather);
+	abstract NewRoadEvent createEvent();
 
 }
