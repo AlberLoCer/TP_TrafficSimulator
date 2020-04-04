@@ -10,13 +10,13 @@ import simulator.model.NewVehicleEvent;
 
 public class NewVehicleEventBuilder extends Builder<Event> {
 
-	public static final String type = "new_vehicle";
+	private static final String type = "new_vehicle";
 
-	public static final String timeKey = "time";
-	public static final String idKey = "id";
-	public static final String maxSpeedKey = "maxspeed";
-	public static final String contClassKey = "class";
-	public static final String itineraryKey = "itinerary";
+	private static final String timeKey = "time";
+	private static final String idKey = "id";
+	private static final String maxSpeedKey = "maxspeed";
+	private static final String contClassKey = "class";
+	private static final String itineraryKey = "itinerary";
 	
 	public NewVehicleEventBuilder() {
 		super(type);

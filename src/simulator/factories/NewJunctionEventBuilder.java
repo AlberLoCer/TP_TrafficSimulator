@@ -10,12 +10,12 @@ import simulator.model.NewJunctionEvent;
 
 public class NewJunctionEventBuilder extends Builder<Event> {
 
-	public static final String type = "new_junction";
-	public static final String timeKey = "time";
-	public static final String idKey = "id";
-	public static final String coordinateKey = "coor";
-	public static final String ls_strategy_key = "ls_strategy";
-	public static final String dq_strategy_key = "dq_strategy";
+	private static final String type = "new_junction";
+	private static final String timeKey = "time";
+	private static final String idKey = "id";
+	private static final String coordinateKey = "coor";
+	private static final String ls_strategy_key = "ls_strategy";
+	private static final String dq_strategy_key = "dq_strategy";
 	private Factory<LightSwitchingStrategy> lssFactory;
 	private Factory<DequeingStrategy> dqsFactory;
 	

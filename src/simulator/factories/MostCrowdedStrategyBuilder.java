@@ -7,8 +7,8 @@ import simulator.model.MostCrowdedStrategy;
 
 public class MostCrowdedStrategyBuilder extends Builder<LightSwitchingStrategy> {
 	
-	public static final String type = "most_crowded_lss";
-	public static final String timeslotKey = "timeslot";
+	private static final String type = "most_crowded_lss";
+	private static final String timeslotKey = "timeslot";
 
 	public MostCrowdedStrategyBuilder() {
 		super(type);		

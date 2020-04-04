@@ -7,14 +7,14 @@ import simulator.model.NewRoadEvent;
 
 public abstract class NewRoadEventBuilder extends Builder<Event> {
 	
-	public static final String timeKey = "time";
-	public static final String idKey = "id";
-	public static final String srcKey = "src";
-	public static final String destKey = "dest";
-	public static final String lengthKey = "length";
-	public static final String co2Key = "co2limit";
-	public static final String maxSpeedKey = "maxspeed";
-	public static final String weatherKey = "weather";
+	private static final String timeKey = "time";
+	private static final String idKey = "id";
+	private static final String srcKey = "src";
+	private static final String destKey = "dest";
+	private static final String lengthKey = "length";
+	private static final String co2Key = "co2limit";
+	private static final String maxSpeedKey = "maxspeed";
+	private static final String weatherKey = "weather";
 
 	NewRoadEventBuilder(String type) {
 		super(type);

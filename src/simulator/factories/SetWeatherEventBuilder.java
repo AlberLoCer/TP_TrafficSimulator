@@ -12,12 +12,12 @@ import simulator.model.Weather;
 
 public class SetWeatherEventBuilder extends Builder<Event> {
 	
-	public static final String type = "set_weather";
-	public static final String timeKey = "time";
-	public static final String infoKey = "info";
+	private static final String type = "set_weather";
+	private static final String timeKey = "time";
+	private static final String infoKey = "info";
 	
-	public static final String roadSubKey = "road";
-	public static final String weatherSubKey = "weather";
+	private static final String roadSubKey = "road";
+	private static final String weatherSubKey = "weather";
 	
 	public SetWeatherEventBuilder() {
 		super(type);
