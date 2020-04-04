@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -183,9 +184,12 @@ public class Main {
 	private static void startBatchMode() throws IOException {
 		Controller controller = new Controller(new TrafficSimulator(), _eventsFactory);
 		InputStream is = new FileInputStream(new File(_inFile));
+		OutputStream os = new FileOutputStream(new File(_outFile));
 		controller.loadEvents(is);
 		if(_outFile != null) {			
-			controller.run(_ticks, new FileOutputStream(_outFile));		
+			controller.run(_ticks, os);		
+			is.close();
+			os.close();
 		}
 		else {
 			controller.run(_ticks, System.out);
