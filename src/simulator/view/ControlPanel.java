@@ -3,11 +3,17 @@ package simulator.view;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComponent;
+import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -35,7 +41,7 @@ public class ControlPanel extends JPanel{
 		openButton.setIcon(getIcon("open.png"));
 		openButton.setSize(60, 60);
 		openButton.addActionListener( (actionEvent) -> {
-			System.out.println("Open");
+			loadButton();
 		});
 		this.add(openButton);
 		
@@ -108,6 +114,29 @@ public class ControlPanel extends JPanel{
 			
 		});
 		this.add(exitButton);
+	}
+	
+	private void loadButton() {
+
+		JComponent mainPanel = new JPanel();
+		JFileChooser fc = new JFileChooser();
+
+		fc.setCurrentDirectory(new File("resources/examples"));
+		fc.setAcceptAllFileFilterUsed(false);
+		fc.showOpenDialog(null);
+		InputStream fs = null;
+		try {
+			fs = new FileInputStream(fc.getSelectedFile());
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		controller.reset();
+		controller.loadEvents(fs);
+	
+		this.add(mainPanel);
+		mainPanel.setOpaque(true);
+		this.setVisible(true);
+		
 	}
 	
 	private JButton addButton(String text) {
