@@ -1,8 +1,10 @@
 package simulator.view;
 
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -37,8 +39,7 @@ public class ControlPanel extends JPanel{
 		});
 		this.add(openButton);
 		
-		JSeparator sep1 = new JSeparator(SwingUtilities.VERTICAL);
-		this.add(sep1);
+		addSeparation();
 		
 		JButton co2Button = addButton("");
 		co2Button.setIcon(getIcon("co2class.png"));
@@ -56,8 +57,7 @@ public class ControlPanel extends JPanel{
 		});
 		this.add(weatherButton);
 		
-		JSeparator sep2 = new JSeparator(SwingUtilities.VERTICAL);
-		this.add(sep2);
+		addSeparation();
 		
 		JButton runButton = addButton("");
 		runButton.setIcon(getIcon("run.png"));
@@ -76,17 +76,22 @@ public class ControlPanel extends JPanel{
 		});
 		this.add(stopButton);
 		
+		this.add(Box.createRigidArea(new Dimension(10, 0)));
+		
 		JLabel ticks = new JLabel("Ticks:");
-		this.add(ticks);
+		this.add(ticks);		
+		
+		this.add(Box.createRigidArea(new Dimension(10, 0)));
+		
 		JSpinner ticknum = new JSpinner();
-		this.add(ticknum);
+		ticknum.setMinimumSize(new Dimension(100, 40));
+		ticknum.setPreferredSize(new Dimension(100, 40));
+		ticknum.setMaximumSize(new Dimension(100, 40));
+		this.add(ticknum);		
 		
-		JPanel space = new JPanel();
-		space.setSize(300, 60);
-		this.add(space);
+		this.add(Box.createHorizontalGlue());
 		
-		JSeparator sep3 = new JSeparator(SwingUtilities.VERTICAL);
-		this.add(sep3);
+		addSeparation();
 		
 		JButton exitButton = addButton("");
 		exitButton.setIcon(getIcon("exit.png"));
@@ -103,12 +108,21 @@ public class ControlPanel extends JPanel{
 			
 		});
 		this.add(exitButton);
-		
 	}
 	
 	private JButton addButton(String text) {
 		JButton button = new JButton(text);
 		return button;
+	}
+	
+	private void addSeparation() {
+		this.add(Box.createRigidArea(new Dimension(10, 0)));
+		
+		JSeparator sep = new JSeparator(SwingUtilities.VERTICAL);
+		sep.setMaximumSize(new Dimension(10, 60));
+		this.add(sep);
+		
+		this.add(Box.createRigidArea(new Dimension(10, 0)));
 	}
 	
 	private ImageIcon getIcon(String filename) {
