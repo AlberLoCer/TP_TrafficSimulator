@@ -29,9 +29,9 @@ public class TestExamples {
 
 		JSONArray tests = jo.getJSONArray("tests");
 
+		System.setOut(nullStream);
+		System.setErr(nullStream);
 		if (testMode) {
-			System.setOut(nullStream);
-			System.setErr(nullStream);
 			for (int i = 0; i < tests.length(); i++) {
 				test(path, tests.getJSONObject(i));
 			}
@@ -48,12 +48,12 @@ public class TestExamples {
 		String outFile = path + "/" + info.getString("file") + ".expout.json";
 		Integer ticks = info.getInt("ticks");
 
-		System.out.println("-> Running: " + inFile);
+		_stdOut.println("-> Running: " + inFile);
 		try {
-			simulator.launcher.Main.main(new String[] { "-i", inFile, "-o", outFile, "-t", ticks.toString() });
-			System.out.println("OK!");
+			simulator.launcher.Main.main(new String[] { "-m","console","-i", inFile, "-o", outFile, "-t", ticks.toString() });
+			_stdOut.println("OK!");
 		} catch (Exception e) {
-			System.out.println("Failed (exception thrown).");
+			_stdOut.println("Failed (exception thrown).");
 		}
 
 	}
@@ -64,10 +64,10 @@ public class TestExamples {
 		File myoutFile = new File(path + "/" + info.getString("file") + ".myout.json");
 		Integer ticks = info.getInt("ticks");
 
-		_stdOut.println("-> Running: " + inFile);
+		_stdOut.println("-> Testing: " + inFile);
 		try {
 			simulator.launcher.Main
-					.main(new String[] { "-i", inFile.getPath(), "-o", myoutFile.getPath(), "-t", ticks.toString() });
+					.main(new String[] { "-m","console","-i", inFile.getPath(), "-o", myoutFile.getPath(), "-t", ticks.toString() });
 
 			JSONObject jo1 = new JSONObject(new JSONTokener(new FileInputStream(outFile)));
 			JSONObject jo2 = new JSONObject(new JSONTokener(new FileInputStream(myoutFile)));
