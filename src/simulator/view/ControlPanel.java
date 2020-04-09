@@ -25,6 +25,7 @@ import javax.swing.JSpinner;
 import javax.swing.SwingUtilities;
 
 import extra.dialog.DialogWindowExample;
+import javafx.stage.FileChooser;
 import simulator.control.Controller;
 import simulator.model.RoadMap;
 
@@ -32,6 +33,8 @@ public class ControlPanel extends JPanel{
 	
 	//TODO: Use glue for adapting the UI to what it's meant	
 	private Controller controller;
+	
+	private JFileChooser fileChooser;
 
 	public ControlPanel(Controller controller) {
 		this.controller = controller; 
@@ -137,25 +140,22 @@ public class ControlPanel extends JPanel{
 	
 	private void loadButton() {
 
-		JComponent mainPanel = new JPanel();
-		JFileChooser fc = new JFileChooser();
-
-		fc.setCurrentDirectory(new File("resources/examples"));
-		fc.setAcceptAllFileFilterUsed(false);
-		fc.showOpenDialog(null);
+		if(fileChooser == null) {
+			// First use of it -> create instance
+			fileChooser = new JFileChooser();
+			fileChooser.setCurrentDirectory(new File("resources/examples"));
+			fileChooser.setAcceptAllFileFilterUsed(false);
+		}		
+		
+		fileChooser.showOpenDialog(null);
 		InputStream fs = null;
 		try {
-			fs = new FileInputStream(fc.getSelectedFile());
+			fs = new FileInputStream(fileChooser.getSelectedFile());
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 		controller.reset();
-		controller.loadEvents(fs);
-	
-		this.add(mainPanel);
-		mainPanel.setOpaque(true);
-		this.setVisible(true);
-		
+		controller.loadEvents(fs);		
 	}
 	
 	
