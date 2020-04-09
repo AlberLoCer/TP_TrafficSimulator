@@ -1,6 +1,9 @@
 package simulator.view;
 
+import java.awt.BorderLayout;
+import java.awt.Dialog;
 import java.awt.Dimension;
+import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -21,7 +24,9 @@ import javax.swing.JSeparator;
 import javax.swing.JSpinner;
 import javax.swing.SwingUtilities;
 
+import extra.dialog.DialogWindowExample;
 import simulator.control.Controller;
+import simulator.model.RoadMap;
 
 public class ControlPanel extends JPanel{
 	
@@ -51,7 +56,14 @@ public class ControlPanel extends JPanel{
 		co2Button.setIcon(getIcon("co2class.png"));
 		co2Button.setSize(60, 60);		
 		co2Button.addActionListener( (actionEvent) -> {
-			System.out.println("CO2");
+			SwingUtilities.invokeLater(new Runnable() {
+				
+				@Override
+				public void run() {
+					new CO2Window(new Frame());
+				}
+			});
+		
 		});		
 		this.add(co2Button);
 		
@@ -59,7 +71,14 @@ public class ControlPanel extends JPanel{
 		weatherButton.setIcon(getIcon("weather.png"));
 		weatherButton.setSize(60, 60);
 		weatherButton.addActionListener( (actionEvent) -> {
-			System.out.println("You changed weather");
+			SwingUtilities.invokeLater(new Runnable() {
+				
+				@Override
+				public void run() {
+					new WeatherWindow(new Frame());
+				}
+			});
+		
 		});
 		this.add(weatherButton);
 		
@@ -138,6 +157,7 @@ public class ControlPanel extends JPanel{
 		this.setVisible(true);
 		
 	}
+	
 	
 	private JButton addButton(String text) {
 		JButton button = new JButton(text);
