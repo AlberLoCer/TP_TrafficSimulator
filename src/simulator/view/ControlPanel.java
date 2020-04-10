@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.List;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -26,17 +27,23 @@ import javax.swing.SwingUtilities;
 
 import extra.dialog.DialogWindowExample;
 import simulator.control.Controller;
+import simulator.model.Event;
 import simulator.model.RoadMap;
+import simulator.model.TrafficSimObserver;
 
-public class ControlPanel extends JPanel{
+public class ControlPanel extends JPanel implements TrafficSimObserver{
 	
 	//TODO: Use glue for adapting the UI to what it's meant	
 	private Controller controller;
+	private RoadMap roadMap;
+	private int simTime;
 	
 	private JFileChooser fileChooser;
+	private WeatherWindow weatherWindow;
 
 	public ControlPanel(Controller controller) {
 		this.controller = controller; 
+		controller.addObserver(this);
 		initGUI();		
 	}
 	
@@ -69,6 +76,7 @@ public class ControlPanel extends JPanel{
 		});		
 		this.add(co2Button);
 		
+		weatherWindow = new WeatherWindow((Frame) SwingUtilities.getWindowAncestor(ControlPanel.this), controller);
 		JButton weatherButton = addButton("");
 		weatherButton.setIcon(getIcon("weather.png"));
 		weatherButton.setSize(60, 60);
@@ -77,7 +85,7 @@ public class ControlPanel extends JPanel{
 				
 				@Override
 				public void run() {
-					new WeatherWindow((Frame) SwingUtilities.getWindowAncestor(ControlPanel.this));
+					weatherWindow.display(roadMap, simTime);
 				}
 			});
 		
@@ -175,6 +183,40 @@ public class ControlPanel extends JPanel{
 	
 	private ImageIcon getIcon(String filename) {
 		return new ImageIcon("resources/icons/" + filename);
+	}
+
+	@Override
+	public void onAdvanceStart(RoadMap map, List<Event> events, int time) {
+		
+	}
+
+	@Override
+	public void onAdvanceEnd(RoadMap map, List<Event> events, int time) {
+		this.roadMap = map;		
+		this.simTime = time;
+	}
+
+	@Override
+	public void onEventAdded(RoadMap map, List<Event> events, Event e, int time) {
+		this.roadMap = map;	
+		this.simTime = time;
+	}
+
+	@Override
+	public void onReset(RoadMap map, List<Event> events, int time) {
+		this.roadMap = map;	
+		this.simTime = time;
+	}
+
+	@Override
+	public void onRegister(RoadMap map, List<Event> events, int time) {
+		this.roadMap = map;		
+		this.simTime = time;
+	}
+
+	@Override
+	public void onError(String err) {
+		
 	}
 
 }
