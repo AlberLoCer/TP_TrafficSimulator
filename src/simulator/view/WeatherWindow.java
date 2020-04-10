@@ -16,9 +16,11 @@ import simulator.model.Road;
 import simulator.model.Weather;
 
 public class WeatherWindow extends JDialog {
+	
 	private JComboBox<Road> roadsBox;
 	private JComboBox<Weather> weatherBox;
 	private JSpinner ticks;
+	
 	public WeatherWindow(Frame f) {
 		super(f, true);
 		buildWindow();
@@ -76,8 +78,10 @@ public class WeatherWindow extends JDialog {
 		setPreferredSize(new Dimension(500, 200));
 		pack();
 		setResizable(false);
-		setVisible(true);
-		
+		setLocation(getParent().getLocation().x + getParent().getWidth() / 4,
+				getParent().getLocation().y  + getParent().getHeight() / 4);
+		setVisible(true);		
 	}
+	
 
 }

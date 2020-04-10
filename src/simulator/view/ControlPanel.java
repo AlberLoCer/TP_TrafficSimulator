@@ -25,7 +25,6 @@ import javax.swing.JSpinner;
 import javax.swing.SwingUtilities;
 
 import extra.dialog.DialogWindowExample;
-import javafx.stage.FileChooser;
 import simulator.control.Controller;
 import simulator.model.RoadMap;
 
@@ -63,7 +62,7 @@ public class ControlPanel extends JPanel{
 				
 				@Override
 				public void run() {
-					new CO2Window(new Frame());
+					new CO2Window((Frame) SwingUtilities.getWindowAncestor(ControlPanel.this));
 				}
 			});
 		
@@ -78,7 +77,7 @@ public class ControlPanel extends JPanel{
 				
 				@Override
 				public void run() {
-					new WeatherWindow(new Frame());
+					new WeatherWindow((Frame) SwingUtilities.getWindowAncestor(ControlPanel.this));
 				}
 			});
 		
