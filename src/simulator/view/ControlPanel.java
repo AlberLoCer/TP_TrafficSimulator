@@ -40,6 +40,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 	
 	private JFileChooser fileChooser;
 	private WeatherWindow weatherWindow;
+	private CO2Window co2Window;
 
 	public ControlPanel(Controller controller) {
 		this.controller = controller; 
@@ -61,6 +62,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		
 		addSeparation();
 		
+		co2Window = new CO2Window((Frame) SwingUtilities.getWindowAncestor(ControlPanel.this), controller);
 		JButton co2Button = addButton("");
 		co2Button.setIcon(getIcon("co2class.png"));
 		co2Button.setSize(60, 60);		
@@ -69,7 +71,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 				
 				@Override
 				public void run() {
-					new CO2Window((Frame) SwingUtilities.getWindowAncestor(ControlPanel.this));
+					co2Window.display(roadMap, simTime);
 				}
 			});
 		
