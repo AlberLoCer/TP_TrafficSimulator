@@ -28,10 +28,11 @@ public class CO2Window extends JDialog{
 	
 	private Controller controller;			
 	private int simTime;
-	private Integer contVals[] = {1,2,3,4,5,6,7,8,9,10};
+	private Integer contVals[] = {0,1,2,3,4,5,6,7,8,9,10};
 	private JComboBox<Vehicle> vehicleBox;
 	private JComboBox<Integer> contClassBox;
 	private JSpinner ticks;
+	
 	public CO2Window(Frame f, Controller controller) {
 		super(f,true);
 		this.controller = controller;
