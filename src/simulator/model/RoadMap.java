@@ -56,18 +56,26 @@ public class RoadMap {
 	}
 	
 	void addVehicle(Vehicle v) {
-		boolean junctionsOK = true;
+		//Check that there is a road between consecutive junctions.
+		for(int i = 0; i < v.getItinerary().size()-1; i++) {
+            Junction a = v.getItinerary().get(i);
+            Junction b = v.getItinerary().get(i+1);
+            Map<Junction,Road> m = a.getOutRoads();
+            if(!m.containsKey(b)) {
+            	throw new UnsupportedOperationException("The vehicle itinerary is invalid");
+            }
+		}
+		//Check that the junctions exist
 		for(Junction j : v.getItinerary()) {
 			if (!juncMap.containsValue(j)) {
-				junctionsOK = false;
+				throw new UnsupportedOperationException("Some junction in the vehicle itinerary is not registered");
 			}
 		}
+		
 		if(vehicleMap.containsKey(v.getId())) {
 			throw new UnsupportedOperationException("The vehicle map already contained the vehicle "+v.getId());
 		}	
-		else if (!junctionsOK) {
-			throw new UnsupportedOperationException("Some junctions in vehicle itinerary is not registered");
-		}		
+
 		else {			
 			vehicleList.add(v);
 			vehicleMap.put(v.getId(), v);

@@ -157,6 +157,10 @@ public class Junction extends SimulatedObject {
 	public List<Road> getInRoads(){
 		return Collections.unmodifiableList(incomingRoads);
 	}
+	
+	public Map<Junction, Road> getOutRoads(){
+		return  Collections.unmodifiableMap(outgoingRoads);
+	}
 
 	public List<List<Vehicle>> getQueueList() {
 		return queueList;
