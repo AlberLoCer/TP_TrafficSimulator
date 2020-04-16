@@ -107,6 +107,8 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		runButton.setIcon(getIcon("run.png"));
 		runButton.setSize(60, 60);
 		runButton.addActionListener( (actionEvent) -> {
+			stopped = false;
+			enableToolBar(false);
 			SwingUtilities.invokeLater(() -> run_sim((Integer)ticknum.getValue()));
 		});
 		this.add(runButton);
@@ -199,16 +201,16 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 			try {
 				controller.run(1);
 			} catch (Exception e) {
-		// TODO show error message
+				// TODO show error message
 				stopped = true;
 				return;
 			}
-		SwingUtilities.invokeLater(() -> run_sim(n - 1));
+			SwingUtilities.invokeLater(() -> run_sim(n - 1));
 		}
 		
 		else {
-		enableToolBar(true);
-		stopped = true;
+			enableToolBar(true);
+			stopped = true;
 		}
 	}
 	
