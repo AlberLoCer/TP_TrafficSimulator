@@ -33,7 +33,6 @@ import simulator.model.TrafficSimObserver;
 
 public class ControlPanel extends JPanel implements TrafficSimObserver{
 	
-	//TODO: Use glue for adapting the UI to what it's meant	
 	private Controller controller;
 	private RoadMap roadMap;
 	private int simTime;
@@ -59,26 +58,16 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		
 		this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 		
-		initLoadButton();
-		
-		addSeparation();
-		
-		initCO2Button();
-		
-		initWeatherButton();
-		
-		addSeparation();
-		
-		initRunButton();
-		
-		initStopButton();
-		
-		initTicksSpinner();
-		
-		this.add(Box.createHorizontalGlue());
-		
-		addSeparation();
-		
+		initLoadButton();		
+		addSeparation();		
+		initCO2Button();		
+		initWeatherButton();		
+		addSeparation();		
+		initRunButton();		
+		initStopButton();		
+		initTicksSpinner();		
+		this.add(Box.createHorizontalGlue());		
+		addSeparation();		
 		initExitButton();
 	}
 	
@@ -118,14 +107,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		co2Button.setIcon(getIcon("co2class.png"));
 		co2Button.setSize(60, 60);		
 		co2Button.addActionListener( (actionEvent) -> {
-			SwingUtilities.invokeLater(new Runnable() {
-				
-				@Override
-				public void run() {
-					co2Window.display(roadMap, simTime);
-				}
-			});
-		
+			SwingUtilities.invokeLater(() -> co2Window.display(roadMap, simTime));		
 		});		
 		this.add(co2Button);
 	}
@@ -136,14 +118,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		weatherButton.setIcon(getIcon("weather.png"));
 		weatherButton.setSize(60, 60);
 		weatherButton.addActionListener( (actionEvent) -> {
-			SwingUtilities.invokeLater(new Runnable() {
-				
-				@Override
-				public void run() {
-					weatherWindow.display(roadMap, simTime);
-				}
-			});
-		
+			SwingUtilities.invokeLater(() -> weatherWindow.display(roadMap, simTime));		
 		});
 		this.add(weatherButton);
 	}
@@ -202,8 +177,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 			
 		});
 		this.add(exitButton);
-	}
-	
+	}	
 	
 	private JButton addButton(String text) {
 		JButton button = new JButton(text);
@@ -244,20 +218,15 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 	
 	private void stop() {
 		stopped = true;
-	}
+	}	
 
-
-	
-
-	private void enableToolBar(boolean b) {
-		
+	private void enableToolBar(boolean b) {		
 		openButton.setEnabled(b);
 		co2Button.setEnabled(b);
 		weatherButton.setEnabled(b);
 		runButton.setEnabled(b);
 		stopButton.setEnabled(!b);
-		exitButton.setEnabled(b);
-		
+		exitButton.setEnabled(b);		
 	}
 
 	@Override
