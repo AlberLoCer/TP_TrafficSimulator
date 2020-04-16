@@ -37,11 +37,18 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 	private Controller controller;
 	private RoadMap roadMap;
 	private int simTime;
-	
+	private boolean stopped;
 	private JFileChooser fileChooser;
 	private WeatherWindow weatherWindow;
 	private CO2Window co2Window;
-
+	private JSpinner ticknum;
+	private JButton openButton;
+	private JButton co2Button;
+	private JButton weatherButton;
+	private JButton runButton;
+	private JButton stopButton;
+	private JButton exitButton;
+	
 	public ControlPanel(Controller controller) {
 		this.controller = controller; 
 		controller.addObserver(this);
@@ -52,7 +59,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		
 		this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 		
-		JButton openButton = addButton("");
+		openButton = addButton("");
 		openButton.setIcon(getIcon("open.png"));
 		openButton.setSize(60, 60);
 		openButton.addActionListener( (actionEvent) -> {
@@ -63,7 +70,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		addSeparation();
 		
 		co2Window = new CO2Window((Frame) SwingUtilities.getWindowAncestor(ControlPanel.this), controller);
-		JButton co2Button = addButton("");
+		co2Button = addButton("");
 		co2Button.setIcon(getIcon("co2class.png"));
 		co2Button.setSize(60, 60);		
 		co2Button.addActionListener( (actionEvent) -> {
@@ -79,7 +86,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		this.add(co2Button);
 		
 		weatherWindow = new WeatherWindow((Frame) SwingUtilities.getWindowAncestor(ControlPanel.this), controller);
-		JButton weatherButton = addButton("");
+		weatherButton = addButton("");
 		weatherButton.setIcon(getIcon("weather.png"));
 		weatherButton.setSize(60, 60);
 		weatherButton.addActionListener( (actionEvent) -> {
@@ -96,22 +103,22 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		
 		addSeparation();
 		
-		JButton runButton = addButton("");
+		runButton = addButton("");
 		runButton.setIcon(getIcon("run.png"));
 		runButton.setSize(60, 60);
 		runButton.addActionListener( (actionEvent) -> {
-			// TODO: change, this is only to test
-			controller.run(1);
+			SwingUtilities.invokeLater(() -> run_sim((Integer)ticknum.getValue()));
 		});
 		this.add(runButton);
 		
-		JButton stopButton = addButton("");
+		stopButton = addButton("");
 		stopButton.setIcon(getIcon("stop.png"));
 		stopButton.setSize(60, 60);
 		stopButton.addActionListener( (actionEvent) -> {
-			System.out.println("Stop");
+			stop();
 		});
 		this.add(stopButton);
+        stopped = false;
 		
 		this.add(Box.createRigidArea(new Dimension(10, 0)));
 		
@@ -120,7 +127,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		
 		this.add(Box.createRigidArea(new Dimension(10, 0)));
 		
-		JSpinner ticknum = new JSpinner();
+		ticknum = new JSpinner();
 		ticknum.setMinimumSize(new Dimension(100, 40));
 		ticknum.setPreferredSize(new Dimension(100, 40));
 		ticknum.setMaximumSize(new Dimension(100, 40));
@@ -130,7 +137,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		
 		addSeparation();
 		
-		JButton exitButton = addButton("");
+		exitButton = addButton("");
 		exitButton.setIcon(getIcon("exit.png"));
 		exitButton.setSize(60, 60);
 		exitButton.addActionListener( (actionEvent) -> {
@@ -185,6 +192,42 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 	
 	private ImageIcon getIcon(String filename) {
 		return new ImageIcon("resources/icons/" + filename);
+	}
+	
+	private void run_sim(int n) {
+		if (n > 0 && !stopped) {
+			try {
+				controller.run(1);
+			} catch (Exception e) {
+		// TODO show error message
+				stopped = true;
+				return;
+			}
+		SwingUtilities.invokeLater(() -> run_sim(n - 1));
+		}
+		
+		else {
+		enableToolBar(true);
+		stopped = true;
+		}
+	}
+	
+	private void stop() {
+		stopped = true;
+	}
+
+
+	
+
+	private void enableToolBar(boolean b) {
+		
+		openButton.setEnabled(b);
+		co2Button.setEnabled(b);
+		weatherButton.setEnabled(b);
+		runButton.setEnabled(b);
+		stopButton.setEnabled(!b);
+		exitButton.setEnabled(b);
+		
 	}
 
 	@Override
