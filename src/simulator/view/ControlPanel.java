@@ -59,104 +59,40 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		
 		this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 		
-		openButton = addButton("");
-		openButton.setIcon(getIcon("open.png"));
-		openButton.setSize(60, 60);
-		openButton.addActionListener( (actionEvent) -> {
-			loadButton();
-		});
-		this.add(openButton);
+		initLoadButton();
 		
 		addSeparation();
 		
-		co2Window = new CO2Window((Frame) SwingUtilities.getWindowAncestor(ControlPanel.this), controller);
-		co2Button = addButton("");
-		co2Button.setIcon(getIcon("co2class.png"));
-		co2Button.setSize(60, 60);		
-		co2Button.addActionListener( (actionEvent) -> {
-			SwingUtilities.invokeLater(new Runnable() {
-				
-				@Override
-				public void run() {
-					co2Window.display(roadMap, simTime);
-				}
-			});
+		initCO2Button();
 		
-		});		
-		this.add(co2Button);
-		
-		weatherWindow = new WeatherWindow((Frame) SwingUtilities.getWindowAncestor(ControlPanel.this), controller);
-		weatherButton = addButton("");
-		weatherButton.setIcon(getIcon("weather.png"));
-		weatherButton.setSize(60, 60);
-		weatherButton.addActionListener( (actionEvent) -> {
-			SwingUtilities.invokeLater(new Runnable() {
-				
-				@Override
-				public void run() {
-					weatherWindow.display(roadMap, simTime);
-				}
-			});
-		
-		});
-		this.add(weatherButton);
+		initWeatherButton();
 		
 		addSeparation();
 		
-		runButton = addButton("");
-		runButton.setIcon(getIcon("run.png"));
-		runButton.setSize(60, 60);
-		runButton.addActionListener( (actionEvent) -> {
-			stopped = false;
-			enableToolBar(false);
-			SwingUtilities.invokeLater(() -> run_sim((Integer)ticknum.getValue()));
-		});
-		this.add(runButton);
+		initRunButton();
 		
-		stopButton = addButton("");
-		stopButton.setIcon(getIcon("stop.png"));
-		stopButton.setSize(60, 60);
-		stopButton.addActionListener( (actionEvent) -> {
-			stop();
-		});
-		this.add(stopButton);
-        stopped = false;
+		initStopButton();
 		
-		this.add(Box.createRigidArea(new Dimension(10, 0)));
-		
-		JLabel ticks = new JLabel("Ticks:");
-		this.add(ticks);		
-		
-		this.add(Box.createRigidArea(new Dimension(10, 0)));
-		
-		ticknum = new JSpinner();
-		ticknum.setMinimumSize(new Dimension(100, 40));
-		ticknum.setPreferredSize(new Dimension(100, 40));
-		ticknum.setMaximumSize(new Dimension(100, 40));
-		this.add(ticknum);		
+		initTicksSpinner();
 		
 		this.add(Box.createHorizontalGlue());
 		
 		addSeparation();
 		
-		exitButton = addButton("");
-		exitButton.setIcon(getIcon("exit.png"));
-		exitButton.setSize(60, 60);
-		exitButton.addActionListener( (actionEvent) -> {
-			
-			Object[] options = {"Yes", "No"};
-			int choice = JOptionPane.showOptionDialog(null, "Are you sure you want to exit?"
-					, "Quit", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null,
-					options, options[0]);
-			if(choice == 0) {
-				System.exit(0);
-			}		
-			
-		});
-		this.add(exitButton);
+		initExitButton();
 	}
 	
-	private void loadButton() {
+	private void initLoadButton() {
+		openButton = addButton("");
+		openButton.setIcon(getIcon("open.png"));
+		openButton.setSize(60, 60);
+		openButton.addActionListener( (actionEvent) -> {
+			loadButtonClicked();
+		});
+		this.add(openButton);
+	}
+	
+	private void loadButtonClicked() {
 
 		if(fileChooser == null) {
 			// First use of it -> create instance
@@ -174,6 +110,98 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		}
 		controller.reset();
 		controller.loadEvents(fs);		
+	}
+	
+	private void initCO2Button() {
+		co2Window = new CO2Window((Frame) SwingUtilities.getWindowAncestor(ControlPanel.this), controller);
+		co2Button = addButton("");
+		co2Button.setIcon(getIcon("co2class.png"));
+		co2Button.setSize(60, 60);		
+		co2Button.addActionListener( (actionEvent) -> {
+			SwingUtilities.invokeLater(new Runnable() {
+				
+				@Override
+				public void run() {
+					co2Window.display(roadMap, simTime);
+				}
+			});
+		
+		});		
+		this.add(co2Button);
+	}
+	
+	private void initWeatherButton() {
+		weatherWindow = new WeatherWindow((Frame) SwingUtilities.getWindowAncestor(ControlPanel.this), controller);
+		weatherButton = addButton("");
+		weatherButton.setIcon(getIcon("weather.png"));
+		weatherButton.setSize(60, 60);
+		weatherButton.addActionListener( (actionEvent) -> {
+			SwingUtilities.invokeLater(new Runnable() {
+				
+				@Override
+				public void run() {
+					weatherWindow.display(roadMap, simTime);
+				}
+			});
+		
+		});
+		this.add(weatherButton);
+	}
+	
+	private void initRunButton() {
+		runButton = addButton("");
+		runButton.setIcon(getIcon("run.png"));
+		runButton.setSize(60, 60);
+		runButton.addActionListener( (actionEvent) -> {
+			stopped = false;
+			enableToolBar(false);
+			SwingUtilities.invokeLater(() -> run_sim((Integer)ticknum.getValue()));
+		});
+		this.add(runButton);
+	}
+	
+	private void initStopButton() {
+		stopButton = addButton("");
+		stopButton.setIcon(getIcon("stop.png"));
+		stopButton.setSize(60, 60);
+		stopButton.addActionListener( (actionEvent) -> {
+			stop();
+		});
+		this.add(stopButton);
+        stopped = false;
+	}
+	
+	private void initTicksSpinner() {
+		this.add(Box.createRigidArea(new Dimension(10, 0)));
+		
+		JLabel ticks = new JLabel("Ticks:");
+		this.add(ticks);		
+		
+		this.add(Box.createRigidArea(new Dimension(10, 0)));
+		
+		ticknum = new JSpinner();
+		ticknum.setMinimumSize(new Dimension(100, 40));
+		ticknum.setPreferredSize(new Dimension(100, 40));
+		ticknum.setMaximumSize(new Dimension(100, 40));
+		this.add(ticknum);
+	}
+	
+	private void initExitButton() {
+		exitButton = addButton("");
+		exitButton.setIcon(getIcon("exit.png"));
+		exitButton.setSize(60, 60);
+		exitButton.addActionListener( (actionEvent) -> {
+			
+			Object[] options = {"Yes", "No"};
+			int choice = JOptionPane.showOptionDialog(null, "Are you sure you want to exit?"
+					, "Quit", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null,
+					options, options[0]);
+			if(choice == 0) {
+				System.exit(0);
+			}		
+			
+		});
+		this.add(exitButton);
 	}
 	
 	
