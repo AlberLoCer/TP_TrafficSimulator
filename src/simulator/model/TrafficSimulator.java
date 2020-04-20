@@ -42,6 +42,18 @@ public class TrafficSimulator implements Observable<TrafficSimObserver> {
 		}
 	}
 	
+	void advanceJunctions(int time) {
+		for(Junction j : roadMap.getJunctions()) {
+			j.advance(time);
+		}
+	}
+	
+	void advanceRoads(int time) {
+		for(Road r : roadMap.getRoads()) {
+			r.advance(time);
+		}
+	}
+	
 	public void advance() {
 		try {
 			//Advance simulation time
@@ -56,8 +68,8 @@ public class TrafficSimulator implements Observable<TrafficSimObserver> {
 				eventList.remove(0).execute(roadMap);
 			}
 			//Advance methods
-			roadMap.advanceJunctions(simTime);
-			roadMap.advanceRoads(simTime);
+			advanceJunctions(simTime);
+			advanceRoads(simTime);
 			//Notify
 			for (TrafficSimObserver obs : observers) {
 				obs.onAdvanceEnd(roadMap, eventList, simTime);
