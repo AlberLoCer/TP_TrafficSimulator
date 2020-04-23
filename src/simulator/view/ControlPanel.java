@@ -150,6 +150,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		this.add(Box.createRigidArea(new Dimension(10, 0)));
 		
 		ticknum = new JSpinner();
+		ticknum.setValue(new Integer(10));
 		ticknum.setMinimumSize(new Dimension(100, 40));
 		ticknum.setPreferredSize(new Dimension(100, 40));
 		ticknum.setMaximumSize(new Dimension(100, 40));
