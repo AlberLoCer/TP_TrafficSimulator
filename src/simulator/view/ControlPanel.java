@@ -1,11 +1,7 @@
 package simulator.view;
 
-import java.awt.BorderLayout;
-import java.awt.Dialog;
 import java.awt.Dimension;
 import java.awt.Frame;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -16,7 +12,6 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -25,7 +20,7 @@ import javax.swing.JSeparator;
 import javax.swing.JSpinner;
 import javax.swing.SwingUtilities;
 
-import extra.dialog.DialogWindowExample;
+
 import simulator.control.Controller;
 import simulator.model.Event;
 import simulator.model.RoadMap;

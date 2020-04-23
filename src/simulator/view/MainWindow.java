@@ -5,7 +5,6 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.Border;
 
-import extra.jtable.EventExTableModel;
 import simulator.control.Controller;
 
 public class MainWindow extends JFrame{

@@ -4,8 +4,6 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
 import java.awt.Image;
 import java.awt.RenderingHints;
 import java.io.File;
@@ -17,12 +15,10 @@ import javax.swing.JPanel;
 
 import simulator.control.Controller;
 import simulator.model.Event;
-import simulator.model.Junction;
 import simulator.model.Road;
 import simulator.model.RoadMap;
 import simulator.model.TrafficSimObserver;
 import simulator.model.Vehicle;
-import simulator.model.VehicleStatus;
 
 public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 	

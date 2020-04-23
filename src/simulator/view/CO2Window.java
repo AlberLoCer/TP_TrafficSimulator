@@ -2,7 +2,6 @@ package simulator.view;
 
 import java.awt.Dimension;
 import java.awt.Frame;
-import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.List;
 

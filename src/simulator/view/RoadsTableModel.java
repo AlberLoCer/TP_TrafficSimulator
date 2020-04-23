@@ -3,14 +3,12 @@ package simulator.view;
 import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
-import javax.swing.table.TableModel;
 
 import simulator.control.Controller;
 import simulator.model.Event;
 import simulator.model.Road;
 import simulator.model.RoadMap;
 import simulator.model.TrafficSimObserver;
-import simulator.model.Vehicle;
 
 public class RoadsTableModel extends AbstractTableModel implements TrafficSimObserver{
 	private String[] colNames = { "Id", "Length", "Weather", "Max Speed", "Speed Limit",  "Total CO2", "CO2 Limit" };
