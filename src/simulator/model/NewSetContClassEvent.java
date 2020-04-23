@@ -33,7 +33,7 @@ public class NewSetContClassEvent extends Event {
 	
 	@Override
 	public String toString() {
-		String event = "Event: Change CO2 class: [";
+		String event = "Change CO2 class: [";
 		for(Pair<String,Integer> c : cs) {
 			event+="("+c.getFirst()+"," + c.getSecond() + ")";
 		}
