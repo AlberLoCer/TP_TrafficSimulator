@@ -7,6 +7,8 @@ import simulator.misc.Pair;
 public class SetWeatherEvent extends Event {
 	
 	List<Pair<String,Weather>> ws;
+	
+	private String str;
 
 	public SetWeatherEvent(int time, List<Pair<String,Weather>> ws)  {
 		super(time);
@@ -33,9 +35,12 @@ public class SetWeatherEvent extends Event {
 	
 	@Override
 	public String toString() {
-		return "Weather changes";
-		// TODO: To print specific info, store map parameter of execute and
-		// iterate over list as in execute
+		str = "Change Weather: [";
+		for (Pair<String,Weather> w : ws) {		
+			str += " (" + w.getFirst() + "," + w.getSecond() + ") ";			
+		}
+		str += "]";
+		return str;
 	}
 
 }

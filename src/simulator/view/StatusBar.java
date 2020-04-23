@@ -33,40 +33,37 @@ public class StatusBar extends JPanel implements TrafficSimObserver{
     	this.add(new JSeparator(SwingUtilities.VERTICAL));
     	
     	eventLabel = new JLabel();
-    	eventLabel.setText("Event: -");
+    	eventLabel.setText("Welcome!");
     	this.add(eventLabel);
     }
 
 	@Override
 	public void onAdvanceStart(RoadMap map, List<Event> events, int time) {
 		timeLabel.setText("Time: "+ time);
-		eventLabel.setText("Event: " + "Simulation time advancing...");
+		eventLabel.setText("");
 	}
 
 	@Override
 	public void onAdvanceEnd(RoadMap map, List<Event> events, int time) {
 		timeLabel.setText("Time: "+ time);
-		eventLabel.setText("Event: " + "Simulation time advance stopped."); //Provisional
+		eventLabel.setText("");
 	}
 
 	@Override
 	public void onEventAdded(RoadMap map, List<Event> events, Event e, int time) {
 		timeLabel.setText("Time: "+ time);
-		eventLabel.setText("Event added"); //Provisional
+		eventLabel.setText("Event added: " + e);
 	}
 
 	@Override
 	public void onReset(RoadMap map, List<Event> events, int time) {
 		timeLabel.setText("Time: "+ time);
-		eventLabel.setText("Event: " + "Simulator state reseted"); //Provisional
+		eventLabel.setText("");
 	}
 
 	@Override
 	public void onRegister(RoadMap map, List<Event> events, int time) {
-		//WARNING:
-		// Don't do anything here because onRegister is called before InitGUI (see constructor)
-		//timeLabel.setText("Time: "+ time);
-		//For event label??
+		
 	}
 
 	@Override
