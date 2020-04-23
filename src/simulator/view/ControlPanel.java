@@ -69,6 +69,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 	private void initLoadButton() {
 		openButton = addButton("");
 		openButton.setIcon(getIcon("open.png"));
+		openButton.setToolTipText("Load events from file system");
 		openButton.setSize(60, 60);
 		openButton.addActionListener( (actionEvent) -> {
 			loadButtonClicked();
@@ -100,6 +101,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		co2Window = new CO2Window((Frame) SwingUtilities.getWindowAncestor(ControlPanel.this), controller);
 		co2Button = addButton("");
 		co2Button.setIcon(getIcon("co2class.png"));
+		co2Button.setToolTipText("Change the CO2 class of a vehicle");
 		co2Button.setSize(60, 60);		
 		co2Button.addActionListener( (actionEvent) -> {
 			SwingUtilities.invokeLater(() -> co2Window.display(roadMap, simTime));		
@@ -111,6 +113,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		weatherWindow = new WeatherWindow((Frame) SwingUtilities.getWindowAncestor(ControlPanel.this), controller);
 		weatherButton = addButton("");
 		weatherButton.setIcon(getIcon("weather.png"));
+		weatherButton.setToolTipText("Change the weather of a road");
 		weatherButton.setSize(60, 60);
 		weatherButton.addActionListener( (actionEvent) -> {
 			SwingUtilities.invokeLater(() -> weatherWindow.display(roadMap, simTime));		
@@ -121,6 +124,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 	private void initRunButton() {
 		runButton = addButton("");
 		runButton.setIcon(getIcon("run.png"));
+		runButton.setToolTipText("Run the simulation");
 		runButton.setSize(60, 60);
 		runButton.addActionListener( (actionEvent) -> {
 			stopped = false;
@@ -133,6 +137,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 	private void initStopButton() {
 		stopButton = addButton("");
 		stopButton.setIcon(getIcon("stop.png"));
+		stopButton.setToolTipText("Stop the simulation");
 		stopButton.setSize(60, 60);
 		stopButton.addActionListener( (actionEvent) -> {
 			stop();
@@ -150,6 +155,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		this.add(Box.createRigidArea(new Dimension(10, 0)));
 		
 		ticknum = new JSpinner();
+		ticknum.setToolTipText("Simulation ticks to run: 1 - 100000");
 		ticknum.setValue(new Integer(10));
 		ticknum.setMinimumSize(new Dimension(100, 40));
 		ticknum.setPreferredSize(new Dimension(100, 40));
