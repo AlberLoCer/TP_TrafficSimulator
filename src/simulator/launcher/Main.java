@@ -199,10 +199,6 @@ public class Main {
 	
 	private static void startGUIMode() throws IOException {
 		Controller controller = new Controller(new TrafficSimulator(), _eventsFactory);
-		if (_inFile != null) {		//In GUI mode it is optional
-			InputStream is = new FileInputStream(new File(_inFile));
-			controller.loadEvents(is);
-		}
 		
 		SwingUtilities.invokeLater( () -> new MainWindow(controller));
 	}
