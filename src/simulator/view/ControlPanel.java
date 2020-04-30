@@ -90,11 +90,14 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		InputStream fs = null;
 		try {
 			fs = new FileInputStream(fileChooser.getSelectedFile());
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			controller.reset();
+			controller.loadEvents(fs);
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog((Frame) SwingUtilities.getWindowAncestor(this),
+					"Something went wrong while loading the file: " + e.getMessage(), "ERROR",
+                    JOptionPane.ERROR_MESSAGE);			
 		}
-		controller.reset();
-		controller.loadEvents(fs);		
+				
 	}
 	
 	private void initCO2Button() {
