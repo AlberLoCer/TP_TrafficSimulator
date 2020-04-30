@@ -1,14 +1,17 @@
 package simulator.view;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.swing.table.AbstractTableModel;
 
 import simulator.control.Controller;
 import simulator.model.Event;
 import simulator.model.Junction;
+import simulator.model.Road;
 import simulator.model.RoadMap;
 import simulator.model.TrafficSimObserver;
+import simulator.model.Vehicle;
 
 public class JunctionsTableModel extends AbstractTableModel implements TrafficSimObserver{
 	
@@ -62,8 +65,9 @@ public class JunctionsTableModel extends AbstractTableModel implements TrafficSi
 			}
 			break;
 		case 2:
-			s = junctions.get(rowIndex).getQueueMapList().toString();
-			if(s == null) {
+			Map<Road, List<Vehicle>> aux = junctions.get(rowIndex).getQueueMapList();
+			s = aux.toString();
+			if(s == null || aux.isEmpty()) {
 				s =  new String(" ");
 			}
 			break;
