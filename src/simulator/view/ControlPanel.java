@@ -17,6 +17,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JSpinner;
+import javax.swing.SpinnerModel;
+import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingUtilities;
 
 
@@ -155,10 +157,13 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		this.add(ticks);		
 		
 		this.add(Box.createRigidArea(new Dimension(10, 0)));
-		
-		ticknum = new JSpinner();
+		int min = 1;
+	    int max = 1000;
+	    int step = 1;
+	    int initValue = 10;
+	    SpinnerModel model = new SpinnerNumberModel(initValue, min, max, step);
+		ticknum = new JSpinner(model);
 		ticknum.setToolTipText("Simulation ticks to run: 1 - 100000");
-		ticknum.setValue(new Integer(10));
 		ticknum.setMinimumSize(new Dimension(100, 40));
 		ticknum.setPreferredSize(new Dimension(100, 40));
 		ticknum.setMaximumSize(new Dimension(100, 40));
