@@ -11,6 +11,7 @@ import simulator.model.TrafficSimObserver;
 import simulator.model.Vehicle;
 
 public class VehiclesTableModel extends AbstractTableModel implements TrafficSimObserver{
+	private static final long serialVersionUID = 5894002378614333529L;
 	private String[] colNames = { "Id", "Location", "itinerary", "CO2 Class", "Max Speed", "Speed", "Total CO2", "Distance" };
 	private List<Vehicle> vehicles;
 	

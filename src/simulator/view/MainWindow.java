@@ -8,7 +8,7 @@ import javax.swing.border.Border;
 import simulator.control.Controller;
 
 public class MainWindow extends JFrame{
-	
+	private static final long serialVersionUID = -417261336973419340L;
 	private Controller ctrl ;
 	
 	public MainWindow(Controller ctrl ) {

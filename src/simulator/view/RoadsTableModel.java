@@ -11,6 +11,7 @@ import simulator.model.RoadMap;
 import simulator.model.TrafficSimObserver;
 
 public class RoadsTableModel extends AbstractTableModel implements TrafficSimObserver{
+	private static final long serialVersionUID = 7536840294312563173L;
 	private String[] colNames = { "Id", "Length", "Weather", "Max Speed", "Speed Limit",  "Total CO2", "CO2 Limit" };
 	private List<Road> roads;
 	

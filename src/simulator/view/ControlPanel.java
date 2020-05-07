@@ -26,7 +26,7 @@ import simulator.model.RoadMap;
 import simulator.model.TrafficSimObserver;
 
 public class ControlPanel extends JPanel implements TrafficSimObserver{
-	
+	private static final long serialVersionUID = -9118944526329752975L;
 	private Controller controller;
 	private RoadMap roadMap;
 	private int simTime;

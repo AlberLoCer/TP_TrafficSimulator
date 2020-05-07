@@ -24,7 +24,7 @@ import simulator.model.Vehicle;
 
 
 public class CO2Window extends JDialog{
-	
+	private static final long serialVersionUID = 7696803416883376018L;
 	private Controller controller;			
 	private int simTime;
 	private Integer contVals[] = {0,1,2,3,4,5,6,7,8,9,10};

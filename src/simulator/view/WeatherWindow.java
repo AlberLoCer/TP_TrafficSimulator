@@ -24,7 +24,7 @@ import simulator.model.SetWeatherEvent;
 import simulator.model.Weather;
 
 public class WeatherWindow extends JDialog {
-	
+	private static final long serialVersionUID = -2236894090169871300L;
 	private Controller controller;			// To add new events 
 	private int simTime;
 	

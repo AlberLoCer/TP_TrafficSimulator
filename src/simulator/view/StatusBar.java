@@ -14,7 +14,7 @@ import simulator.model.RoadMap;
 import simulator.model.TrafficSimObserver;
 
 public class StatusBar extends JPanel implements TrafficSimObserver{
-	
+	private static final long serialVersionUID = -7231663420645969226L;
 	//TODO: Check correctness of event JLable messages
 	private JLabel timeLabel;
 	private JLabel eventLabel;
