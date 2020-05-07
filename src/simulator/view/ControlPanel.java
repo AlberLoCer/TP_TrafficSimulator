@@ -166,7 +166,6 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 	    SpinnerModel model = new SpinnerNumberModel(initValue, min, max, step);
 		ticknum = new JSpinner(model);
 		ticknum.setToolTipText("Simulation ticks to run: 1 - 100000");
-		ticknum.setValue(new Integer(10));
 		ticknum.setMinimumSize(new Dimension(100, 40));
 		ticknum.setPreferredSize(new Dimension(100, 40));
 		ticknum.setMaximumSize(new Dimension(100, 40));
@@ -185,7 +184,6 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 	    SpinnerModel model = new SpinnerNumberModel(initValue, min, max, step);
 		delay = new JSpinner(model);
 		delay.setToolTipText("Delay between simulation steps");
-		delay.setValue(new Integer(10));
 		delay.setMinimumSize(new Dimension(100, 40));
 		delay.setPreferredSize(new Dimension(100, 40));
 		delay.setMaximumSize(new Dimension(100, 40));
