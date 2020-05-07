@@ -85,7 +85,6 @@ public  abstract class Road extends SimulatedObject {
 		reduceTotalContamination();
 		updateSpeedLimit();
 		for(Vehicle v : vehicles) {
-			//TODO: only when vehicle moving
 			if (v.getStatus() == VehicleStatus.TRAVELING) {
 				v.setSpeed(calculateVehicleSpeed(v));
 				v.advance(time);

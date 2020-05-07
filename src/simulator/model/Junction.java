@@ -57,8 +57,6 @@ public class Junction extends SimulatedObject {
 
 	@Override
 	void advance(int time) {
-		
-		// TODO: maybe only advance the queue that has green light
 		if (greenLightIdx != -1 && greenLightIdx < incomingRoads.size()) {
 			List<Vehicle> currQueue = queueMapList.get(incomingRoads.get(greenLightIdx));
 			if (!currQueue.isEmpty()) {
@@ -105,12 +103,10 @@ public class Junction extends SimulatedObject {
 	}
 	
 	void enter( Vehicle v) {		
-		//TODO: check
 		queueMapList.get(v.getRoad()).add(v);
 	}
 	
 	Road roadTo(Junction j) {
-		// TODO: check
 		return outgoingRoads.get(j);
 	}
 	@Override

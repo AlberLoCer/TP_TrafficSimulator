@@ -127,9 +127,6 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 			drawRoad(g, _map.getRoads().get(i), i);
 		}
 		
-//		drawRoads(g);
-//		drawVehicles(g);
-//		drawJunctions(g);
 	}
 	
 	private void drawRoad(Graphics g, Road road, int row) {

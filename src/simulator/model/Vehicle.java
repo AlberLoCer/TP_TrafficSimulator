@@ -38,10 +38,10 @@ public class Vehicle extends SimulatedObject {
 			
 			this.maxSpeed = maxSpeed;
 			this.contClass = contClass;
-			this.currSpeed = 0;						// TODO: Or -1 ?
+			this.currSpeed = 0;						
 			this.totalContamination = 0;
 			this.status = VehicleStatus.PENDING;
-			this.location = 0;						// TODO: Or -1 ?
+			this.location = 0;						
 			this.totalDistance = 0;
 			this.itineraryIdx = 0;					// TODO: Or -1 ?
 		}
@@ -68,7 +68,6 @@ public class Vehicle extends SimulatedObject {
 			if(this.getLocation() == this.getRoad().getLength()) {
 				this.setStatus(VehicleStatus.WAITING);
 				this.setSpeed(0);
-				// TODO: itineraryIdx or ItineraryIdx + 1 ??
 				itinerary.get(itineraryIdx).enter(this);
 			}
 		}
