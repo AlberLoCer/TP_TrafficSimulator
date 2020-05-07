@@ -17,6 +17,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JSpinner;
+import javax.swing.SpinnerModel;
+import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingUtilities;
 
 
@@ -35,6 +37,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 	private WeatherWindow weatherWindow;
 	private CO2Window co2Window;
 	private JSpinner ticknum;
+	private JSpinner delay;
 	private JButton openButton;
 	private JButton co2Button;
 	private JButton weatherButton;
@@ -59,7 +62,8 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		addSeparation();		
 		initRunButton();		
 		initStopButton();		
-		initTicksSpinner();		
+		initTicksSpinner();	
+		initDelaySpinner();
 		this.add(Box.createHorizontalGlue());		
 		addSeparation();		
 		initExitButton();
@@ -155,14 +159,37 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		this.add(ticks);		
 		
 		this.add(Box.createRigidArea(new Dimension(10, 0)));
-		
-		ticknum = new JSpinner();
+		int min = 1;
+	    int max = 1000;
+	    int step = 1;
+	    int initValue = 10;
+	    SpinnerModel model = new SpinnerNumberModel(initValue, min, max, step);
+		ticknum = new JSpinner(model);
 		ticknum.setToolTipText("Simulation ticks to run: 1 - 100000");
 		ticknum.setValue(new Integer(10));
 		ticknum.setMinimumSize(new Dimension(100, 40));
 		ticknum.setPreferredSize(new Dimension(100, 40));
 		ticknum.setMaximumSize(new Dimension(100, 40));
 		this.add(ticknum);
+	}
+	
+	private void initDelaySpinner() {
+		this.add(Box.createRigidArea(new Dimension(10, 0)));
+		JLabel delayLbl = new JLabel("Delay:");
+		this.add(delayLbl);		
+		this.add(Box.createRigidArea(new Dimension(10, 0)));
+		int min = 0;
+	    int max = 1000;
+	    int step = 1;
+	    int initValue = 10;
+	    SpinnerModel model = new SpinnerNumberModel(initValue, min, max, step);
+		delay = new JSpinner(model);
+		delay.setToolTipText("Delay between simulation steps");
+		delay.setValue(new Integer(10));
+		delay.setMinimumSize(new Dimension(100, 40));
+		delay.setPreferredSize(new Dimension(100, 40));
+		delay.setMaximumSize(new Dimension(100, 40));
+		this.add(delay);
 	}
 	
 	private void initExitButton() {
