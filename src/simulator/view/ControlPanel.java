@@ -20,7 +20,7 @@ import javax.swing.JSpinner;
 import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingUtilities;
-
+import javax.swing.SwingWorker;
 
 import simulator.control.Controller;
 import simulator.model.Event;
@@ -45,12 +45,13 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 	private JButton stopButton;
 	private JButton exitButton;
 	
-	private volatile Thread thread;
+	//private volatile Thread thread;
+	private volatile ViewWorker worker;
 	
 	public ControlPanel(Controller controller) {
 		this.controller = controller; 
 		controller.addObserver(this);
-		initGUI();		
+		initGUI();
 	}
 	
 	public void initGUI() {
@@ -136,13 +137,8 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		runButton.setSize(60, 60);
 		runButton.addActionListener( (actionEvent) -> {
 			enableToolBar(false);
-			thread = new Thread() {
-				public void run() {
-					run_sim((Integer)ticknum.getValue(), (Integer)delay.getValue());
-					enableToolBar(true);
-				}
-			};
-			thread.start();
+			worker = new ViewWorker();
+			worker.execute();
 		});
 		this.add(runButton);
 	}
@@ -233,21 +229,9 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		return new ImageIcon("resources/icons/" + filename);
 	}
 	
-	private void run_sim(int n, long delay) {
-		while (n > 0 && !thread.isInterrupted()) {
-			try {
-				controller.run(1);		
-				thread.sleep(delay);
-			} catch (Exception e) {
-				return;
-			}
-			n--;
-		}		
-	}
-	
 	private void stop() {
-		if(thread != null) {
-			thread.interrupt();
+		if(!worker.isCancelled()) {
+			worker.cancel(true);
 		}
 	}	
 
@@ -292,6 +276,31 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 	@Override
 	public void onError(String err) {
 		
+	}
+	
+	private class ViewWorker extends SwingWorker<Void, Void> {
+
+		@Override
+		protected Void doInBackground() throws Exception {
+			int n = (Integer)ticknum.getValue();
+			long delayTime = (Integer)delay.getValue();
+			while (n > 0 && !isCancelled()) {
+				try {
+					controller.run(1);	
+					Thread.sleep(delayTime);
+				} catch (Exception e) {
+					return null;
+				}
+				n--;
+			}			
+			return null;
+		}
+		
+		@Override
+		protected void done() {
+			super.done();
+			enableToolBar(true);
+		}
 	}
 
 }
