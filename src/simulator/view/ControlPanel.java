@@ -28,11 +28,11 @@ import simulator.model.RoadMap;
 import simulator.model.TrafficSimObserver;
 
 public class ControlPanel extends JPanel implements TrafficSimObserver{
+	
 	private static final long serialVersionUID = -9118944526329752975L;
 	private Controller controller;
 	private RoadMap roadMap;
 	private int simTime;
-	private boolean stopped;
 	private JFileChooser fileChooser;
 	private WeatherWindow weatherWindow;
 	private CO2Window co2Window;
@@ -44,6 +44,8 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 	private JButton runButton;
 	private JButton stopButton;
 	private JButton exitButton;
+	
+	private volatile Thread thread;
 	
 	public ControlPanel(Controller controller) {
 		this.controller = controller; 
@@ -133,9 +135,14 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		runButton.setToolTipText("Run the simulation");
 		runButton.setSize(60, 60);
 		runButton.addActionListener( (actionEvent) -> {
-			stopped = false;
 			enableToolBar(false);
-			SwingUtilities.invokeLater(() -> run_sim((Integer)ticknum.getValue()));
+			thread = new Thread() {
+				public void run() {
+					run_sim((Integer)ticknum.getValue(), (Integer)delay.getValue());
+					enableToolBar(true);
+				}
+			};
+			thread.start();
 		});
 		this.add(runButton);
 	}
@@ -149,7 +156,6 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 			stop();
 		});
 		this.add(stopButton);
-        stopped = false;
 	}
 	
 	private void initTicksSpinner() {
@@ -227,25 +233,22 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		return new ImageIcon("resources/icons/" + filename);
 	}
 	
-	private void run_sim(int n) {
-		if (n > 0 && !stopped) {
+	private void run_sim(int n, long delay) {
+		while (n > 0 && !thread.isInterrupted()) {
 			try {
-				controller.run(1);
+				controller.run(1);		
+				thread.sleep(delay);
 			} catch (Exception e) {
-				stopped = true;
 				return;
 			}
-			SwingUtilities.invokeLater(() -> run_sim(n - 1));
-		}
-		
-		else {
-			enableToolBar(true);
-			stopped = true;
-		}
+			n--;
+		}		
 	}
 	
 	private void stop() {
-		stopped = true;
+		if(thread != null) {
+			thread.interrupt();
+		}
 	}	
 
 	private void enableToolBar(boolean b) {		
