@@ -26,7 +26,7 @@ public class TrafficSimulator implements Observable<TrafficSimObserver> {
 	}
 
 	public void addEvent(Event e) {
-		if(e.getTime() >= simTime) {
+		if(e.getTime() > simTime) {
 			try {
 				eventList.add(e);
 				//Notify
@@ -116,8 +116,10 @@ public class TrafficSimulator implements Observable<TrafficSimObserver> {
 	@Override
 	public void addObserver(TrafficSimObserver o) {		
 		try {
-			observers.add(o);
-			o.onRegister(roadMap, eventList, simTime);
+			if (!observers.contains(o)) {
+				observers.add(o);
+				o.onRegister(roadMap, eventList, simTime);
+			}
 		} catch (Exception e) {
 			for (TrafficSimObserver obs : observers) {
 				obs.onError(e.getMessage());

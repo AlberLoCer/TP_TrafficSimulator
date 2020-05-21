@@ -87,7 +87,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 			fileChooser.setAcceptAllFileFilterUsed(false);
 		}		
 		
-		fileChooser.showOpenDialog(null);
+		fileChooser.showOpenDialog(SwingUtilities.getWindowAncestor(ControlPanel.this));
 		InputStream fs = null;
 		try {
 			fs = new FileInputStream(fileChooser.getSelectedFile());
@@ -108,7 +108,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		co2Button.setToolTipText("Change the CO2 class of a vehicle");
 		co2Button.setSize(60, 60);		
 		co2Button.addActionListener( (actionEvent) -> {
-			SwingUtilities.invokeLater(() -> co2Window.display(roadMap, simTime));		
+			co2Window.display(roadMap, simTime);		
 		});		
 		this.add(co2Button);
 	}
@@ -120,7 +120,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		weatherButton.setToolTipText("Change the weather of a road");
 		weatherButton.setSize(60, 60);
 		weatherButton.addActionListener( (actionEvent) -> {
-			SwingUtilities.invokeLater(() -> weatherWindow.display(roadMap, simTime));		
+			weatherWindow.display(roadMap, simTime);		
 		});
 		this.add(weatherButton);
 	}
@@ -133,7 +133,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		runButton.addActionListener( (actionEvent) -> {
 			stopped = false;
 			enableToolBar(false);
-			SwingUtilities.invokeLater(() -> run_sim((Integer)ticknum.getValue()));
+			run_sim((Integer)ticknum.getValue());
 		});
 		this.add(runButton);
 	}
@@ -212,6 +212,10 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 			try {
 				controller.run(1);
 			} catch (Exception e) {
+				JOptionPane.showMessageDialog((Frame) SwingUtilities.getWindowAncestor(this),
+						"An exception ocurred: " + e.getMessage(), "ERROR",
+	                    JOptionPane.ERROR_MESSAGE);	
+				enableToolBar(true);
 				stopped = true;
 				return;
 			}
@@ -236,6 +240,11 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 		stopButton.setEnabled(!b);
 		exitButton.setEnabled(b);		
 	}
+	
+	private void assignObserverData(RoadMap map, int time) {
+		this.roadMap = map;		
+		this.simTime = time;
+	}
 
 	@Override
 	public void onAdvanceStart(RoadMap map, List<Event> events, int time) {
@@ -244,26 +253,22 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 
 	@Override
 	public void onAdvanceEnd(RoadMap map, List<Event> events, int time) {
-		this.roadMap = map;		
-		this.simTime = time;
+		assignObserverData(map, time);
 	}
 
 	@Override
 	public void onEventAdded(RoadMap map, List<Event> events, Event e, int time) {
-		this.roadMap = map;	
-		this.simTime = time;
+		assignObserverData(map, time);
 	}
 
 	@Override
 	public void onReset(RoadMap map, List<Event> events, int time) {
-		this.roadMap = map;	
-		this.simTime = time;
+		assignObserverData(map, time);
 	}
 
 	@Override
 	public void onRegister(RoadMap map, List<Event> events, int time) {
-		this.roadMap = map;		
-		this.simTime = time;
+		assignObserverData(map, time);
 	}
 
 	@Override

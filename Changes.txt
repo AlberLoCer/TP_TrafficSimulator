@@ -1,11 +1,8 @@
 
-- fix all comments and upload again in aweek from now
-
-
 Main:
 
 
-- in startBatchMode this should go outside the if
+- in startBatchMode this should go outside the if														-> DONE
 
 
 			is.close();
@@ -19,25 +16,25 @@ Controller:
 Model:
 
 
-- in addEvent, this should be > and not >=
+- in addEvent, this should be > and not >=															-> DONE
 
 
 		if(e.getTime() >= simTime) {
 
 
-- in addObserver, if o is already in the list you should do nothing
-
+- in addObserver, if o is already in the list you should do 													-> DONE
+	
 
 View:
 
 
-- when opening the filechooser better pass it the following instead of null
+- when opening the filechooser better pass it the following instead of null											-> DONE
 
 
      SwingUtilities.getWindowAncestor(ControlPanel.this), controller);
 
 
-- the action should not be with invokeLater, you can open the dialog immediately
+- the action should not be with invokeLater, you can open the dialog immediately										-> DONE
 
 
 	co2Button.addActionListener( (actionEvent) -> {
@@ -53,10 +50,10 @@ View:
 	SwingUtilities.invokeLater(() -> run_sim((Integer)ticknum.getValue()));
 
 
-- in run_sim, when catching the exception you should show the error in a dailog and also enable the buttons again using enableToolBar(true)
+- in run_sim, when catching the exception you should show the error in a dailog and also enable the buttons again using enableToolBar(true)			-> DONE
 
 
-- in ControlPanel this code is duplicated, better move it to a method
+- in ControlPanel this code is duplicated, better move it to a method												-> DONE
 
 
 		this.roadMap = map;		
@@ -64,10 +61,12 @@ View:
 		this.simTime = time;
 
 
-- you could make getQueueMapList() to return a string, instead of the map itself 
+- you could make getQueueMapList() to return a string, instead of the map itself 										-> DONE
 
 
-- in MapByRoadComponent, the field _cont0,...,_cont5 can be an array, this would allow faster access. Also the wether images can be incorporated in the Weather enum for a faster access (don't have to do it)
+- in MapByRoadComponent, the field _cont0,...,_cont5 can be an array, this would allow faster access. 
+	Also the wether images can be incorporated in the Weather enum for a faster access (don't have to do it)  						-> DONE
 
 
-- when trying to set weather/contamiantion before loading any file and exception is thrown and shown on the console (because the selected item is null). In the action of the OK button, you should check that the selected item is not null, and if it is null simply do nothing to force the user to press Cancel
+- when trying to set weather/contamiantion before loading any file and exception is thrown and shown on the console (because the selected item is null). 	-> DONE
+In the action of the OK button, you should check that the selected item is not null, and if it is null simply do nothing to force the user to press Cancel

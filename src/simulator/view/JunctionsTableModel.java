@@ -65,9 +65,8 @@ public class JunctionsTableModel extends AbstractTableModel implements TrafficSi
 			}
 			break;
 		case 2:
-			Map<Road, List<Vehicle>> aux = junctions.get(rowIndex).getQueueMapList();
-			s = aux.toString();
-			if(s == null || aux.isEmpty()) {
+			s = junctions.get(rowIndex).getQueueMapList();
+			if(s == null || s == "{}") {
 				s =  new String(" ");
 			}
 			break;

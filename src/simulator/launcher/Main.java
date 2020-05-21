@@ -188,13 +188,12 @@ public class Main {
 		controller.loadEvents(is);
 		if(_outFile != null) {			
 			controller.run(_ticks, os);		
-			is.close();
 			os.close();
 		}
 		else {
 			controller.run(_ticks, System.out);
 		}
-		
+		is.close();
 	}
 	
 	private static void startGUIMode() throws IOException {

@@ -93,8 +93,10 @@ public class WeatherWindow extends JDialog {
 		// Accept button
 		JButton okButton = new JButton("OK");
 		okButton.addActionListener((actionEvent) -> {
-			buildEvent();
-			WeatherWindow.this.setVisible(false);
+			if (roadsBox.getSelectedItem() != null) {
+				buildEvent();
+				WeatherWindow.this.setVisible(false);
+			}			
 		});
 		
 		// Panel to hold buttons

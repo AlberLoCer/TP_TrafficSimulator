@@ -162,8 +162,8 @@ public class Junction extends SimulatedObject {
 		return queueList;
 	}
 
-	public Map<Road, List<Vehicle>> getQueueMapList() {
-		return queueMapList;
+	public String getQueueMapList() {
+		return queueMapList.toString();
 	}
 	
 	

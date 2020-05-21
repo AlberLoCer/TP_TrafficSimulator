@@ -61,12 +61,8 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 
 	private Image _car;
 	
-	private Image _cont0;
-	private Image _cont1;
-	private Image _cont2;
-	private Image _cont3;
-	private Image _cont4;
-	private Image _cont5;
+	private Image[] images;
+	private final int ARRAY_SIZE = 6;
 	
 	private Image _rain;
 	private Image _cloud;
@@ -83,12 +79,13 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 	private void initGUI() {
 		_car = loadImage("car.png");
 		
-		_cont0 = loadImage("cont_0.png");
-		_cont1 = loadImage("cont_1.png");
-		_cont2 = loadImage("cont_2.png");
-		_cont3 = loadImage("cont_3.png");
-		_cont4 = loadImage("cont_4.png");
-		_cont5 = loadImage("cont_5.png");
+		images = new Image[ARRAY_SIZE];
+		images[0] = loadImage("cont_0.png");
+		images[1] = loadImage("cont_1.png");
+		images[2] = loadImage("cont_2.png");
+		images[3] = loadImage("cont_3.png");
+		images[4] = loadImage("cont_4.png");
+		images[5] = loadImage("cont_5.png");
 		
 		_rain = loadImage("rain.png");
 		_storm = loadImage("storm.png");
@@ -213,21 +210,11 @@ public class MapByRoadComponent extends JPanel implements TrafficSimObserver {
 	private Image getContImage(Road road) {
 		Double aux = Math.min((double) road.getTotalCO2() / (1.0 + (double) road.getCO2Limit()), 1.0);
 		int cont = (int) Math.floor( aux / 0.19);
-		switch (cont) {
-			case 0:
-				return _cont0;
-			case 1:
-				return _cont1;
-			case 2:
-				return _cont2;
-			case 3:
-				return _cont3;
-			case 4:
-				return _cont4;
-			case 5:
-				return _cont5;
-			default:
-				return _cont0;
+		if(cont >= 0 && cont < ARRAY_SIZE){
+			return images[cont];
+		}	
+		else {
+			return images[0];		// Default image
 		}
 	}
 	

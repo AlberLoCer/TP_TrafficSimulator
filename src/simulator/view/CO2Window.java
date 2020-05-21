@@ -81,8 +81,10 @@ public class CO2Window extends JDialog{
 		
 		JButton okButton = new JButton("OK");
 		okButton.addActionListener((actionEvent) -> { 
-			buildEvent(); 
-			CO2Window.this.setVisible(false); 
+			if (vehicleBox.getSelectedItem() != null) {
+				buildEvent(); 
+				CO2Window.this.setVisible(false); 
+			}			
 		}); 
 		
 		JPanel buttonPanel = new JPanel(); 
