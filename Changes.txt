@@ -1,0 +1,73 @@
+
+- fix all comments and upload again in aweek from now
+
+
+Main:
+
+
+- in startBatchMode this should go outside the if
+
+
+			is.close();
+
+
+
+Controller:
+
+
+
+Model:
+
+
+- in addEvent, this should be > and not >=
+
+
+		if(e.getTime() >= simTime) {
+
+
+- in addObserver, if o is already in the list you should do nothing
+
+
+View:
+
+
+- when opening the filechooser better pass it the following instead of null
+
+
+     SwingUtilities.getWindowAncestor(ControlPanel.this), controller);
+
+
+- the action should not be with invokeLater, you can open the dialog immediately
+
+
+	co2Button.addActionListener( (actionEvent) -> {
+
+		SwingUtilities.invokeLater(() -> co2Window.display(roadMap, simTime));		});		
+
+
+	weatherButton.addActionListener( (actionEvent) -> {
+
+		SwingUtilities.invokeLater(() -> weatherWindow.display(roadMap, simTime));	});
+
+
+	SwingUtilities.invokeLater(() -> run_sim((Integer)ticknum.getValue()));
+
+
+- in run_sim, when catching the exception you should show the error in a dailog and also enable the buttons again using enableToolBar(true)
+
+
+- in ControlPanel this code is duplicated, better move it to a method
+
+
+		this.roadMap = map;		
+
+		this.simTime = time;
+
+
+- you could make getQueueMapList() to return a string, instead of the map itself 
+
+
+- in MapByRoadComponent, the field _cont0,...,_cont5 can be an array, this would allow faster access. Also the wether images can be incorporated in the Weather enum for a faster access (don't have to do it)
+
+
+- when trying to set weather/contamiantion before loading any file and exception is thrown and shown on the console (because the selected item is null). In the action of the OK button, you should check that the selected item is not null, and if it is null simply do nothing to force the user to press Cancel
