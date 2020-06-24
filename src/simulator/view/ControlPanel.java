@@ -44,6 +44,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 	private JButton stopButton;
 	private JButton exitButton;
 	private JButton infoButton;
+	private InfoWindow infoWindow;
 	
 	public ControlPanel(Controller controller) {
 		this.controller = controller; 
@@ -71,37 +72,15 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 	}
 	
 	private void initInfoButton() {
+		infoWindow = new InfoWindow((Frame) SwingUtilities.getWindowAncestor(ControlPanel.this), controller);
 		infoButton = addButton("");
 		infoButton.setIcon(getIcon("pie-chart.png"));
 		infoButton.setToolTipText("Get info about contamination levels");
 		infoButton.setSize(60, 60);
 		infoButton.addActionListener( (actionEvent) -> {
-			infoButtonClicked();
+			infoWindow.display(roadMap, simTime);	
 		});
 		this.add(infoButton);
-	}
-	
-	private void infoButtonClicked() {
-
-		if(fileChooser == null) {
-			// First use of it -> create instance
-			fileChooser = new JFileChooser();
-			fileChooser.setCurrentDirectory(new File("resources/examples"));
-			fileChooser.setAcceptAllFileFilterUsed(false);
-		}		
-		
-		fileChooser.showOpenDialog(SwingUtilities.getWindowAncestor(ControlPanel.this));
-		InputStream fs = null;
-		try {
-			fs = new FileInputStream(fileChooser.getSelectedFile());
-			controller.reset();
-			controller.loadEvents(fs);
-		} catch (Exception e) {
-			JOptionPane.showMessageDialog((Frame) SwingUtilities.getWindowAncestor(this),
-					"Something went wrong while loading the file: " + e.getMessage(), "ERROR",
-                    JOptionPane.ERROR_MESSAGE);			
-		}
-				
 	}
 	
 	private void initLoadButton() {
