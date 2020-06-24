@@ -249,6 +249,7 @@ public class ControlPanel extends JPanel implements TrafficSimObserver{
 	}	
 
 	private void enableToolBar(boolean b) {		
+		infoButton.setEnabled(b);
 		openButton.setEnabled(b);
 		co2Button.setEnabled(b);
 		weatherButton.setEnabled(b);

@@ -28,6 +28,7 @@ public class InfoTableModel extends AbstractTableModel implements TrafficSimObse
 	public InfoTableModel(Controller controller) {
 		controller.addObserver(this);
 		contLimit = 1000;
+		info = new ArrayList<>();
 		// This method will trigger a call to onRegister(), 
 		// in which we can get the initial list of events
 	}
@@ -48,8 +49,15 @@ public class InfoTableModel extends AbstractTableModel implements TrafficSimObse
 			list.add(new Pair<>(road, road.getTotalCO2()));
 		}
 		
-		this.info.add(simTime, list);
+		this.info.add(list);
 		
+		update();
+	}
+	
+	public void updateC02Limit(int newValue) {
+		if (newValue >= 1) {
+			contLimit = newValue;
+		}
 		update();
 	}
 
@@ -119,7 +127,7 @@ public class InfoTableModel extends AbstractTableModel implements TrafficSimObse
 
 	@Override
 	public void onRegister(RoadMap map, List<Event> events, int time) {
-		updateInfoList(map, time);			
+		//updateInfoList(map, time);			
 	}
 
 	@Override
