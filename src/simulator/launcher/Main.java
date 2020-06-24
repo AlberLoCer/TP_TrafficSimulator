@@ -162,6 +162,7 @@ public class Main {
 		List<Builder<LightSwitchingStrategy>> lssBuilders = new ArrayList<>();
 		lssBuilders.add(new RoundRobinStrategyBuilder());
 		lssBuilders.add( new MostCrowdedStrategyBuilder());		
+		lssBuilders.add(new VipStrategyBuilder());
 		Factory<LightSwitchingStrategy> lssFactory = new BuilderBasedFactory<>(lssBuilders);
 		
 		List<Builder<DequeingStrategy>> dqBuilders = new ArrayList<>();
